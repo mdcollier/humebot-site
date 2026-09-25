@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>University IT — HumeBot</title>
+  <meta name="description" content="For University IT: a bounded feasibility request for a pinned, reproducible open-weight model deployment to support HumeBot's formal qualification.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HumeBot">
+  <meta property="og:title" content="University IT — HumeBot">
+  <meta property="og:description" content="For University IT: a bounded feasibility request for a pinned, reproducible open-weight model deployment to support HumeBot's formal qualification.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="index.html">HumeBot<span>Evidence-grounded instructional AI</span></a>
+      <nav aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="evidence.html">Evidence</a></li>
+        <li><a href="status.html">Current status</a></li>
+        <li><a href="university-it.html" aria-current="page">University IT</a></li>
+        <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <h1>For University IT</h1>
+    <p class="lede">HumeBot is not an untested chatbot looking for somewhere to run. What it needs next is a reproducible place to run its formal qualification — ideally the same environment that could later support a controlled classroom pilot.</p>
+
+    <h2>The ask</h2>
+    <p>A technical feasibility conversation: could University-supported infrastructure provide a small, pinned, reproducible deployment of an open-weight model, with sufficient context capacity, course-scoped access and appropriate storage for pseudonymous logs — and what constraints should shape it?</p>
+
+    <div class="cols">
+      <div>
+        <h3>What we are asking for</h3>
+        <ul>
+          <li>A pinned open-weight deployment of the Gemma model.</li>
+          <li>A reproducible, documented serving configuration.</li>
+          <li>Sufficient context capacity.</li>
+          <li>Course-scoped access.</li>
+          <li>Appropriate storage for pseudonymous interaction logs.</li>
+          <li>A way for faculty to review responses and failures.</li>
+          <li>The University's standard security and privacy practices.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we are not asking for</h3>
+        <ul>
+          <li>Immediate production approval.</li>
+          <li>University-wide deployment.</li>
+          <li>A vendor commitment.</li>
+          <li>IT certification of the philosophical content.</li>
+          <li>Any processing of real student data before the University's governance review.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Why a pinned deployment matters</h2>
+    <p>A qualification result should describe the system students would actually use. The formal qualification will therefore run only on a deployment whose identity is pinned and documented: the exact model checkpoint (a repository revision, commit or weight checksum), its numerical representation or quantization, the inference engine, version and launch settings, the tokenizer and chat-template source, the context limit, and equivalence across replicas if there are several. The external research service used for development does not expose those details, so it is used for development only.</p>
+
+    <h2>Technical sizing snapshot</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Development observations, not service-level requirements. No GPU type, count or cost is assumed.</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Observation</th></tr></thead>
+        <tbody>
+          <tr><td>Model</td><td>Open-weight Gemma 4 31B</td></tr>
+          <tr><td>Largest observed prompt</td><td>About 64,175 tokens (evidence selection reads all of Sections I–IX)</td></tr>
+          <tr><td>Completion ceiling</td><td>4,096 tokens per call</td></tr>
+          <tr><td>Calls per question</td><td>Up to three sequential model calls; one identical retry only after a pure network failure</td></tr>
+          <tr><td>Recorded model usage per question</td><td>About 63,000 tokens in total across all calls (held-out study average) — an aggregate, not a single-call context requirement</td></tr>
+          <tr><td>Context needed</td><td>Comfortably above about 68,000 tokens (largest prompt plus completion)</td></tr>
+          <tr><td>Sampling</td><td>Temperature 0, JSON-formatted output</td></tr>
+          <tr><td>End-to-end time on the research service</td><td>Median about 23–34 seconds, 95th percentile about 33–67 seconds across two recent runs — descriptive only; will differ on other hardware</td></tr>
+          <tr><td>Enrollment, concurrency, classroom latency target</td><td>Not yet set — open inputs that depend on the course</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Governance principles — planned, not yet built</h2>
+    <p>These are design requirements; no student-facing authentication, logging or storage system has been built.</p>
+    <ul>
+      <li><strong>Course-scoped access</strong>, established without attaching persistent identity to what a student asks.</li>
+      <li><strong>Pseudonymous-by-default logging</strong>; participation or credit records, where needed, kept separate from conversation content where practical.</li>
+      <li><strong>Faculty review</strong> of responses, evidence and failures, under the access and governance rules eventually agreed with the University; corrections recorded alongside, never overwriting, what the student originally saw.</li>
+      <li><strong>Separate data uses</strong>: instructional operation, system evaluation and improvement, and research or model training are kept distinct. Ordinary classroom conversations are not automatically research or training data.</li>
+    </ul>
+    <div class="callout"><p>No real student interaction data should be sent to a model provider or classroom deployment until the applicable University governance and data-handling determination has been made.</p></div>
+
+    <h2>Download</h2>
+    <p><a class="download" href="downloads/HumeBot_University_IT_Executive_Brief.pdf">One-page executive brief (PDF)</a></p>
+    <p class="note">A fuller technical and evaluation case is available on request.</p>
+
+  </main>
+  <footer class="site">
+    <div class="bar">
+      <p><strong>HumeBot</strong> · Faculty-led instructional AI research project · 2026</p>
+      <p>HumeBot is an academic project and is not presented as an officially supported University service. See <a href="status.html">current status</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

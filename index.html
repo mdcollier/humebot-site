@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HumeBot</title>
+  <meta name="description" content="HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's Enquiry concerning Human Understanding.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HumeBot">
+  <meta property="og:title" content="HumeBot">
+  <meta property="og:description" content="HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's Enquiry concerning Human Understanding.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="index.html">HumeBot<span>Evidence-grounded instructional AI</span></a>
+      <nav aria-label="Main">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="evidence.html">Evidence</a></li>
+        <li><a href="status.html">Current status</a></li>
+        <li><a href="university-it.html">University IT</a></li>
+        <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p class="kicker">A faculty-led academic project</p>
+    <h1>HumeBot</h1>
+    <p class="lede">HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
+    <div class="callout">
+      <p>It is a <strong>supplement</strong> to the professor and the primary text — a further place to ask questions between classes. Its current scope is <strong><cite>Enquiry</cite> Sections I–IX</strong>. It is <strong>not</strong> an autonomous instructor, a grading system or a general-purpose chatbot.</p>
+    </div>
+
+    <h2>The educational problem</h2>
+    <p>A general-purpose chatbot can give a fluent, confident answer about a philosophical text while misquoting it or citing passages that do not say what it claims. In a course built on close reading of a primary text, students may not be able to distinguish a reliable response from a plausible-sounding one, and instructors may have little visibility into what the answer rested on.</p>
+
+    <h2>What is different</h2>
+    <p>HumeBot answers only from a controlled copy of the text. A separate step selects the passages an answer needs, and the answer is written from those passages alone. Quotations are created by the software, not by the AI model, so every quotation a student sees is Hume's exact text at a location that can be checked. Automatic rules check the structure of the evidence and its provenance before anything is shown, and when the system cannot support an answer it says so visibly instead of guessing. <a href="how-it-works.html">How it works</a>.</p>
+
+    <h2>Evidence so far</h2>
+    <ul class="facts" aria-label="Headline evidence">
+      <li><span class="num">238 / 238</span><span class="lbl">citations exact, valid and supported in the constrained system's 60-question held-out study</span></li>
+      <li><span class="num">50 / 60</span><span class="lbl">held-out questions receiving a verified answer</span></li>
+      <li><span class="num">1,205</span><span class="lbl">automated tests</span></li>
+      <li><span class="num">200</span><span class="lbl">fresh questions planned for formal qualification — not yet written or run</span></li>
+    </ul>
+    <p>The 10 held-out questions without a verified answer ended in visible non-answer states rather than being silently converted into unsupported answers. They are not counted as successes: accurate provenance and answer availability are separate requirements, which is one reason formal qualification is still needed. <strong>No qualification pass is claimed.</strong> <a href="evidence.html">The evidence in detail</a>.</p>
+
+    <h2>Where the project stands</h2>
+    <p>The system's configuration is frozen, with an automated check that detects any change, and a formal 200-question qualification study has been designed prospectively. The qualification has deliberately not been run yet. <a href="status.html">Current status</a>.</p>
+
+    <h2>Why University infrastructure is relevant</h2>
+    <p>The formal qualification should be run on the deployment that could plausibly become the classroom deployment: an open-weight model whose exact version and configuration are pinned and documented, under University access, privacy and security controls. The external research service used for development does not expose the model details needed for that, so a University-supported environment is the next enabling step. <a href="university-it.html">For University IT</a>.</p>
+
+  </main>
+  <footer class="site">
+    <div class="bar">
+      <p><strong>HumeBot</strong> · Faculty-led instructional AI research project · 2026</p>
+      <p>HumeBot is an academic project and is not presented as an officially supported University service. See <a href="status.html">current status</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

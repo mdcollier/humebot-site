@@ -31,17 +31,17 @@
   </header>
   <main id="main">
     <h1>Current status</h1>
-    <p class="lede">The system is frozen, the evaluation design is fixed, the qualification question set is unspent, and the deployment is deliberately deferred until a pinned environment exists.</p>
+    <p class="lede">The semantic candidate — the configuration that defines how HumeBot answers — is frozen. The qualification methodology, sample, principal criteria, confidence rules and review architecture are fixed in advance. The qualification questions have intentionally not yet been written, and the deployment freeze is deferred until a pinned serving environment exists.</p>
 
     <div class="cols">
       <div>
         <h2 id="established">Established</h2>
         <ul>
           <li>A bounded scope: <cite>Enquiry</cite> Sections I–IX.</li>
-          <li>A frozen system configuration, with an automated check that detects any change.</li>
+          <li>A frozen semantic configuration, with an automated check that detects any change.</li>
           <li>Completed empirical development studies, including a 60-question held-out study.</li>
-          <li>An automated regression suite (1,205 tests).</li>
-          <li>A prospectively designed qualification methodology: 200 fresh questions (160 answerable, 40 testing the limits of the text), with principal criteria, confidence rules and review architecture fixed in advance.</li>
+          <li>1,205 automated tests, including a 53-test candidate regression suite.</li>
+          <li>A prospectively designed qualification methodology: a planned sample of 200 fresh questions (160 answerable, 40 testing the limits of the text), not yet written, with principal criteria, confidence rules and review architecture fixed in advance.</li>
         </ul>
       </div>
       <div>
@@ -71,13 +71,13 @@
         </tbody>
       </table>
     </div>
-    <p>The qualification questions have intentionally not yet been written, so they remain a fresh test. Reviewer instruments and sampling are frozen at a later step, before execution.</p>
+    <p>The qualification questions have intentionally not yet been written, so they remain a fresh test. Reviewer instruments and sampling will be frozen at the appropriate later pre-execution step.</p>
 
     <h2>What happens next</h2>
     <ol class="steps">
       <li>Identify a reproducible serving environment.</li>
       <li>Record its exact deployment identity: model checkpoint, numerical representation, inference engine and settings, tokenizer and chat template, context limit.</li>
-      <li>Deploy the frozen system there, unchanged.</li>
+      <li>Deploy the frozen semantic candidate there without substantive change.</li>
       <li>Run a small development sanity check.</li>
       <li>Freeze the combined system-and-deployment configuration.</li>
       <li>Only then write and run the fresh 200-question qualification.</li>

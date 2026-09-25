@@ -34,7 +34,7 @@
     <p class="lede">HumeBot is not an untested chatbot looking for somewhere to run. What it needs next is a reproducible place to run its formal qualification — ideally the same environment that could later support a controlled classroom pilot.</p>
 
     <h2>The ask</h2>
-    <p>A technical feasibility conversation: could University-supported infrastructure provide a small, pinned, reproducible deployment of an open-weight model, with sufficient context capacity, course-scoped access and appropriate storage for pseudonymous logs — and what constraints should shape it?</p>
+    <p>A technical feasibility conversation: could University-supported infrastructure provide a small, pinned, reproducible deployment of an open-weight model, with sufficient context capacity, course-scoped access and appropriate handling and storage for pseudonymous logs, subject to University governance — and what constraints should shape it?</p>
 
     <div class="cols">
       <div>
@@ -44,7 +44,7 @@
           <li>A reproducible, documented serving configuration.</li>
           <li>Sufficient context capacity.</li>
           <li>Course-scoped access.</li>
-          <li>Appropriate storage for pseudonymous interaction logs.</li>
+          <li>Appropriate handling and storage for pseudonymous interaction logs, subject to University governance.</li>
           <li>A way for faculty to review responses and failures.</li>
           <li>The University's standard security and privacy practices.</li>
         </ul>
@@ -73,7 +73,7 @@
           <tr><td>Model</td><td>Open-weight Gemma 4 31B</td></tr>
           <tr><td>Largest observed prompt</td><td>About 64,175 tokens (evidence selection reads all of Sections I–IX)</td></tr>
           <tr><td>Completion ceiling</td><td>4,096 tokens per call</td></tr>
-          <tr><td>Calls per question</td><td>Up to three sequential model calls; one identical retry only after a pure network failure</td></tr>
+          <tr><td>Calls per question</td><td>Up to three sequential model calls; one identical retry only after a pure transport failure in which no response content was received</td></tr>
           <tr><td>Recorded model usage per question</td><td>About 63,000 tokens in total across all calls (held-out study average) — an aggregate, not a single-call context requirement</td></tr>
           <tr><td>Context needed</td><td>Comfortably above about 68,000 tokens (largest prompt plus completion)</td></tr>
           <tr><td>Sampling</td><td>Temperature 0, JSON-formatted output</td></tr>

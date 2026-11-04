@@ -3,81 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evidence — HumeBot</title>
-  <meta name="description" content="The evidence HumeBot has accumulated so far: a 60-question held-out study, provenance and delivery results, a faculty audit, and 1,205 automated tests.">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="HumeBot">
-  <meta property="og:title" content="Evidence — HumeBot">
-  <meta property="og:description" content="The evidence HumeBot has accumulated so far: a 60-question held-out study, provenance and delivery results, a faculty audit, and 1,205 automated tests.">
+  <title>Superseded: Evidence so far — HumeBot</title>
+  <meta name="robots" content="noindex">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <header class="site">
     <div class="bar">
-      <a class="brand" href="index.html">HumeBot<span>Evidence-grounded instructional AI</span></a>
-      <nav aria-label="Main">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html">How it works</a></li>
-        <li><a href="evidence.html" aria-current="page">Evidence</a></li>
-        <li><a href="status.html">Current status</a></li>
-        <li><a href="university-it.html">University IT</a></li>
-        <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable reading of Hume</span></a>
     </div>
   </header>
+
   <main id="main">
-    <h1>Evidence so far</h1>
-    <p class="lede">HumeBot has been developed through controlled studies, each designed before it was run and each changing the design. None of them is the classroom qualification.</p>
-
-    <ul class="facts" aria-label="Headline evidence">
-      <li><span class="num">60</span><span class="lbl">newly authored questions in a held-out study, prepared under an isolated authoring process and screened before execution</span></li>
-      <li><span class="num">238 / 238</span><span class="lbl">of the constrained system's citations in that study were exact, valid and supported by the evidence it selected</span></li>
-      <li><span class="num">50 / 60</span><span class="lbl">held-out questions receiving a verified answer</span></li>
-      <li><span class="num">1,205</span><span class="lbl">automated tests, including a 53-test regression suite for the current system</span></li>
-      <li><span class="num">Frozen</span><span class="lbl">semantic configuration, with an automated check that detects any change</span></li>
-      <li><span class="num">200</span><span class="lbl">questions in a formal qualification study designed prospectively — not yet written or run</span></li>
-    </ul>
-
-    <h2>What the numbers mean</h2>
-    <h3>Provenance held on unseen questions</h3>
-    <p>In the 60-question held-out study, every one of the constrained system's 238 citations was Hume's exact wording, at a location that exists, supported by the evidence the answer actually relied on.</p>
-    <h3>Availability is a separate requirement</h3>
-    <p>The system gave a verified answer on 50 of the 60 held-out questions. The remaining 10 ended in visible non-answer states rather than being silently converted into unsupported answers. <strong>They are not counted as successful delivery.</strong> Provenance and answer availability are separate requirements, and the qualification study measures both.</p>
-    <h3>Better prompting was not enough</h3>
-    <p>A strongly prompted model given the whole text stopped inventing citation locations once told the citation format, but its quotations stayed roughly 86–92% exact across five samples. That is why quotation and provenance were placed under software control rather than trusted to the model.</p>
-    <h3>A faculty audit found what automated review missed</h3>
-    <p>A blinded audit of nine preselected response pairs by the project's faculty lead found both answers acceptable in five of nine, and identified two important omissions by the constrained system that automated review had not flagged — specific omissions, not pervasive interpretive failure. This is why the planned qualification includes a dedicated review for important omissions, and a faculty audit.</p>
-    <h3>Development evidence is not qualification evidence</h3>
-    <p>After the known failure types were addressed, the system gave a verified answer in 48 of 48 runs on the project's 24-question development set, run twice. <strong>That is development evidence only, not a qualification result.</strong> No qualification pass is claimed.</p>
-
-    <h2>Study chronology</h2>
-    <div class="table-wrap">
-      <table>
-        <caption>Principal studies to date. Each figure comes from the project's recorded study artifacts.</caption>
-        <thead><tr><th scope="col">Study</th><th scope="col">Scale</th><th scope="col">Principal finding</th><th scope="col">Consequence</th></tr></thead>
-        <tbody>
-          <tr><td>Diagnostic pilot</td><td>8 questions, 4 configurations</td><td>An ordinary prompted model misquoted 29 of 86 quoted strings; configurations with declared or software-built citations misquoted none.</td><td>Answer length treated as a confound; faculty time reserved for scholarly judgment.</td></tr>
-          <tr><td>Constrained system vs. strong prompt</td><td>24 questions</td><td>No interpretive winner; citation faults 12 of 51 for the prompted model, 0 of 89 for the constrained system.</td><td>Provenance, not better interpretation, identified as the demonstrated contribution.</td></tr>
-          <tr><td>Citation-format instruction</td><td>24 questions × 2</td><td>Invalid citation locations fell from 3 of 48 to 0 of 37; quotation accuracy did not improve.</td><td>Citation format and quotation accuracy recognized as separate problems.</td></tr>
-          <tr><td>Repeatability</td><td>3 runs × 24 questions</td><td>The constrained system's 250 citations had no faults; its delivery was stable at 21–22 of 24.</td><td>A larger held-out test justified.</td></tr>
-          <tr><td>Held-out generalization</td><td>60 new questions</td><td>238 of 238 citations exact, valid and supported; 50 of 60 verified answers.</td><td>Provenance and delivery measured separately.</td></tr>
-          <tr><td>Blinded faculty-lead audit</td><td>9 response pairs</td><td>Both acceptable in 5 of 9; two important omissions caught that automated review missed.</td><td>Omission review and faculty audit built into qualification.</td></tr>
-          <tr><td>Engineering cycle</td><td>53-test regression suite</td><td>Known failure types addressed without loosening the evidence rules.</td><td>System configuration frozen.</td></tr>
-          <tr><td>Development check</td><td>24 questions × 2</td><td>48 of 48 verified answers (development evidence only).</td><td>Development evidence only; not a qualification result.</td></tr>
-        </tbody>
-      </table>
+    <p class="kicker">Superseded page</p>
+    <h1>Evidence so far (September 2026)</h1>
+    <div class="notice" role="note">
+      <p><strong>This page has been retired.</strong> It was part of the September 2026 version of this site. In November 2026 the site was reorganized as a single home page, and this page no longer describes the project as it now stands.</p>
     </div>
-
+    <p>For current information, see <a href="index.html#status">Development status and future directions</a> on the HumeBot home page.</p>
   </main>
-  <footer class="site">
-    <div class="bar">
-      <p><strong>HumeBot</strong> · Faculty-led instructional AI research project · 2026</p>
-      <p>HumeBot is an academic project and is not presented as an officially supported University service. See <a href="status.html">current status</a>.</p>
-    </div>
-  </footer>
 </body>
 </html>

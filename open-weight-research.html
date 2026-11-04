@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-Weight Model Research — HumeBot</title>
+  <meta name="description" content="HumeBot's research on whether an open-weight language model, run on research computing and held fixed, can meet the project's standards of textual accountability.">
+  <link rel="canonical" href="https://mdcollier.github.io/humebot-site/open-weight-research.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable reading of Hume</span></a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#prototype">Prototype</a></li>
+          <li><a href="index.html#questions">Research questions</a></li>
+          <li><a href="open-weight-research.html" aria-current="page">Open-weight research</a></li>
+          <li><a href="index.html#demonstration">Demonstration</a></li>
+          <li><a href="index.html#materials">Materials</a></li>
+          <li><a href="index.html#status">Status</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <p class="kicker">A research direction of the HumeBot project</p>
+    <h1>Open-Weight Model Research</h1>
+    <p class="lede">Alongside its instructor-directed educational work, HumeBot studies whether an open-weight language model, one whose weights can be run on research computing and held fixed, can meet the project's standards of textual accountability, and what that would take.</p>
+
+    <div class="notice" role="note">
+      <p><strong>Research, not deployment.</strong> No model, open-weight or commercial, is qualified for classroom use, and no model or deployment pathway has been chosen for teaching.</p>
+    </div>
+
+    <section id="why" aria-labelledby="why-h">
+      <h2 id="why-h">Why open weights</h2>
+      <ul>
+        <li><strong>Reproducibility.</strong> A study can name the exact model version it used and be run again against identical weights, independent of a provider's update schedule.</li>
+        <li><strong>Experimental control.</strong> The model can be held fixed while one part of the system changes. On research computing it runs locally, with no outside service in the loop, and everything it was given is logged.</li>
+        <li><strong>Possible institutional hosting.</strong> An open-weight model could in principle run inside institutional infrastructure, which may matter for student privacy and institutional control. Whether that can work for a course has not been established.</li>
+      </ul>
+    </section>
+
+    <section id="model" aria-labelledby="model-h">
+      <h2 id="model-h">The model and the computing</h2>
+      <p>Most of this work uses <a href="https://huggingface.co/google/gemma-4-31B-it">Gemma 4 31B</a>, an open-weight instruction model from Google, run through HumeBot's three-stage harness.</p>
+      <ul>
+        <li>The formal qualification attempt of October 2026, and a series of development studies that month, ran on GPUs at the University of Minnesota's <a href="https://msi.umn.edu/">Minnesota Supercomputing Institute</a> (MSI). The model was served on MSI's own hardware, not through an outside service.</li>
+        <li>Earlier controlled comparisons used the same model through the research inference service of the Argonne Leadership Computing Facility.</li>
+      </ul>
+    </section>
+
+    <section id="studied" aria-labelledby="studied-h">
+      <h2 id="studied-h">What has been studied</h2>
+
+      <h3>Evidence selection</h3>
+      <p>Can the model find the passages an answer needs? In a 24-question study, with all 216 units of the corpus in view and no search index, the evidence-selection stage found evidence for 61 of 63 requirements. Its clearest weakness was relating passages: it could hold the right two passages, mark the relation between them unresolved, and so decline to answer. Later development experiments on MSI found that giving the selector more information about the question changed which passages it chose, but not how much of the essential evidence it found.</p>
+
+      <h3>Explanation quality and inferential reasoning</h3>
+      <p>On a 36-question development set, the open-weight system delivered verified answers to 35. In development grading, fewer than half were free of a material problem, and four contained serious scholarly errors. Keeping the rest of the system the same, a much larger open-weight model (Qwen3.5-397B) as the writer repaired some omissions of evidence. It did not repair errors of scope, in which an answer misstates how conditional or provisional one of Hume's claims is.</p>
+
+      <h3>Comparisons across models</h3>
+      <ul>
+        <li><strong>Two open-weight models.</strong> On the same frozen questions, reviewers judged gpt-oss-120b's interpretations the richest when it was prompted directly, but most of its citations were faulty, and inside the harness it answered only half the questions. Gemma 4 31B remained the strongest configuration tested, which did not qualify it.</li>
+        <li><strong>Open-weight and frontier.</strong> In the same harness, a frontier model, Claude Opus 5.5, reached through its provider's service, produced only exact citations in that sample: all 442 were exact. Prompted directly, it quoted exactly in that sample too, and the harness did not improve its fidelity. In a small pilot on five questions chosen because Gemma had struggled with them, the frontier model's answers were better, with or without the harness. That sample was chosen to probe weaknesses, so it shows where the open-weight model falls short, not by how much.</li>
+      </ul>
+    </section>
+
+    <section id="verification" aria-labelledby="verification-h">
+      <h2 id="verification-h">Verification is not correctness</h2>
+      <p>In studies with Gemma 4 31B, the harness produced no faulty citations: none of 89 in a 24-question comparison, none of 250 across three repeated runs, and none of 238 on 60 newly written questions. These results establish exactness in those experiments; they are not a general guarantee of how any model will perform. Prompted directly with the whole text, the same model quoted exactly only about 86–92% of the time. The difference is architectural. The software builds every displayed quotation from the controlled text, so a misquotation is caught and withheld rather than shown.</p>
+      <p>This verification concerns Hume's words and where they stand. It does not show that a passage supports what an explanation says, or that the explanation reads Hume correctly: an answer can quote exactly and still misread him. Interpretive quality is judged by people, and the experiments have not shown that the harness makes the model interpret Hume better.</p>
+    </section>
+
+    <section id="qualification" aria-labelledby="qualification-h">
+      <h2 id="qualification-h">Qualification and its limits</h2>
+      <p>In October 2026, a frozen configuration built on Gemma 4 31B went through a formal qualification attempt on MSI, running all 170 of a set of newly written questions, with repeats. The attempt returned NOT_ELIGIBLE at its evidence-eligibility gate, the check that decides whether a run's evidence can go forward to scholarly review. No scholarly review followed, so it established neither a PASS nor a FAIL. The question set is now used, and a redesigned attempt, which would need a fresh set of similar size, exists only as a plan. No system is qualified.</p>
+      <p>Beyond exact citation in these experiments, what they have established is mostly a set of limits:</p>
+      <ul>
+        <li>quotation fidelity is a weakness of the model itself, which the harness contains but does not cure;</li>
+        <li>omissions, relating passages, and keeping the scope of Hume's claims are recurring weaknesses in the open-weight model's explanations;</li>
+        <li>verification cannot tell when an exactly quoted passage is the wrong evidence for a claim.</li>
+      </ul>
+      <p>All of these results come from small samples and particular model versions. They are directional, not population estimates.</p>
+    </section>
+
+    <section id="post-training" aria-labelledby="post-training-h">
+      <h2 id="post-training-h">Post-training</h2>
+      <p>Post-training adapts a model after its original training, for example by supervised fine-tuning or preference learning. These methods can update the model's own weights or, with LoRA, train a small set of added adapter weights: LoRA generally leaves the base model's weights frozen. HumeBot treats post-training as a research question, governed by rules set in advance:</p>
+      <ul>
+        <li>training may target how a model uses evidence, reasons and explains, learning from reviewed expert feedback, but never Hume's text itself or memorized answers;</li>
+        <li>any fine-tuned model or trained adapter is a new candidate, to be frozen and evaluated afresh;</li>
+        <li>training, development and evaluation material are kept apart, so that no test is contaminated.</li>
+      </ul>
+      <p>The first exploratory study, in October 2026 on MSI, tried to build training examples automatically from public question-answering datasets unrelated to Hume. It stopped before any training. The datasets' labels were adequate for checking an answer, but in many cases did not establish the relation HumeBot's evidence standard requires, so the procedure could not produce enough trustworthy examples. A design for LoRA-based training was drafted, but no method has been adopted.</p>
+      <p><strong>The October study produced no trained model or adapter, and no improvement from post-training has been demonstrated in HumeBot.</strong></p>
+    </section>
+
+    <section id="complements" aria-labelledby="complements-h">
+      <h2 id="complements-h">How this complements the instructor-directed work</h2>
+      <p>The instructor-directed work asks whether an instructor's reconstruction of an argument can improve explanations while keeping Hume's text, the course's reading and the model's explanation distinct. The open-weight work asks whether a model that can be hosted, inspected and held fixed can meet the same textual standards, and where it falls short.</p>
+      <p>The harness is not tied to one model, so what one line learns about evidence, explanation and failure informs the other. The two lines need not use the same model. Which model would serve a course, and whether it would be hosted by the University or reached through a commercial service, has not been decided.</p>
+      <p>No HumeBot papers or public experiment records on this work have been released yet. <a href="index.html">Return to the HumeBot home page</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="bar">
+      <p><strong>HumeBot</strong> · A faculty-led research project · 2026</p>
+      <p>Reviewed November 2026. This site sets no cookies and uses no analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -3,66 +3,258 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HumeBot</title>
-  <meta name="description" content="HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's Enquiry concerning Human Understanding.">
+  <title>HumeBot — Instructor-directed, evidence-accountable reading of Hume</title>
+  <meta name="description" content="HumeBot is a faculty-led research project building an instructor-directed, evidence-accountable environment for reading and inquiry into David Hume's Enquiry concerning Human Understanding.">
+  <link rel="canonical" href="https://mdcollier.github.io/humebot-site/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HumeBot">
-  <meta property="og:title" content="HumeBot">
-  <meta property="og:description" content="HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's Enquiry concerning Human Understanding.">
+  <meta property="og:title" content="HumeBot — Instructor-directed, evidence-accountable reading of Hume">
+  <meta property="og:description" content="A faculty-led research project on instructor-directed, evidence-accountable philosophical reading and inquiry, beginning with Hume's Enquiry.">
+  <meta property="og:url" content="https://mdcollier.github.io/humebot-site/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
   <header class="site">
     <div class="bar">
-      <a class="brand" href="index.html">HumeBot<span>Evidence-grounded instructional AI</span></a>
-      <nav aria-label="Main">
+      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable reading of Hume</span></a>
+      <nav aria-label="Site">
         <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="how-it-works.html">How it works</a></li>
-        <li><a href="evidence.html">Evidence</a></li>
-        <li><a href="status.html">Current status</a></li>
-        <li><a href="university-it.html">University IT</a></li>
-        <li><a href="about.html">About</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#prototype">Prototype</a></li>
+          <li><a href="#questions">Research questions</a></li>
+          <li><a href="open-weight-research.html">Open-weight research</a></li>
+          <li><a href="#demonstration">Demonstration</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#status">Status</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main id="main">
-    <p class="kicker">A faculty-led academic project</p>
+
+    <p class="kicker">A faculty-led research project</p>
     <h1>HumeBot</h1>
-    <p class="lede">HumeBot is a faculty-led, evidence-grounded instructional AI resource that helps students work directly with David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
-    <div class="callout">
-      <p>It is a <strong>supplement</strong> to the professor and the primary text — a further place to ask questions between classes. Its current scope is <strong><cite>Enquiry</cite> Sections I–IX</strong>. It is <strong>not</strong> an autonomous instructor, a grading system or a general-purpose chatbot.</p>
+    <p class="lede">An instructor-directed, evidence-accountable environment for reading and inquiry into David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
+
+    <blockquote class="principle">
+      <p>The instructor, not the model, directs the pedagogy. And every interpretation, the instructor's as much as the model's, stays answerable to Hume's text.</p>
+    </blockquote>
+
+    <div class="notice" role="note">
+      <p><strong>A research prototype.</strong> HumeBot has not been deployed, and no student has used it. It is an academic project, not a University service.</p>
     </div>
 
-    <h2>The educational problem</h2>
-    <p>A general-purpose chatbot can give a fluent, confident answer about a philosophical text while misquoting it or citing passages that do not say what it claims. In a course built on close reading of a primary text, students may not be able to distinguish a reliable response from a plausible-sounding one, and instructors may have little visibility into what the answer rested on.</p>
+    <section id="overview" aria-labelledby="overview-h">
+      <h2 id="overview-h">Overview</h2>
+      <p>General-purpose AI systems now produce fluent interpretations of philosophical texts. They can also misquote a text, cite passages that do not say what is claimed, present contested readings as settled, and quietly take over judgments that belong to instructors and students. In a philosophy course, learning to read an argument closely is the point, so these are not cosmetic faults.</p>
+      <p>HumeBot is being built for that setting. A student asks a question about the <cite>Enquiry</cite> and receives a substantive explanation, shown beside the passages of Hume it cites, in Hume's exact words, so that the student can check the reasoning against the text. It is meant to supplement the professor and the book, not to replace either. It is not an autonomous tutor, a grading system or a general-purpose chatbot.</p>
+      <p>HumeBot grows out of the <a href="https://mdcollier.github.io/glass-box-tutor-site/">Glass-Box AI Tutor</a>, a related project built on the principle that the instructor, not the model, sets the teaching policy. HumeBot proposes to extend that principle from pedagogy to interpretation.</p>
+      <ul>
+        <li>The proposed next step, not yet built, would let an instructor supply a provisional reconstruction of an argument to guide explanations.</li>
+        <li>Such a reconstruction would remain open to textual evidence, to students' challenges, and to revision.</li>
+      </ul>
+    </section>
 
-    <h2>What is different</h2>
-    <p>HumeBot answers only from a controlled copy of the text. A separate step selects the passages an answer needs, and the answer is written from those passages alone. Quotations are created by the software, not by the AI model, so every quotation a student sees is Hume's exact text at a location that can be checked. Automatic rules check the structure of the evidence and its provenance before anything is shown, and when the system cannot support an answer it says so visibly instead of guessing. <a href="how-it-works.html">How it works</a>.</p>
+    <section id="approach" aria-labelledby="approach-h">
+      <h2 id="approach-h">Research approach</h2>
+      <p>Five commitments work together.</p>
+      <dl class="commitments">
+        <dt>A controlled text</dt>
+        <dd>HumeBot works from a controlled pilot corpus: the <cite>Enquiry</cite>, Sections I–IX, in 216 textual units, transcribed from the public-domain 1777 edition. The project's engineering baseline has tested that this corpus can be rebuilt deterministically. A canonical corpus release, and several tasks that consolidate its archival provenance, are not yet finished.</dd>
+        <dt>Deterministic citations</dt>
+        <dd>The software, not the AI model, builds every quotation a reader sees, from the controlled text at a location that can be checked. Anything that fails verification is withheld rather than shown.</dd>
+        <dt>Evidence-accountable explanations</dt>
+        <dd>Each sentence of an explanation cites displayed passages, so that a reader can test it against the text. The software checks that every citation points to text actually displayed. It does not check that the passage supports what the sentence says: a citation locates the evidence to examine, and does not prove the interpretation.</dd>
+        <dt>Instructor direction</dt>
+        <dd>The instructor sets the course's objectives and its norms for engaging the text. The proposed next step, not yet built, is to let an instructor supply provisional reconstructions of arguments to guide explanations. These would be attributed to the instructor, kept apart from Hume's text, and never treated as evidence for what Hume says.</dd>
+        <dt>Critical inquiry</dt>
+        <dd>Readings are there to be examined, not simply accepted. Questions, objections and alternative interpretations can be attached to a particular sentence of a reading or a particular paragraph of Hume.</dd>
+      </dl>
 
-    <h2>Evidence so far</h2>
-    <ul class="facts" aria-label="Headline evidence">
-      <li><span class="num">238 / 238</span><span class="lbl">citations exact, valid and supported in the constrained system's 60-question held-out study</span></li>
-      <li><span class="num">50 / 60</span><span class="lbl">held-out questions receiving a verified answer</span></li>
-      <li><span class="num">1,205</span><span class="lbl">automated tests</span></li>
-      <li><span class="num">200</span><span class="lbl">fresh questions planned for formal qualification — not yet written or run</span></li>
-    </ul>
-    <p>The 10 held-out questions without a verified answer ended in visible non-answer states rather than being silently converted into unsupported answers. They are not counted as successes: accurate provenance and answer availability are separate requirements, which is one reason formal qualification is still needed. <strong>No qualification pass is claimed.</strong> <a href="evidence.html">The evidence in detail</a>.</p>
+      <figure>
+        <p class="figure-title" id="contributions-title">Four contributions, kept distinct</p>
+        <ul class="cards" aria-labelledby="contributions-title">
+          <li>
+            <span class="tag">Built</span>
+            <h3>Hume's text</h3>
+            <p>What Hume wrote, and where, verified against the controlled corpus.</p>
+          </li>
+          <li>
+            <span class="tag later">Proposed next step</span>
+            <h3>The instructor</h3>
+            <p>The framework that organizes a course, including provisional reconstructions. These would be attributed to the instructor and open to revision.</p>
+          </li>
+          <li>
+            <span class="tag">Development build</span>
+            <h3>HumeBot's explanation</h3>
+            <p>An answer to a particular question, anchored to the displayed passages. It is fallible, and labelled as interpretation.</p>
+          </li>
+          <li>
+            <span class="tag">Synthetic prototype</span>
+            <h3>Students</h3>
+            <p>Questions, objections and alternative interpretations, and eventually reconstructions of their own.</p>
+          </li>
+        </ul>
+        <figcaption>Verification establishes the identity and location of Hume's words. It does not establish that any interpretation of them is correct, whether HumeBot's or the instructor's.</figcaption>
+      </figure>
+    </section>
 
-    <h2>Where the project stands</h2>
-    <p>The system's semantic configuration is frozen, with an automated check that detects any change, and a formal 200-question qualification study has been designed prospectively. The qualification has deliberately not been run yet. <a href="status.html">Current status</a>.</p>
+    <section id="prototype" aria-labelledby="prototype-h">
+      <h2 id="prototype-h">The existing prototype</h2>
+      <div class="notice" role="note">
+        <p><strong>Experimental, and not deployed.</strong> Everything described here runs only in a development environment, with synthetic identities and test or recorded data. No real student has used it. No version is qualified for classroom use.</p>
+      </div>
+      <ul class="entries">
+        <li>
+          <span class="tag">Development software</span>
+          <h3>The HumeBot harness</h3>
+          <p>The harness answers a question in three stages:</p>
+          <ol>
+            <li>it works out what an adequate answer requires;</li>
+            <li>it selects evidence from the text;</li>
+            <li>it writes the explanation from that evidence alone.</li>
+          </ol>
+          <p>It is not tied to one AI model. Development has used open-weight models and commercial frontier models; see <a href="open-weight-research.html">Open-weight model research</a>.</p>
+        </li>
+        <li>
+          <span class="tag">Release candidate · not deployed</span>
+          <h3>The Reading Desk</h3>
+          <p>A web application that shows HumeBot's reading beside whole paragraphs of Hume's verified text. It highlights exactly which words each sentence cites, and before displaying an answer it re-checks the answer's quotations, their locations and its citations against the corpus. Instructors get an evidence inspector showing which evidence was supplied for each answer, which was selected, and which each sentence cites.</p>
+          <p>It has not been deployed or approved for student use.</p>
+        </li>
+        <li>
+          <span class="tag">Experimental · synthetic data only</span>
+          <h3>The Course Reading Commons</h3>
+          <p>A development feature for discussing readings within a course:</p>
+          <ul>
+            <li>A reader can deliberately share a verified reading with their course.</li>
+            <li>Classmates and the instructor can attach questions, objections and alternative interpretations to particular sentences or paragraphs. These can include passages the reading left out.</li>
+            <li>Contributions are attributed, and the prototype keeps a record of every contribution and moderation step.</li>
+            <li>Nothing is ranked or voted on, and the instructor can moderate.</li>
+          </ul>
+          <p>That record is how the prototype behaves, not an adopted policy. How long contributions are kept, how they can be deleted, how moderation works and what privacy protections apply must all be settled before any classroom use.</p>
+          <p>It has been exercised only with synthetic participants, and it is not ready for classroom use.</p>
+        </li>
+      </ul>
+    </section>
 
-    <h2>Why University infrastructure is relevant</h2>
-    <p>The formal qualification should be run on the deployment that could plausibly become the classroom deployment: an open-weight model whose exact version and configuration are pinned and documented, under University access, privacy and security controls. The external research service used for development does not expose the model details needed for that, so a University-supported environment is the next enabling step. <a href="university-it.html">For University IT</a>.</p>
+    <section id="questions" aria-labelledby="questions-h">
+      <h2 id="questions-h">Research questions</h2>
+      <p>The research asks how intellectual authority should be shared among instructor, student and AI, and whether that sharing can be made visible and accountable.</p>
+      <ol class="questions">
+        <li><strong>Instructor-guided philosophical explanation.</strong> Does an instructor's reviewed, provisional reconstruction make HumeBot's explanations more faithful to the text and more intelligible as arguments? Can it do so without attributing the instructor's reading to Hume, and without bending the text to fit it?</li>
+        <li><strong>Interpretive fidelity and accountability.</strong> How can Hume's text, the course's reading, the model's explanation and a student's interpretation be kept distinguishable in every answer? And can a contested reading be presented faithfully while remaining genuinely open to challenge?</li>
+        <li><strong>Contestable reconstructions and student reasoning.</strong> When students can see, question and help revise reconstructions, does their capacity to reconstruct unfamiliar arguments for themselves develop? Answering this needs classroom research under institutional approval, which has not begun.</li>
+      </ol>
+      <p><strong>The first case</strong> is the instructor's own teaching of Hume's problem of induction (<cite>Enquiry</cite> <span class="nowrap">IV–V</span>).</p>
+      <ul>
+        <li>It begins with a careful philosophical conversation about that treatment of the argument.</li>
+        <li>Only once that conversation has produced a reconstruction the instructor regards as faithful will the reconstruction be used to guide any explanation.</li>
+        <li>Negative results will count as findings.</li>
+      </ul>
+      <p class="pointer"><strong>A distinct research direction.</strong> <a href="open-weight-research.html">Open-weight model research</a> asks whether a model that can be run on research computing and held fixed can meet these same textual standards, and what that would take.</p>
+    </section>
+
+    <section id="demonstration" aria-labelledby="demonstration-h">
+      <h2 id="demonstration-h">Demonstration</h2>
+      <p>No public demonstration is available. The Reading Desk runs only as a local development build, and it is not hosted anywhere that students or the public can reach.</p>
+      <div class="notice" role="note">
+        <p><strong>Synthetic development demonstration.</strong> The screenshots below come from that development build. The course, its students and its instructor are synthetic, and the questions and answers are recorded development material, replayed and re-checked against the corpus. HumeBot's readings in them are its own interpretations and may be mistaken.</p>
+      </div>
+      <p class="small">Select a screenshot to open it at full size.</p>
+      <div class="gallery">
+        <figure class="shot">
+          <a href="assets/screenshots/reading-beside-text.png"><img src="assets/screenshots/reading-beside-text.png" width="1440" height="900" loading="lazy" alt="A Reading Desk screen in two panes. On the left, HumeBot's reading of a recorded question about Hume's account of the will, labelled as interpretation, with paragraph markers such as 7.10, 7.14 and 7.15 after its sentences. On the right, Hume's text, labelled as verified against the corpus, with a list of the paragraphs the reading cites and a map of Section VII."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>An explanation beside Hume's text.</strong> HumeBot's reading, on the left, is labelled as interpretation, and each sentence carries markers for the paragraphs it cites. The right-hand pane shows those paragraphs in full, lists them, and maps where they sit in Section VII.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/screenshots/commons-discussion.png"><img src="assets/screenshots/commons-discussion.png" width="1440" height="900" loading="lazy" alt="A course discussion of a shared reading. On the left, Synthetic Student B objects that sentence 6 of HumeBot's reading leaves out Hume's premise “But consciousness never deceives” from paragraph 7.13, and Synthetic Student A offers an alternative interpretation of that paragraph. On the right, the full text of paragraph 7.13, with the words the reading cites underlined and the paragraph's page and leaf in the 1777 edition."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>A synthetic course discussion.</strong> One synthetic student objects that a sentence of HumeBot's reading leaves out a premise Hume states; another offers an alternative interpretation of the paragraph. On the right, the cited paragraph appears in full, with the words the reading cites underlined and its page in the 1777 edition.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/screenshots/question-on-unshown-paragraph.png"><img src="assets/screenshots/question-on-unshown-paragraph.png" width="1440" height="900" loading="lazy" alt="A course discussion of a reading on Section IV. On the left, Synthetic Student B attaches a question to paragraph 4.18, which the reading does not show, asking where Hume carries out the survey that paragraph 4.17 promises. On the right, Hume's text, labelled as verified against the corpus, with the paragraphs the reading cites and a map of Section IV that marks the paragraph with a contribution."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>Questioning the choice of evidence.</strong> Readers can open any paragraph of a section in place, including paragraphs a reading did not use, and attach a question to it. Here a synthetic student asks about a paragraph the reading left out.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="materials" aria-labelledby="materials-h">
+      <h2 id="materials-h">Research materials</h2>
+      <ul class="materials">
+        <li><strong>HumeBot publications.</strong> None yet. Public summaries and papers will be listed here once they have been completed and reviewed for release.</li>
+        <li><strong>The related project.</strong> The Glass-Box AI Tutor site publishes <a href="https://mdcollier.github.io/glass-box-tutor-site/reports.html">reports</a> on that project's design, deployment and course adaptation.</li>
+        <li><strong>The text.</strong> HumeBot's corpus is transcribed from the public-domain 1777 edition of Hume's <cite>Essays and Treatises on Several Subjects</cite>. The project gratefully acknowledges <a href="https://davidhume.org/">Hume Texts Online</a>, edited by Amyas Merivale and Peter Millican. Its scholarship informed the project, and HumeBot's passage identifiers follow its paragraph numbering.</li>
+      </ul>
+    </section>
+
+    <section id="status" aria-labelledby="status-h">
+      <h2 id="status-h">Development status and future directions</h2>
+      <div class="columns">
+        <div>
+          <h3>Now: a Hume-specific research system</h3>
+          <ul>
+            <li><strong>Scope:</strong> <cite>Enquiry</cite> Sections I–IX.</li>
+            <li><strong>Built, as development software:</strong>
+              <ul>
+                <li>the controlled pilot corpus;</li>
+                <li>deterministic verification;</li>
+                <li>explanations that keep Hume's text and HumeBot's reading apart;</li>
+                <li>the three-stage harness;</li>
+                <li>the Reading Desk release candidate;</li>
+                <li>the synthetic Commons prototype.</li>
+              </ul>
+            </li>
+            <li><strong>Demonstrated:</strong> exact citation in the experiments described. The software builds every displayed quotation from the controlled text and withholds what it cannot verify. That concerns whether quotations are exact, correctly located and anchored in the displayed text, not whether the cited passages support the interpretation. The figures establish exactness in these experiments; they are not a general guarantee of any model's performance.
+              <ul>
+                <li>In a 24-question comparison in which both systems used the same open-weight model, the harness made no faulty citations in 89. The same model, strongly prompted and given the whole text, made 12 faulty citations in 51.</li>
+                <li>In a 60-question held-out study, all 238 of the harness's citations were exact and valid, and every one came from the evidence supplied for the answer.</li>
+              </ul>
+            </li>
+            <li><strong>Not shown:</strong>
+              <ul>
+                <li>that HumeBot interprets Hume better than a well-prompted model;</li>
+                <li>that it improves learning;</li>
+                <li>that any version is ready for classroom use. A formal qualification attempt in October 2026 returned NOT_ELIGIBLE at its evidence-eligibility gate, the check that decides whether a run's evidence can go forward to scholarly review. No scholarly review followed, so the attempt established neither a PASS nor a FAIL, and no system is qualified for classroom deployment.</li>
+              </ul>
+            </li>
+            <li><strong>Next:</strong> the first case on induction, described above.</li>
+          </ul>
+        </div>
+        <div class="later">
+          <h3>Later: possibilities, not results</h3>
+          <ul>
+            <li><strong>A home for contestable reconstructions.</strong> The Course Reading Commons could hold instructors' and students' reconstructions as visible, versioned work, open to challenge.</li>
+            <li><strong>Other instructors, texts and interpretive traditions.</strong> Success with one instructor would not show that the approach works for others.</li>
+            <li><strong>A possible licensable, instructor-configurable application.</strong> This would raise its own questions: ownership of course materials, privacy, accessibility and support. It is separate from the research, and not established by it.</li>
+            <li><strong>Formal reasoning tools.</strong> Such tools would check the validity and consequences of formalizations that an instructor or student supplies. A valid formalization can still misrepresent the text. Automated reconstruction of informal arguments is a separate, exploratory question.</li>
+          </ul>
+          <p class="small">Nothing in this column is built or scheduled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact and affiliation</h2>
+      <address>
+        <strong>Mark Collier</strong>, faculty lead<br>
+        Professor of Philosophy, University of Minnesota Morris<br>
+        <a href="mailto:mcollier@morris.umn.edu">mcollier@morris.umn.edu</a>
+      </address>
+      <p>Researchers, faculty colleagues and others interested in the project are welcome to get in touch.</p>
+      <p class="small">HumeBot is a faculty research project. It is not an official University of Minnesota service, and nothing on this site should be read as University sponsorship or endorsement.</p>
+    </section>
 
   </main>
+
   <footer class="site">
     <div class="bar">
-      <p><strong>HumeBot</strong> · Faculty-led instructional AI research project · 2026</p>
-      <p>HumeBot is an academic project and is not presented as an officially supported University service. See <a href="status.html">current status</a>.</p>
+      <p><strong>HumeBot</strong> · A faculty-led research project · 2026</p>
+      <p>Reviewed November 2026. This site sets no cookies and uses no analytics.</p>
     </div>
   </footer>
 </body>

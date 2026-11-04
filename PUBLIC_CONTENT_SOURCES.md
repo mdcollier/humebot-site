@@ -53,3 +53,5 @@ When a source document changes, update the affected sections by hand and record 
 - 2026-11-03: Open-Weight Model Research page added.
 - 2026-11-03: corrections from the faculty lead's review of revision 2: linked full-size screenshots, post-training
   wording, citation results scoped to their experiments, instructor reconstructions described as the proposed next step.
+- 2026-11-03: editorial revision: the home page's opening and Overview; citation figures stated with what they count;
+  the open-weight page's qualifications of reproducibility, hosting, judged quality and the scope of comparisons.

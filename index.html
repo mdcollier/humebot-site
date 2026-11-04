@@ -39,25 +39,24 @@
 
     <p class="kicker">A faculty-led research project</p>
     <h1>HumeBot</h1>
-    <p class="lede">An instructor-directed, evidence-accountable environment for reading and inquiry into David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
+    <p class="lede">Instructor-directed AI for evidence-accountable philosophical inquiry</p>
+    <p>HumeBot is a research project developing an AI-supported environment for reading, interpreting, and critically examining David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
 
     <blockquote class="principle">
-      <p>The instructor, not the model, directs the pedagogy. And every interpretation, the instructor's as much as the model's, stays answerable to Hume's text.</p>
+      <p>Instructors direct the pedagogy. Interpretations—whether produced by instructors, students, or AI—remain answerable to the philosophical text and open to criticism.</p>
     </blockquote>
 
     <div class="notice" role="note">
-      <p><strong>A research prototype.</strong> HumeBot has not been deployed, and no student has used it. It is an academic project, not a University service.</p>
+      <p><strong>Research prototype.</strong> HumeBot has not been deployed, and no student has used it. It is not an official University of Minnesota service.</p>
     </div>
 
     <section id="overview" aria-labelledby="overview-h">
       <h2 id="overview-h">Overview</h2>
-      <p>General-purpose AI systems now produce fluent interpretations of philosophical texts. They can also misquote a text, cite passages that do not say what is claimed, present contested readings as settled, and quietly take over judgments that belong to instructors and students. In a philosophy course, learning to read an argument closely is the point, so these are not cosmetic faults.</p>
-      <p>HumeBot is being built for that setting. A student asks a question about the <cite>Enquiry</cite> and receives a substantive explanation, shown beside the passages of Hume it cites, in Hume's exact words, so that the student can check the reasoning against the text. It is meant to supplement the professor and the book, not to replace either. It is not an autonomous tutor, a grading system or a general-purpose chatbot.</p>
-      <p>HumeBot grows out of the <a href="https://mdcollier.github.io/glass-box-tutor-site/">Glass-Box AI Tutor</a>, a related project built on the principle that the instructor, not the model, sets the teaching policy. HumeBot proposes to extend that principle from pedagogy to interpretation.</p>
-      <ul>
-        <li>The proposed next step, not yet built, would let an instructor supply a provisional reconstruction of an argument to guide explanations.</li>
-        <li>Such a reconstruction would remain open to textual evidence, to students' challenges, and to revision.</li>
-      </ul>
+      <p>Generative AI can produce fluent explanations of philosophical texts, but fluency is not the same as philosophical understanding. A model may misquote a passage, overlook an important argumentative relationship, or present a contested interpretation as settled. These limitations matter especially in philosophy, where learning to examine arguments and their textual foundations is central to the educational task.</p>
+      <p>HumeBot investigates a different approach. Its development prototype presents AI-generated explanations alongside verified passages of Hume's text, allowing readers to examine the evidence for themselves. It is designed to support philosophical teaching and inquiry, not to replace instructors, primary texts, or students' independent judgment.</p>
+      <p>The project builds on the <a href="https://mdcollier.github.io/glass-box-tutor-site/">Glass-Box AI Tutor</a>, which places pedagogical decisions under instructor direction rather than delegating them to a language model.</p>
+      <p>HumeBot proposes to extend that principle to philosophical interpretation. Instructors could supply provisional reconstructions of arguments to guide explanations, while keeping those reconstructions visible, attributable, revisable, and open to student challenge.</p>
+      <p>That instructor-guidance capability remains a proposed research direction, not an implemented feature.</p>
     </section>
 
     <section id="approach" aria-labelledby="approach-h">
@@ -125,7 +124,6 @@
           <span class="tag">Release candidate · not deployed</span>
           <h3>The Reading Desk</h3>
           <p>A web application that shows HumeBot's reading beside whole paragraphs of Hume's verified text. It highlights exactly which words each sentence cites, and before displaying an answer it re-checks the answer's quotations, their locations and its citations against the corpus. Instructors get an evidence inspector showing which evidence was supplied for each answer, which was selected, and which each sentence cites.</p>
-          <p>It has not been deployed or approved for student use.</p>
         </li>
         <li>
           <span class="tag">Experimental · synthetic data only</span>
@@ -151,6 +149,7 @@
         <li><strong>Interpretive fidelity and accountability.</strong> How can Hume's text, the course's reading, the model's explanation and a student's interpretation be kept distinguishable in every answer? And can a contested reading be presented faithfully while remaining genuinely open to challenge?</li>
         <li><strong>Contestable reconstructions and student reasoning.</strong> When students can see, question and help revise reconstructions, does their capacity to reconstruct unfamiliar arguments for themselves develop? Answering this needs classroom research under institutional approval, which has not begun.</li>
       </ol>
+      <p>The longer-term educational goal is for students to progress from examining provisional reconstructions offered by instructors and AI toward developing, defending, and revising their own interpretations of philosophical arguments. This is a proposed pedagogical outcome, not an established result.</p>
       <p><strong>The first case</strong> is the instructor's own teaching of Hume's problem of induction (<cite>Enquiry</cite> <span class="nowrap">IV–V</span>).</p>
       <ul>
         <li>It begins with a careful philosophical conversation about that treatment of the argument.</li>
@@ -162,7 +161,7 @@
 
     <section id="demonstration" aria-labelledby="demonstration-h">
       <h2 id="demonstration-h">Demonstration</h2>
-      <p>No public demonstration is available. The Reading Desk runs only as a local development build, and it is not hosted anywhere that students or the public can reach.</p>
+      <p>No public interactive demonstration is currently available. The Reading Desk runs only as a local development build, and it is not hosted anywhere that students or the public can reach.</p>
       <div class="notice" role="note">
         <p><strong>Synthetic development demonstration.</strong> The screenshots below come from that development build. The course, its students and its instructor are synthetic, and the questions and answers are recorded development material, replayed and re-checked against the corpus. HumeBot's readings in them are its own interpretations and may be mistaken.</p>
       </div>
@@ -211,7 +210,7 @@
             </li>
             <li><strong>Demonstrated:</strong> exact citation in the experiments described. The software builds every displayed quotation from the controlled text and withholds what it cannot verify. That concerns whether quotations are exact, correctly located and anchored in the displayed text, not whether the cited passages support the interpretation. The figures establish exactness in these experiments; they are not a general guarantee of any model's performance.
               <ul>
-                <li>In a 24-question comparison in which both systems used the same open-weight model, the harness made no faulty citations in 89. The same model, strongly prompted and given the whole text, made 12 faulty citations in 51.</li>
+                <li>In a 24-question comparison in which both systems used the same open-weight model, the harness made no faulty citations in 89. The same model, strongly prompted and given the whole text, made 12 faulty citations in 51: 8 quotations not found in the passage cited, and 4 references to passages that do not exist.</li>
                 <li>In a 60-question held-out study, all 238 of the harness's citations were exact and valid, and every one came from the evidence supplied for the answer.</li>
               </ul>
             </li>
@@ -219,7 +218,7 @@
               <ul>
                 <li>that HumeBot interprets Hume better than a well-prompted model;</li>
                 <li>that it improves learning;</li>
-                <li>that any version is ready for classroom use. A formal qualification attempt in October 2026 returned NOT_ELIGIBLE at its evidence-eligibility gate, the check that decides whether a run's evidence can go forward to scholarly review. No scholarly review followed, so the attempt established neither a PASS nor a FAIL, and no system is qualified for classroom deployment.</li>
+                <li>that any version is ready for classroom use. The October 2026 qualification attempt returned NOT_ELIGIBLE at its evidence-eligibility gate, before scholarly review. It established neither a pass nor a fail. No system is qualified for classroom use.</li>
               </ul>
             </li>
             <li><strong>Next:</strong> the first case on induction, described above.</li>

@@ -70,7 +70,7 @@
         <dt>Evidence-accountable explanations</dt>
         <dd>Each sentence of an explanation cites displayed passages, so that a reader can test it against the text. The software checks that every citation points to text actually displayed. It does not check that the passage supports what the sentence says: a citation locates the evidence to examine, and does not prove the interpretation.</dd>
         <dt>Instructor direction</dt>
-        <dd>The instructor sets the course's objectives and its norms for engaging the text. The proposed next step, not yet built, is to let an instructor supply provisional reconstructions of arguments to guide explanations. These would be attributed to the instructor, kept apart from Hume's text, and never treated as evidence for what Hume says.</dd>
+        <dd>The instructor sets the course's objectives and its norms for engaging the text. The proposed next step, not yet built, is to present an instructor's own interpretations and reconstructions of arguments as course materials beside Hume's text and HumeBot's explanations. These would be attributed to the instructor, kept apart from Hume's text, and never treated as evidence for what Hume says. Whether such materials can reliably guide AI explanations remains a research question.</dd>
         <dt>Critical inquiry</dt>
         <dd>Readings are there to be examined, not simply accepted. Questions, objections and alternative interpretations can be attached to a particular sentence of a reading or a particular paragraph of Hume.</dd>
       </dl>
@@ -159,6 +159,16 @@
       <p class="pointer"><strong>A distinct research direction.</strong> <a href="open-weight-research.html">Open-weight model research</a> asks whether a model that can be run on research computing and held fixed can meet these same textual standards, and what that would take.</p>
     </section>
 
+    <section id="update" aria-labelledby="update-h">
+      <h2 id="update-h">Research update, November 2026</h2>
+      <p>HumeBot's recent exploratory studies investigated how instructor-authored interpretations and educational objectives might influence AI explanations of Hume's problem of induction. Explicitly specifying philosophical tasks proved effective, while additional instructor guidance influenced framing and task selection without establishing improved explanation quality. The studies were small, and their outputs were evaluated by AI readers.</p>
+      <p>These findings support a distinction in HumeBot's development. Instructor-authored interpretations and argument reconstructions can be presented directly as attributed, contestable course materials, without requiring the language model to reproduce them. Research on reliably using instructor records to guide a language model's behavior remains open.</p>
+      <div class="notice" role="note">
+        <p><strong>A development direction, not yet built.</strong> Presenting instructor materials in this way has not been implemented. The harness that writes HumeBot's current explanations does not receive instructor materials.</p>
+      </div>
+      <p>This is a normative pedagogical direction, not evidence of improved student learning or classroom readiness.</p>
+    </section>
+
     <section id="demonstration" aria-labelledby="demonstration-h">
       <h2 id="demonstration-h">Demonstration</h2>
       <p>No public interactive demonstration is currently available. The Reading Desk runs only as a local development build, and it is not hosted anywhere that students or the public can reach.</p>
@@ -221,7 +231,7 @@
                 <li>that any version is ready for classroom use. The October 2026 qualification attempt returned NOT_ELIGIBLE at its evidence-eligibility gate, before scholarly review. It established neither a pass nor a fail. No system is qualified for classroom use.</li>
               </ul>
             </li>
-            <li><strong>Next:</strong> the first case on induction, described above.</li>
+            <li><strong>Next:</strong> presenting instructor-authored interpretations and reconstructions as attributed course materials, the development direction described in the <a href="#update">research update</a>. It is not yet built.</li>
           </ul>
         </div>
         <div class="later">

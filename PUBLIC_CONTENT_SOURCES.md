@@ -21,12 +21,13 @@ automatically from internal project materials.
 | section of `index.html` | derived from |
 |---|---|
 | Opening and Overview | research statement §1–§2; the Glass-Box AI Tutor site (its statement of the instructor-sets-the-policy principle) |
-| Research approach | research statement §1–§2; the project's corpus records (pilot scope and unit count; status of the canonical release and of provenance consolidation) |
+| Research approach | research statement §1–§2; the project's corpus records (pilot scope and unit count; status of the canonical release and of provenance consolidation); the faculty lead's closure decision of 2026-11-05 (instructor direction) |
 | The existing prototype | status records; reading application documentation |
 | Research questions | research statement §3–§4 |
+| Research update | the faculty lead's research-update text and closure decision of 2026-11-05 for the project's instructor-guidance studies; the project's closure record for those studies |
 | Demonstration | status records (no public deployment exists); three screenshots of the development build, with synthetic data, checked for accuracy and privacy on 2026-11-03 and published only with the faculty lead's approval |
 | Research materials | September 2026 site (corpus acknowledgement); the Glass-Box AI Tutor site (its reports page) |
-| Development status and future directions | research statement §5–§8; figures as published on the September 2026 site, with the wording of the held-out result corrected; status records (the October 2026 qualification attempt) |
+| Development status and future directions | research statement §5–§8; figures as published on the September 2026 site, with the wording of the held-out result corrected; status records (the October 2026 qualification attempt); the faculty lead's closure decision of 2026-11-05 (the next step) |
 | Contact and affiliation | September 2026 site (faculty lead); faculty lead's own contact details |
 
 | page | derived from |
@@ -55,3 +56,6 @@ When a source document changes, update the affected sections by hand and record 
   wording, citation results scoped to their experiments, instructor reconstructions described as the proposed next step.
 - 2026-11-03: editorial revision: the home page's opening and Overview; citation figures stated with what they count;
   the open-weight page's qualifications of reproducibility, hosting, judged quality and the scope of comparisons.
+- 2026-11-05: research update on the instructor-guidance studies added, from the faculty lead's text, lightly adapted.
+  The instructor-direction commitment and the status section's next step were revised to match: presenting instructor
+  materials is a development direction, not yet built, and using them to guide explanations is an open research question.

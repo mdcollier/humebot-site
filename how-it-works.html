@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How HumeBot Works — HumeBot</title>
-  <meta name="description" content="HumeBot gives students AI-generated explanations of Hume's arguments, built from his verified text and open to examination. Instructors continue to guide how those arguments are taught.">
+  <meta name="description" content="HumeBot gives students AI-generated explanations of Hume's arguments, grounded in his verified text and open to examination. Instructors continue to guide how those arguments are taught.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/how-it-works.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -30,35 +30,71 @@
 
     <h1>How HumeBot Works</h1>
     <p class="lede"><strong>Philosophical explanations grounded in Hume's own words.</strong></p>
-    <p>HumeBot gives students AI-generated explanations of Hume's arguments, built from his verified text and open to examination. Instructors continue to guide how those arguments are taught.</p>
+    <p>HumeBot gives students AI-generated explanations of Hume's arguments, grounded in his verified text and open to examination. Instructors continue to guide how those arguments are taught.</p>
 
     <section id="steps" aria-labelledby="steps-h">
       <h2 id="steps-h">From question to explanation</h2>
+      <p>HumeBot uses three stages:</p>
       <ol class="questions">
         <li><strong>Analyze.</strong> Identify what an explanation must address: the arguments, distinctions, and qualifications at stake.</li>
-        <li><strong>Select evidence.</strong> Find the relevant passages in a verified edition of Hume's <cite>Enquiry concerning Human Understanding</cite> (Sections I–IX).</li>
-        <li><strong>Explain.</strong> Reconstruct the argument from those passages alone.</li>
+        <li><strong>Select evidence.</strong> Find relevant passages in a verified edition of Hume's <cite>Enquiry concerning Human Understanding</cite>.</li>
+        <li><strong>Explain.</strong> Reconstruct the argument using the selected passages.</li>
       </ol>
-      <p>The software builds every quotation from the verified text, never from the model's memory, and checks every citation. An answer that fails a check is not shown.</p>
+      <p>The software builds quotations from the verified text, never from the model's memory, and checks every citation. Answers that fail verification are withheld.</p>
+
+      <figure aria-labelledby="flow-title" aria-describedby="flow-text">
+        <p class="figure-title" id="flow-title">From a student's question to an explanation they can examine</p>
+        <ol class="flow">
+          <li><div class="node"><b>Student question</b></div></li>
+          <li><div class="node model"><span class="who">AI model · stage 1</span><b>Analysis</b><small>what an adequate explanation must address</small></div></li>
+          <li><div class="node software"><span class="who">Software</span><b>Check</b><small>the analysis is canonicalized and recorded</small></div></li>
+          <li>
+            <div class="with-source">
+              <div class="node source"><span class="who">Verified source</span><b>Hume's <cite>Enquiry</cite></b><small>controlled transcription of the 1777 edition</small></div>
+              <div class="feed" aria-hidden="true">→</div>
+              <div class="node model"><span class="who">AI model · stage 2</span><b>Evidence selection</b><small>relevant passages, identified by exact location</small></div>
+            </div>
+          </li>
+          <li><div class="node software"><span class="who">Software</span><b>Check</b><small>every selected location is resolved against the verified text</small></div></li>
+          <li><div class="node model"><span class="who">AI model · stage 3</span><b>Explanation</b><small>the argument reconstructed from the selected passages</small></div></li>
+          <li><div class="node software"><span class="who">Software</span><b>Verification before delivery</b><small>quotations built from the verified text; every citation checked. An answer that fails is withheld.</small></div></li>
+          <li>
+            <div class="node"><span class="who">Reading Desk</span>
+              <div class="pair2">
+                <div class="node"><b>Hume's text</b><small>verified words, in their paragraphs</small></div>
+                <div class="node"><b>HumeBot's reading</b><small>interpretation, each sentence linked to the words it cites</small></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pair2">
+              <div class="node"><b>Students examine the interpretation</b><small>follow citations, read the section, question the reading</small></div>
+              <div class="node"><b>Instructors inspect the evidence</b><small>the Evidence Inspector: sources and verification records</small></div>
+            </div>
+          </li>
+        </ol>
+        <figcaption id="flow-text">A student's question goes through three AI-model stages, analysis, evidence selection and explanation, with the software checking each result before the next stage begins. Only the evidence-selection stage receives Hume's verified text, a controlled transcription of the 1777 edition. Before delivery the software builds every quotation from that text and checks every citation; an answer that fails is withheld. The Reading Desk then presents Hume's text alongside HumeBot's reading, where students examine the interpretation and instructors inspect the evidence.</figcaption>
+      </figure>
     </section>
 
     <section id="examine" aria-labelledby="examine-h">
       <h2 id="examine-h">Evidence students can examine</h2>
-      <p>In the Reading Desk, Hume's text and HumeBot's explanation appear side by side, in three labeled parts:</p>
+      <p>In the Reading Desk, Hume's text and HumeBot's explanation appear side by side, with distinct kinds of information:</p>
       <ul>
-        <li><strong>Text:</strong> Hume's own words.</li>
-        <li><strong>Reading:</strong> HumeBot's interpretation, each sentence linked to the words it cites.</li>
-        <li><strong>Open questions:</strong> qualifications and disagreements the explanation leaves unsettled.</li>
+        <li><strong>Text:</strong> Hume's own words, reproduced from the verified source.</li>
+        <li><strong>Reading:</strong> HumeBot's interpretation, with each sentence linked to the exact words it cites.</li>
+        <li><strong>Open questions:</strong> Qualifications, uncertainties, and disagreements the explanation leaves unsettled.</li>
       </ul>
-      <p>Students can follow any citation into its full paragraph and section, then return.</p>
+      <p>Students can follow citations into complete paragraphs and sections, then return to the explanation.</p>
       <p><strong>The evidence is verified. The interpretation remains open to criticism.</strong></p>
     </section>
 
     <section id="instructor" aria-labelledby="instructor-h">
       <h2 id="instructor-h">The instructor's role</h2>
       <p>The instructor's lectures, notes, and argument reconstructions frame the course. HumeBot supplies explanations, not a teaching method.</p>
-      <p>Take Hume's problem of induction. The sun has always risen; why expect it to rise tomorrow? An instructor's reconstruction exposes the hidden assumption, that the future will resemble the past, and students can then examine Hume's challenge to it. The <a href="demo.html">Demo</a> shows such a reconstruction alongside Hume's text and HumeBot's explanation.</p>
-      <p>Instructors can also use the Evidence Inspector to see the sources and checks behind any answer.</p>
+      <p>Consider Hume's problem of induction. The sun has always risen in our experience; why expect it to rise tomorrow? An instructor's reconstruction reveals the missing assumption: that the future will resemble the past. Students can then examine Hume's challenge to justifying that assumption.</p>
+      <p>The <a href="demo.html">Demo</a> illustrates this reconstruction alongside Hume's text and HumeBot's explanation.</p>
+      <p>Instructors can also use the Evidence Inspector to examine the sources and verification records behind any answer.</p>
     </section>
 
     <section id="principle" aria-labelledby="principle-h">
@@ -66,7 +102,7 @@
       <blockquote class="principle">
         <p>Educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant.</p>
       </blockquote>
-      <p>HumeBot gives students philosophical explanations, and the evidence and reasons to question them.</p>
+      <p><strong>HumeBot gives students philosophical explanations—and the evidence and reasons to question them.</strong></p>
       <p class="small"><em>For technical details, safeguards, privacy, and deployment plans, see <a href="reports.html">Reports</a>.</em></p>
     </section>
 

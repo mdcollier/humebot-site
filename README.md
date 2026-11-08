@@ -1,8 +1,8 @@
 # humebot-site
 
 This repository contains **only the public HumeBot project website**. It is a small static site:
-- HTML and CSS only, with one inline SVG diagram;
-- no build step, framework or scripts;
+- HTML and CSS only, with one inline SVG diagram in two layouts;
+- no build step, framework or scripts on the site; `tools/harness_diagram.py` (standard-library Python, run by hand) regenerates the diagram's SVG files in `assets/diagram/`;
 - no analytics, cookies or forms.
 
 Open `index.html` locally to preview it, or serve the directory with any static file server.
@@ -38,6 +38,7 @@ repository is copied here wholesale.
 | `assets/` | Stylesheet and favicon |
 | `assets/screenshots/` | Screenshots of the development build from V1, synthetic data only |
 | `assets/demo/` | The demonstration recording (WebM), its poster, captions (WebVTT) and key-moment screenshots, synthetic data only |
+| `assets/diagram/`, `tools/harness_diagram.py` | The How It Works diagram (landscape and portrait SVG) and the script that generates it |
 
 ## History
 

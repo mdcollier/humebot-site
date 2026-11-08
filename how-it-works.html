@@ -42,38 +42,160 @@
       </ol>
       <p>The software builds quotations from the verified text, never from the model's memory, and checks every citation. Answers that fail verification are withheld.</p>
 
-      <figure aria-labelledby="flow-title" aria-describedby="flow-text">
-        <p class="figure-title" id="flow-title">From a student's question to an explanation they can examine</p>
-        <ol class="flow">
-          <li><div class="node"><b>Student question</b></div></li>
-          <li><div class="node model"><span class="who">AI model · stage 1</span><b>Analysis</b><small>what an adequate explanation must address</small></div></li>
-          <li><div class="node software"><span class="who">Software</span><b>Check</b><small>the analysis is canonicalized and recorded</small></div></li>
-          <li>
-            <div class="with-source">
-              <div class="node source"><span class="who">Verified source</span><b>Hume's <cite>Enquiry</cite></b><small>controlled transcription of the 1777 edition</small></div>
-              <div class="feed" aria-hidden="true">→</div>
-              <div class="node model"><span class="who">AI model · stage 2</span><b>Evidence selection</b><small>relevant passages, identified by exact location</small></div>
-            </div>
-          </li>
-          <li><div class="node software"><span class="who">Software</span><b>Check</b><small>every selected location is resolved against the verified text</small></div></li>
-          <li><div class="node model"><span class="who">AI model · stage 3</span><b>Explanation</b><small>the argument reconstructed from the selected passages</small></div></li>
-          <li><div class="node software"><span class="who">Software</span><b>Verification before delivery</b><small>quotations built from the verified text; every citation checked. An answer that fails is withheld.</small></div></li>
-          <li>
-            <div class="node"><span class="who">Reading Desk</span>
-              <div class="pair2">
-                <div class="node"><b>Hume's text</b><small>verified words, in their paragraphs</small></div>
-                <div class="node"><b>HumeBot's reading</b><small>interpretation, each sentence linked to the words it cites</small></div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="pair2">
-              <div class="node"><b>Students examine the interpretation</b><small>follow citations, read the section, question the reading</small></div>
-              <div class="node"><b>Instructors inspect the evidence</b><small>the Evidence Inspector: sources and verification records</small></div>
-            </div>
-          </li>
-        </ol>
-        <figcaption id="flow-text">A student's question goes through three AI-model stages, analysis, evidence selection and explanation, with the software checking each result before the next stage begins. Only the evidence-selection stage receives Hume's verified text, a controlled transcription of the 1777 edition. Before delivery the software builds every quotation from that text and checks every citation; an answer that fails is withheld. The Reading Desk then presents Hume's text alongside HumeBot's reading, where students examine the interpretation and instructors inspect the evidence.</figcaption>
+      <figure class="harness-fig" aria-labelledby="harness-title">
+        <p class="figure-title" id="harness-title">The model inside the harness</p>
+        <div class="landscape">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 640" role="img" aria-labelledby="hb-title hb-desc">
+          <title id="hb-title">HumeBot: an AI model inside a normative harness</title>
+          <desc id="hb-desc">A student question enters HumeBot's normative harness. Inside, the AI model analyzes the question, selects evidence and explains; Hume's verified text supplies the evidence to the selection stage only; the software rules of the harness govern the evidence, the citations, the structure of the response and its verification. The answer leaves the harness only through a verification seal, to the Reading Desk, which shows Hume's text beside HumeBot's explanation. The instructor guides the course and inspects the evidence: a dashed arrow to the harness boundary, not an input to the model.</desc>
+          <defs>
+              <marker id="head-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="hbd-acc-f"/></marker>
+              <marker id="head-gold-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="hbd-gold-f"/></marker>
+            </defs>
+            <style>
+            .hbd-paper { fill: var(--paper, #fcfbf8); }
+            .hbd-panel { fill: var(--panel, #f3f1eb); }
+            .hbd-ink { fill: var(--ink, #1b1e23); }
+            .hbd-muted { fill: var(--muted, #4b5260); }
+            .hbd-acc-s { stroke: var(--accent, #1f3a56); }
+            .hbd-acc-f { fill: var(--accent, #1f3a56); }
+            .hbd-gold-s { stroke: var(--gold, #b8862b); }
+            .hbd-gold-f { fill: var(--gold, #b8862b); }
+            .hbd-rule-s { stroke: var(--rule, #dad6cc); }
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+            .hbd-serif { font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Charter, Georgia, serif; }
+            .hbd-t-title { font-size: 22px; font-weight: 700; }
+            .hbd-t-label { font-size: 17px; font-weight: 600; }
+            .hbd-t-stage { font-size: 16px; font-weight: 600; }
+            .hbd-t-small { font-size: 13px; }
+            .hbd-t-rule { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
+            .hbd-flow { fill: none; stroke-width: 2.5; }
+            .hbd-flow-thin { fill: none; stroke-width: 2; }
+            .hbd-govern { fill: none; stroke-width: 2.5; stroke-dasharray: 7 6; }
+            .hbd-frame { fill: none; stroke-width: 3.5; }
+            .hbd-frame-in { fill: none; stroke-width: 1.2; }
+          </style>
+          <rect x="30" y="294" width="200" height="72" rx="36.0" class="hbd-paper hbd-acc-s" stroke-width="2"/>
+          <text x="130.0" y="336.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Student question</text>
+          <path d="M232 330 L276 330" class="hbd-flow hbd-acc-s" marker-end="url(#head-l)"/>
+          <rect x="280" y="150" width="520" height="420" rx="22" class="hbd-frame hbd-acc-s"/>
+          <rect x="287" y="157" width="506" height="406" rx="16" class="hbd-frame-in hbd-acc-s"/>
+          <text x="304" y="188" class="hbd-serif hbd-t-title hbd-ink" text-anchor="start" >HumeBot's normative harness</text>
+          <text x="304" y="210" class="hbd-t-small hbd-muted" text-anchor="start" >AI model inside · software rules around it</text>
+          <text x="540.0" y="550" class="hbd-t-rule hbd-muted" text-anchor="middle" >software rules: evidence · citations · structure · verification</text>
+          <circle cx="380" cy="330" r="40" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="380" y="338" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >1</text>
+          <text x="380" y="272" class="hbd-t-stage hbd-ink" text-anchor="middle" >Analyze</text>
+          <path d="M424 330 L496 330" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-l)"/>
+          <circle cx="540" cy="330" r="40" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="540" y="338" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >2</text>
+          <text x="540" y="272" class="hbd-t-stage hbd-ink" text-anchor="middle" >Select evidence</text>
+          <path d="M584 330 L656 330" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-l)"/>
+          <circle cx="700" cy="330" r="40" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="700" y="338" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >3</text>
+          <text x="700" y="272" class="hbd-t-stage hbd-ink" text-anchor="middle" >Explain</text>
+          <rect x="440" y="442" width="200" height="72" rx="4" class="hbd-panel hbd-gold-s" stroke-width="2.5"/>
+          <line x1="454" y1="446" x2="454" y2="510" class="hbd-gold-s" stroke-width="2"/>
+          <text x="547.0" y="476.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Hume's verified text</text>
+          <text x="547.0" y="496.0" class="hbd-t-small hbd-muted" text-anchor="middle" >Enquiry, 1777 edition</text>
+          <path d="M540 440 L540 376" class="hbd-flow-thin hbd-gold-s" marker-end="url(#head-gold-l)"/>
+          <path d="M742 330 L772 330" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-l)"/>
+          <circle cx="800" cy="330" r="24" class="hbd-paper hbd-acc-s" stroke-width="3"/>
+          <path d="M789 331 L797 339 L812 322" fill="none" class="hbd-acc-s" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M826 330 L874 330" class="hbd-flow hbd-acc-s" marker-end="url(#head-l)"/>
+          <rect x="878" y="230" width="180" height="200" rx="10" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="968.0" y="260" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Reading Desk</text>
+          <rect x="892" y="276" width="152" height="56.0" rx="6" class="hbd-panel hbd-rule-s" stroke-width="1.5"/>
+          <text x="968.0" y="309.0" class="hbd-t-stage hbd-ink" text-anchor="middle" >Hume's text</text>
+          <rect x="892" y="346.0" width="152" height="56.0" rx="6" class="hbd-panel hbd-rule-s" stroke-width="1.5"/>
+          <text x="968.0" y="370.0" class="hbd-t-stage hbd-ink" text-anchor="middle" >HumeBot's</text>
+          <text x="968.0" y="390.0" class="hbd-t-stage hbd-ink" text-anchor="middle" >explanation</text>
+          <rect x="390" y="16" width="190" height="56" rx="28.0" class="hbd-paper hbd-acc-s" stroke-width="2"/>
+          <text x="485.0" y="50.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Instructor</text>
+          <path d="M485 74 L485 146" class="hbd-govern hbd-gold-s" marker-end="url(#head-gold-l)"/>
+          <text x="502" y="100" class="hbd-t-small hbd-muted" text-anchor="start" >Guides the course · Inspects the evidence</text>
+          <text x="502" y="118" class="hbd-t-small hbd-muted" text-anchor="start" >not an input to the model</text>
+          </svg>
+        </div>
+        <div class="portrait">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1140" role="img" aria-labelledby="hbp-title hbp-desc">
+          <title id="hbp-title">HumeBot: an AI model inside a normative harness</title>
+          <desc id="hbp-desc">A student question enters HumeBot's normative harness. Inside, the AI model analyzes the question, selects evidence and explains; Hume's verified text supplies the evidence to the selection stage only; the software rules of the harness govern the evidence, the citations, the structure of the response and its verification. The answer leaves the harness only through a verification seal, to the Reading Desk, which shows Hume's text beside HumeBot's explanation. The instructor guides the course and inspects the evidence: a dashed arrow to the harness boundary, not an input to the model.</desc>
+          <defs>
+              <marker id="head-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="hbd-acc-f"/></marker>
+              <marker id="head-gold-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="hbd-gold-f"/></marker>
+            </defs>
+            <style>
+            .hbd-paper { fill: var(--paper, #fcfbf8); }
+            .hbd-panel { fill: var(--panel, #f3f1eb); }
+            .hbd-ink { fill: var(--ink, #1b1e23); }
+            .hbd-muted { fill: var(--muted, #4b5260); }
+            .hbd-acc-s { stroke: var(--accent, #1f3a56); }
+            .hbd-acc-f { fill: var(--accent, #1f3a56); }
+            .hbd-gold-s { stroke: var(--gold, #b8862b); }
+            .hbd-gold-f { fill: var(--gold, #b8862b); }
+            .hbd-rule-s { stroke: var(--rule, #dad6cc); }
+            text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+            .hbd-serif { font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Charter, Georgia, serif; }
+            .hbd-t-title { font-size: 22px; font-weight: 700; }
+            .hbd-t-label { font-size: 17px; font-weight: 600; }
+            .hbd-t-stage { font-size: 16px; font-weight: 600; }
+            .hbd-t-small { font-size: 13px; }
+            .hbd-t-rule { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
+            .hbd-flow { fill: none; stroke-width: 2.5; }
+            .hbd-flow-thin { fill: none; stroke-width: 2; }
+            .hbd-govern { fill: none; stroke-width: 2.5; stroke-dasharray: 7 6; }
+            .hbd-frame { fill: none; stroke-width: 3.5; }
+            .hbd-frame-in { fill: none; stroke-width: 1.2; }
+          </style>
+          <rect x="40" y="30" width="240" height="72" rx="36.0" class="hbd-paper hbd-acc-s" stroke-width="2"/>
+          <text x="160.0" y="72.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Student question</text>
+          <path d="M160 104 L160 196" class="hbd-flow hbd-acc-s" marker-end="url(#head-p)"/>
+          <rect x="380" y="38" width="190" height="56" rx="28.0" class="hbd-paper hbd-acc-s" stroke-width="2"/>
+          <text x="475.0" y="72.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Instructor</text>
+          <path d="M475 96 L475 196" class="hbd-govern hbd-gold-s" marker-end="url(#head-gold-p)"/>
+          <text x="462" y="128" class="hbd-t-small hbd-muted" text-anchor="end" >Guides the course ·</text>
+          <text x="462" y="146" class="hbd-t-small hbd-muted" text-anchor="end" >Inspects the evidence</text>
+          <text x="462" y="164" class="hbd-t-small hbd-muted" text-anchor="end" >not an input to the model</text>
+          <rect x="40" y="200" width="560" height="640" rx="22" class="hbd-frame hbd-acc-s"/>
+          <rect x="47" y="207" width="546" height="626" rx="16" class="hbd-frame-in hbd-acc-s"/>
+          <text x="64" y="238" class="hbd-serif hbd-t-title hbd-ink" text-anchor="start" >HumeBot's normative harness</text>
+          <text x="64" y="260" class="hbd-t-small hbd-muted" text-anchor="start" >AI model inside · software rules around it</text>
+          <text x="320.0" y="780" class="hbd-t-rule hbd-muted" text-anchor="middle" >software rules · evidence · citations</text>
+          <text x="320.0" y="800" class="hbd-t-rule hbd-muted" text-anchor="middle" >structure · verification</text>
+          <text x="150" y="300" class="hbd-t-rule hbd-muted" text-anchor="middle" >AI model</text>
+          <circle cx="150" cy="380" r="42" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="150" y="388" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >1</text>
+          <text x="150" y="380" class="hbd-t-stage hbd-ink" text-anchor="middle" ></text>
+          <text x="214" y="386" class="hbd-t-stage hbd-ink" text-anchor="start" >Analyze</text>
+          <path d="M150 426 L150 494" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-p)"/>
+          <circle cx="150" cy="540" r="42" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="150" y="548" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >2</text>
+          <text x="150" y="540" class="hbd-t-stage hbd-ink" text-anchor="middle" ></text>
+          <text x="214" y="546" class="hbd-t-stage hbd-ink" text-anchor="start" >Select evidence</text>
+          <path d="M150 586 L150 654" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-p)"/>
+          <circle cx="150" cy="700" r="42" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="150" y="708" class="hbd-serif hbd-t-title hbd-acc-f" text-anchor="middle" >3</text>
+          <text x="150" y="700" class="hbd-t-stage hbd-ink" text-anchor="middle" ></text>
+          <text x="214" y="706" class="hbd-t-stage hbd-ink" text-anchor="start" >Explain</text>
+          <rect x="370" y="610" width="200" height="80" rx="4" class="hbd-panel hbd-gold-s" stroke-width="2.5"/>
+          <line x1="384" y1="614" x2="384" y2="686" class="hbd-gold-s" stroke-width="2"/>
+          <text x="477.0" y="648.0" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Hume's verified text</text>
+          <text x="477.0" y="668.0" class="hbd-t-small hbd-muted" text-anchor="middle" >Enquiry, 1777 edition</text>
+          <path d="M370 640 L190 578" class="hbd-flow-thin hbd-gold-s" marker-end="url(#head-gold-p)"/>
+          <path d="M150 746 L150 810" class="hbd-flow-thin hbd-acc-s" marker-end="url(#head-p)"/>
+          <circle cx="150" cy="840" r="24" class="hbd-paper hbd-acc-s" stroke-width="3"/>
+          <path d="M139 841 L147 849 L162 832" fill="none" class="hbd-acc-s" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M150 868 L150 912" class="hbd-flow hbd-acc-s" marker-end="url(#head-p)"/>
+          <rect x="40" y="918" width="560" height="170" rx="10" class="hbd-paper hbd-acc-s" stroke-width="2.5"/>
+          <text x="320.0" y="948" class="hbd-serif hbd-t-label hbd-ink" text-anchor="middle" >Reading Desk</text>
+          <rect x="54" y="964" width="259.0" height="96" rx="6" class="hbd-panel hbd-rule-s" stroke-width="1.5"/>
+          <text x="183.5" y="1017.0" class="hbd-t-stage hbd-ink" text-anchor="middle" >Hume's text</text>
+          <rect x="327.0" y="964" width="259.0" height="96" rx="6" class="hbd-panel hbd-rule-s" stroke-width="1.5"/>
+          <text x="456.5" y="1017.0" class="hbd-t-stage hbd-ink" text-anchor="middle" >HumeBot's explanation</text>
+          </svg>
+        </div>
+        <figcaption>The AI model operates inside HumeBot's normative harness, where verified primary text and software-enforced rules govern its outputs. The instructor guides the course and inspects the evidence; that is governance, not an input to the model.</figcaption>
       </figure>
     </section>
 

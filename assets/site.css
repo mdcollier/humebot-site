@@ -318,25 +318,9 @@ table.status th { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0
 .inference .missing { border-style: dashed; border-color: var(--gold); }
 .inference .question { margin: 0.8rem 0 0; font-weight: 700; font-size: 1.05rem; font-family: var(--serif); }
 
-/* ---------- V2.2: the conceptual flow on How It Works (HTML and CSS only; legible at phone widths) ---------- */
-.flow { list-style: none; padding: 0; margin: 1.2rem 0 0; max-width: 40rem; font-family: var(--sans); font-size: 0.95rem; line-height: 1.45; }
-.flow > li { max-width: none; position: relative; padding: 0 0 1.55rem; }
-.flow > li:not(:last-child)::after { content: "↓"; position: absolute; left: 50%; bottom: 0.1rem; transform: translateX(-50%); color: var(--accent); font-size: 1.25rem; line-height: 1; }
-.flow .node { background: var(--paper); border: 1.5px solid var(--accent); border-radius: 6px; padding: 0.65rem 0.9rem; }
-.flow .node b { display: block; font-size: 1rem; }
-.flow .node small { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 0.15rem; }
-.flow .who { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
-.flow .model { border-color: var(--accent); }
-.flow .software { background: var(--panel); border: 1.5px dashed var(--gold); }
-.flow .software .who { color: var(--muted); }   /* the gold stays decorative: border only, never text */
-.flow .pair2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-.flow .pair2 .node { margin: 0; }
-/* The corpus feeds evidence selection only: beside it on wide screens, above it on narrow ones. */
-.flow .with-source { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr); gap: 0.5rem; align-items: center; }
-.flow .with-source .feed { color: var(--accent); font-size: 1.25rem; text-align: center; }
-.flow .source { border-color: var(--gold); border-style: solid; background: var(--panel); }
-@media (max-width: 40rem) {
-  .flow .with-source { grid-template-columns: 1fr; }
-  .flow .with-source .feed { transform: rotate(90deg); }
-  .flow .pair2 { grid-template-columns: 1fr; }
-}
+/* ---------- V2.2: the harness diagram on How It Works (two inline SVGs from tools/harness_diagram.py) ---------- */
+.harness-fig { margin: 1.6rem 0 0; }
+.harness-fig svg { display: block; width: 100%; height: auto; max-width: 60rem; }
+.harness-fig .landscape { display: block; }
+.harness-fig .portrait { display: none; max-width: 26rem; }
+@media (max-width: 40rem) { .harness-fig .landscape { display: none; } .harness-fig .portrait { display: block; } }

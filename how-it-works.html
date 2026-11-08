@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How HumeBot Works — HumeBot</title>
-  <meta name="description" content="HumeBot combines AI-generated explanations with verified primary texts, evidence students can examine, and instructor-guided philosophical inquiry.">
+  <meta name="description" content="HumeBot gives students AI-generated explanations of Hume's arguments, built from his verified text and open to examination. Instructors continue to guide how those arguments are taught.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/how-it-works.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -29,62 +29,45 @@
   <main id="main">
 
     <h1>How HumeBot Works</h1>
-    <p class="lede"><strong>An answer you can check against the text.</strong></p>
-    <p>HumeBot combines AI-generated explanations with verified primary texts, evidence students can examine, and instructor-guided philosophical inquiry. Its purpose is not simply to answer questions about Hume, but to help students understand how interpretations of philosophical arguments can be justified, examined, and challenged.</p>
-
-    <section id="text" aria-labelledby="text-h">
-      <h2 id="text-h">Hume's text comes first</h2>
-      <p>HumeBot uses a controlled transcription of Hume's <cite>Enquiry concerning Human Understanding</cite>, based on the 1777 edition. Each passage has a stable location in the text. Every quotation HumeBot displays is constructed from this corpus rather than generated from the model's memory.</p>
-      <p>Students can follow citations to the exact words being interpreted, examine the surrounding paragraphs, and read the larger argument in its original context.</p>
-      <p>The project acknowledges <a href="https://davidhume.org/">Hume Texts Online</a>, edited by Amyas Merivale and Peter Millican, whose scholarship informed the project. HumeBot's paragraph identifiers follow its numbering.</p>
-    </section>
+    <p class="lede"><strong>Philosophical explanations grounded in Hume's own words.</strong></p>
+    <p>HumeBot gives students AI-generated explanations of Hume's arguments, built from his verified text and open to examination. Instructors continue to guide how those arguments are taught.</p>
 
     <section id="steps" aria-labelledby="steps-h">
-      <h2 id="steps-h">Three steps to an explanation</h2>
-      <p>HumeBot uses three separate AI requests, with software checking their results between stages.</p>
+      <h2 id="steps-h">From question to explanation</h2>
       <ol class="questions">
-        <li><strong>Analyze the question.</strong> Identify what an adequate explanation must address: relevant distinctions, steps of argument, and qualifications.</li>
-        <li><strong>Select evidence.</strong> Examine Hume's text and identify passages relevant to those requirements. The software verifies their locations against the controlled corpus.</li>
-        <li><strong>Construct the explanation.</strong> Develop an interpretation from the selected evidence. The software constructs and verifies the quotations and citations before displaying the answer.</li>
+        <li><strong>Analyze.</strong> Identify what an explanation must address: the arguments, distinctions, and qualifications at stake.</li>
+        <li><strong>Select evidence.</strong> Find the relevant passages in a verified edition of Hume's <cite>Enquiry concerning Human Understanding</cite> (Sections I–IX).</li>
+        <li><strong>Explain.</strong> Reconstruct the argument from those passages alone.</li>
       </ol>
-      <p>If an answer fails its delivery checks, it is withheld entirely. The student sees a notice rather than a partial or unverified answer.</p>
-      <p>This process is designed to encourage evidence-dependent explanation. It cannot establish what the model actually relied on internally.</p>
+      <p>The software builds every quotation from the verified text, never from the model's memory, and checks every citation. An answer that fails a check is not shown.</p>
     </section>
 
     <section id="examine" aria-labelledby="examine-h">
-      <h2 id="examine-h">What students can examine</h2>
-      <p>The Reading Desk displays Hume's words alongside HumeBot's interpretation. Students can inspect the evidence cited for each interpretive sentence and move between the explanation and the surrounding text.</p>
-      <p>Different kinds of information remain distinct:</p>
+      <h2 id="examine-h">Evidence students can examine</h2>
+      <p>In the Reading Desk, Hume's text and HumeBot's explanation appear side by side, in three labeled parts:</p>
       <ul>
-        <li><strong>Text:</strong> Hume's verified words.</li>
-        <li><strong>Reading:</strong> HumeBot's interpretation, linked to the exact words it cites.</li>
-        <li><strong>Open questions:</strong> Interpretive uncertainties and matters the explanation cannot settle.</li>
+        <li><strong>Text:</strong> Hume's own words.</li>
+        <li><strong>Reading:</strong> HumeBot's interpretation, each sentence linked to the words it cites.</li>
+        <li><strong>Open questions:</strong> qualifications and disagreements the explanation leaves unsettled.</li>
       </ul>
-      <p>A fourth category for attributed scholarship is planned but not yet in use.</p>
-      <p><strong>The software verifies what Hume wrote and where. It does not verify that HumeBot's interpretation is correct or that the cited passages support it.</strong> Those judgments remain with students and instructors.</p>
+      <p>Students can follow any citation into its full paragraph and section, then return.</p>
+      <p><strong>The evidence is verified. The interpretation remains open to criticism.</strong></p>
     </section>
 
     <section id="instructor" aria-labelledby="instructor-h">
-      <h2 id="instructor-h">Instructor-guided philosophical inquiry</h2>
-      <p>Instructors determine how students approach philosophical arguments, including which questions, distinctions, and interpretive frameworks deserve attention.</p>
-      <p>For example, an instructor might reconstruct Hume's problem of induction by asking why the fact that the sun has always risen before should justify the expectation that it will rise tomorrow.</p>
-      <p>Such frameworks help students examine the reasoning behind philosophical conclusions. They remain distinct from Hume's own text and from HumeBot's explanations.</p>
-      <p>The <a href="demo.html">Demo</a> illustrates this relationship. Integrating instructor-authored frameworks into the Reading Desk remains a proposed development, not a current model-generation capability.</p>
-      <p>The Reading Desk also provides instructors with an <strong>Evidence Inspector</strong>, showing the passages supplied, selected, and cited in an answer, together with its verification records.</p>
+      <h2 id="instructor-h">The instructor's role</h2>
+      <p>The instructor's lectures, notes, and argument reconstructions frame the course. HumeBot supplies explanations, not a teaching method.</p>
+      <p>Take Hume's problem of induction. The sun has always risen; why expect it to rise tomorrow? An instructor's reconstruction exposes the hidden assumption, that the future will resemble the past, and students can then examine Hume's challenge to it. The <a href="demo.html">Demo</a> shows such a reconstruction alongside Hume's text and HumeBot's explanation.</p>
+      <p>Instructors can also use the Evidence Inspector to see the sources and checks behind any answer.</p>
     </section>
 
-    <section id="why" aria-labelledby="why-h">
-      <h2 id="why-h">Why it is designed this way</h2>
+    <section id="principle" aria-labelledby="principle-h">
+      <h2 id="principle-h">The guiding principle</h2>
       <blockquote class="principle">
         <p>Educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant.</p>
       </blockquote>
-      <p>For HumeBot, that means explanations should offer <strong>publicly examinable reasons</strong>, not simply plausible conclusions. Students can investigate the evidence and reasoning for themselves without needing access to a model's private reasoning process.</p>
-    </section>
-
-    <section id="privacy" aria-labelledby="privacy-h">
-      <h2 id="privacy-h">Privacy and deployment</h2>
-      <p>HumeBot currently operates as a local development application. No real student data will be used without University approval. Any classroom deployment will require approved hosting, data storage, and AI services, with appropriate privacy protections.</p>
-      <p>See <a href="reports.html">Reports</a> for the technical architecture, the project's eight normative invariants, evaluation findings, and University deployment requirements.</p>
+      <p>HumeBot gives students philosophical explanations, and the evidence and reasons to question them.</p>
+      <p class="small"><em>For technical details, safeguards, privacy, and deployment plans, see <a href="reports.html">Reports</a>.</em></p>
     </section>
 
   </main>

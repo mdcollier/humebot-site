@@ -56,6 +56,10 @@ generated automatically from internal project materials.
 
 When a source document changes, update the affected sections by hand and record the date of the update here.
 
+| Demo: "Three contributions, kept distinct" (added 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08 describing his PE–PI–UP–FE reconstruction and the sunrise example (the framework is his, abridged into ordinary sentences and labelled as instructor-authored interpretation); Hume quotations copied exactly from the corpus (EHU 4.19, 4.21, 5.5); HumeBot sentences copied exactly from two recorded answers (a frontier-pilot answer on the circle, and sentence 6 of the recording's answer), with their recorded citations |
+| Home: "Why it exists" (revised 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08: the comparison with generic assistants is architectural and normative, not categorical |
+| Reports (reordered 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08: the IT overview first; records governance; processing location under an external API |
+
 **Updates:**
 - 2026-11-03: V1 corrections and additions (see the repository history).
 - 2026-11-05: research update on the instructor-guidance studies added to V1.

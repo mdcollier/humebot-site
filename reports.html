@@ -30,36 +30,17 @@
 
     <p class="kicker">Reports</p>
     <h1>Design, deployment and evidence</h1>
-    <p class="lede">Four short overviews: the educational and philosophical design; a technical and institutional overview for University IT; what has been evaluated so far, and what has not; and the decisions that remain before any classroom use.</p>
+    <p class="lede">Four short overviews, beginning with the one for University IT: the technical and institutional picture; the educational and philosophical design; what has been evaluated so far, and what has not; and the decisions that remain before any classroom use.</p>
     <ul class="explore" aria-label="On this page">
-      <li><a href="#design">Educational and philosophical design</a></li>
       <li><a href="#deployment">Deployment overview for University IT</a></li>
+      <li><a href="#design">Educational and philosophical design</a></li>
       <li><a href="#evaluation">What has been evaluated</a></li>
       <li><a href="#decisions">Decisions that remain</a></li>
     </ul>
 
-    <section id="design" aria-labelledby="design-h">
-      <h2 id="design-h">1. Educational and philosophical design</h2>
-      <p><strong>The activity.</strong> HumeBot supports historical-philosophical inquiry: reconstructing and assessing a philosopher's arguments from the text, with the book in front of the student. It answers questions directly and substantively, with its best-supported reading rather than an authoritative verdict, and directs the student back to the primary text at every step.</p>
-      <p><strong>The principle.</strong> The project's governing educational principle, adopted in November 2026, is that educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant. The principle explains the project's commitments and adds none of its own.</p>
-      <p><strong>The commitments.</strong> Eight normative invariants, held because scholarship requires them and never traded for a better-sounding explanation:</p>
-      <dl class="terms">
-        <dt>Visible primary text</dt><dd>A substantive answer displays the relevant passages, built and verified by the software; citations attached to prose are not a substitute.</dd>
-        <dt>Deterministic provenance</dt><dd>Every quotation and location is derived from, or verified against, the controlled corpus before it is shown; anything that fails is withheld.</dd>
-        <dt>Epistemic typing</dt><dd>Hume's text, HumeBot's reading, attributed scholarship and open questions stay distinct and labelled. An anchored interpretation is not thereby correct.</dd>
-        <dt>Evidence accountability</dt><dd>Every interpretive claim is traceable to passages actually supplied and open to inspection. A correct quotation does not establish that the passage supports the claim.</dd>
-        <dt>Evidence-dependent reasoning</dt><dd>Generation is designed to engage the supplied text rather than decorate pretrained knowledge with citations. This is a behavioural objective, examined empirically, never claimed as proven.</dd>
-        <dt>Instructor authority</dt><dd>The instructor sets the course's objectives and norms. Pedagogy belongs to a policy the instructor can set or decline, never to the core, and no policy overrides provenance or privacy.</dd>
-        <dt>Educator auditability</dt><dd>For any answer, the instructor can inspect the evidence supplied, selected, displayed and cited, the checks, the stated limits and the generation metadata.</dd>
-        <dt>Student privacy and data separation</dt><dd>No real student data reaches a remote provider or an instructor view before the University's written determination. Instructional, operational and research data stay separate; storing an interaction gives no permission to analyse or train on it.</dd>
-      </dl>
-      <p><strong>Public justification.</strong> HumeBot requires explanations and reasons that anyone can examine, not access to a model's private reasoning. The project cannot establish that a model relied only on the supplied text rather than on its training; it says so, and treats evidence dependence as an objective to be studied.</p>
-      <p><strong>A conceptual contrast.</strong> Different teaching applications may need different epistemic constraints. A Socratic tutor may restrict answer-giving to protect a student's own reasoning; HumeBot gives substantive answers and governs how they are justified. The comparison is conceptual: it says what kind of design HumeBot is, not that one approach is better.</p>
-    </section>
-
     <section id="deployment" aria-labelledby="deployment-h">
-      <h2 id="deployment-h">2. Technical and institutional overview for University IT</h2>
-      <p><strong>Prepared for</strong> the colleagues who would host and operate the application. It separates what is implemented and tested in development from what is proposed and would need University provision or approval.</p>
+      <h2 id="deployment-h">1. Technical and institutional overview for University IT</h2>
+      <p><strong>Prepared for</strong> the colleagues who would host and operate the application. It separates what is implemented and tested in development from what is proposed and would need University provision or approval. What has been verified experimentally, and what has not, is in <a href="#evaluation">section 3</a>.</p>
 
       <h3>What exists today</h3>
       <p>The Reading Desk is a containerized web application: a Python web process, a worker process and a migration job built from one image, with a PostgreSQL 16 database. It runs as a non-root user on a read-only filesystem, exposes liveness and readiness probes, and takes every setting from the environment. It is tested with synthetic identities and recorded answers on a developer's machine; it has not been deployed anywhere.</p>
@@ -71,10 +52,10 @@
       </ul>
 
       <h3>Proposed: answering new questions through an approved inference API</h3>
-      <p>Today the application serves recorded answers, and can exercise its live path only against a local stand-in. The proposal is to let students ask their own questions, with HumeBot's three stages run through an external inference API that the University has approved for this use. Only the worker process would call it, over TLS, sending the text of the question and the corpus and never the student's identity. The settings are fixed by the pipeline; a response from an unexpected model, or one that fails verification, is refused. Each new answer takes about a minute on the configuration tested in development. Which provider, under which agreement and data-handling terms, is a University decision, and the configuration that would serve students must also pass the project's own acceptance decision; neither has been made.</p>
+      <p>Today the application serves recorded answers, and can exercise its live path only against a local stand-in. The proposal is to let students ask their own questions, with HumeBot's three stages run through an external inference API that the University has approved for this use. Only the worker process would call it, over TLS, sending the text of the question and the corpus and never the student's identity. The settings are fixed by the pipeline; a response from an unexpected model, or one that fails verification, is refused. Each new answer takes about a minute on the configuration tested in development. An external API means that the question text, and the corpus, leave University infrastructure for the provider's systems under whatever agreement governs that use; institutional approval of the endpoint does not make the processing local. Which provider, under which agreement and data-handling terms, is a University decision, and the configuration that would serve students must also pass the project's own acceptance decision; neither has been made.</p>
 
       <h3>Data, privacy and retention</h3>
-      <p>The proposed initial classroom use is ordinary teaching, not a research study, and no institutional review board study is being conducted for it. The database would hold ordinary teaching records: which course members asked which questions, the answers they received, the verification and audit records, and potentially optional student feedback, all subject to University approval and its data-governance requirements. Any later research use of such records would need its own governance, access and retention rules and the appropriate institutional determinations. The questions to settle in writing are the data classification of student questions and readings; the treatment of stored answers and instructor views under student-records law; the retention schedule and a governed deletion path compatible with append-only history, which is not yet built; what notice students receive; and whether the approved model service may receive student questions.</p>
+      <p>The proposed initial classroom use is an ordinary instructional application, not a research study, and no institutional review board study is being conducted for it. The database would hold ordinary teaching records: which course members asked which questions, the answers they received, the verification and audit records, and potentially optional student feedback, retained for legitimate teaching purposes subject to University data-governance approval. Access follows course roles and defaults to deny; students see only their own readings and instructors the readings of their own course; every view is audited, and the history is append-only. Any later research use of such records would need its own governance, access and retention rules and the appropriate institutional determinations. The questions to settle in writing are the data classification of student questions and readings; the treatment of stored answers and instructor views under student-records law; the retention schedule and a governed deletion path compatible with append-only history, which is not yet built; what notice students receive; and whether the approved model service may receive student questions.</p>
 
       <h3>What the University would provide</h3>
       <div class="table-scroll">
@@ -91,6 +72,25 @@
       </table>
       </div>
       <p><strong>Accessibility.</strong> Automated checks against WCAG 2.1 AA and scripted keyboard tests pass and run as a regression gate in development. That is not a conformance claim: screen-reader testing, real browser zoom, other browsers and the University's accessibility review remain to be done.</p>
+    </section>
+
+    <section id="design" aria-labelledby="design-h">
+      <h2 id="design-h">2. Educational and philosophical design</h2>
+      <p><strong>The activity.</strong> HumeBot supports historical-philosophical inquiry: reconstructing and assessing a philosopher's arguments from the text, with the book in front of the student. It answers questions directly and substantively, with its best-supported reading rather than an authoritative verdict, and directs the student back to the primary text at every step.</p>
+      <p><strong>The principle.</strong> The project's governing educational principle, adopted in November 2026, is that educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant. The principle explains the project's commitments and adds none of its own.</p>
+      <p><strong>The commitments.</strong> Eight normative invariants, held because scholarship requires them and never traded for a better-sounding explanation:</p>
+      <dl class="terms">
+        <dt>Visible primary text</dt><dd>A substantive answer displays the relevant passages, built and verified by the software; citations attached to prose are not a substitute.</dd>
+        <dt>Deterministic provenance</dt><dd>Every quotation and location is derived from, or verified against, the controlled corpus before it is shown; anything that fails is withheld.</dd>
+        <dt>Epistemic typing</dt><dd>Hume's text, HumeBot's reading, attributed scholarship and open questions stay distinct and labelled. An anchored interpretation is not thereby correct.</dd>
+        <dt>Evidence accountability</dt><dd>Every interpretive claim is traceable to passages actually supplied and open to inspection. A correct quotation does not establish that the passage supports the claim.</dd>
+        <dt>Evidence-dependent reasoning</dt><dd>Generation is designed to engage the supplied text rather than decorate pretrained knowledge with citations. This is a behavioural objective, examined empirically, never claimed as proven.</dd>
+        <dt>Instructor authority</dt><dd>The instructor sets the course's objectives and norms. Pedagogy belongs to a policy the instructor can set or decline, never to the core, and no policy overrides provenance or privacy.</dd>
+        <dt>Educator auditability</dt><dd>For any answer, the instructor can inspect the evidence supplied, selected, displayed and cited, the checks, the stated limits and the generation metadata.</dd>
+        <dt>Student privacy and data separation</dt><dd>No real student data reaches a remote provider or an instructor view before the University's written determination. Instructional, operational and research data stay separate; storing an interaction gives no permission to analyse or train on it.</dd>
+      </dl>
+      <p><strong>Public justification.</strong> HumeBot requires explanations and reasons that anyone can examine, not access to a model's private reasoning. The project cannot establish that a model relied only on the supplied text rather than on its training; it says so, and treats evidence dependence as an objective to be studied.</p>
+      <p><strong>A conceptual contrast.</strong> Different teaching applications may need different epistemic constraints. A Socratic tutor may restrict answer-giving to protect a student's own reasoning; HumeBot gives substantive answers and governs how they are justified. The comparison is conceptual: it says what kind of design HumeBot is, not that one approach is better.</p>
     </section>
 
     <section id="evaluation" aria-labelledby="evaluation-h">

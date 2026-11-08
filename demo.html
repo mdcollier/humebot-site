@@ -75,6 +75,57 @@
       </details>
     </section>
 
+    <section id="framework" aria-labelledby="framework-h">
+      <h2 id="framework-h">Three contributions, kept distinct: the problem of induction</h2>
+      <p>The question in the recording comes from Hume's treatment of the problem of induction in Sections IV–V of the <cite>Enquiry</cite>. In a course, three kinds of contribution meet around such a question, and HumeBot's design keeps them apart and attributed. The instructor contributes substantive philosophical and pedagogical judgment, not the configuration of a chatbot.</p>
+      <div class="contributions">
+        <div>
+          <span class="tag">Hume's text · verified</span>
+          <h3>What Hume wrote</h3>
+          <p>Passages built from the controlled corpus, at locations a reader can check.</p>
+          <blockquote>
+            <p>“To endeavour, therefore, the proof of this last supposition by probable arguments, or arguments regarding existence, must be evidently going in a circle, and taking that for granted, which is the very point in question.”</p>
+            <p class="loc">EHU 4.19</p>
+            <p>“All inferences from experience suppose, as their foundation, that the future will resemble the past, and that similar powers will be conjoined with similar sensible qualities.”</p>
+            <p class="loc">EHU 4.21</p>
+            <p>“This principle is CUSTOM or HABIT. For wherever the repetition of any particular act or operation produces a propensity to renew the same act or operation, without being impelled by any reasoning or process of the understanding …”</p>
+            <p class="loc">EHU 5.5</p>
+          </blockquote>
+        </div>
+        <div class="instructor">
+          <span class="tag later">Instructor-authored pedagogical interpretation</span>
+          <h3>The instructor's framework</h3>
+          <p>A reconstruction, in ordinary sentences, of the inference Hume examines and the premise it needs. Take the sun rising tomorrow.</p>
+          <div class="inference" aria-label="The inference, in ordinary sentences">
+            <div class="step"><b>Past experience (PE)</b>The sun has risen every day in our past experience.</div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="step"><b>Future expectation (FE)</b>The sun will rise tomorrow.</div>
+            <p class="small" style="margin-top:0.6rem">The sun has always risen before → the sun will rise tomorrow. The step needs a connecting principle:</p>
+            <div class="step missing"><b>Uniformity Principle (UP) · the missing premise</b>The future will resemble the past in the relevant respects.</div>
+            <p class="question">But what justifies this assumption?</p>
+          </div>
+          <p>Appealing to past experience to justify the Uniformity Principle already assumes that past experience is a reliable guide to unobserved cases. That is the circularity at the centre of Hume's argument. In the instructor's fuller reconstruction, PE–PI–UP–FE, a present impression (PI), seeing the sun set this evening, say, is what sets the expectation going; the sunrise example leaves it implicit, because it adds nothing to the question of justification.</p>
+          <p>Hume's negative conclusion, that no reasoning supplies the missing premise, leads to his positive account in Section V: what carries us from past to future is custom or habit, a principle of human nature rather than an argument.</p>
+          <p class="small">A simplified illustration of the instructor's framework, in the instructor's own terms, not Hume's wording and not formal notation. It is a pedagogical interpretation: open to criticism, and to comparison with Hume's text.</p>
+        </div>
+        <div>
+          <span class="tag">HumeBot's explanation · model-generated</span>
+          <h3>What HumeBot said</h3>
+          <p>From recorded HumeBot answers, written by the model from selected passages and verified for provenance, not for correctness. Each sentence cites the passages it rests on.</p>
+          <blockquote>
+            <p>“The circle is this: any probable argument for the future's resembling the past would itself rest on that resemblance as its supposition, so it would assume the very conclusion it was meant to prove.”</p>
+            <p class="loc">cites EHU 4.19, 4.21 · a recorded answer to a question about the circle</p>
+            <p>“If the claimant hesitates even a moment, or offers an intricate or profound argument, he in a manner gives up the question. He thereby concedes that it is not reasoning that leads us to expect the past to resemble the future and similar effects from apparently similar causes.”</p>
+            <p class="loc">cites EHU 4.23 · sentence 6 of the answer in the recording</p>
+          </blockquote>
+          <p>Students compare this reading with the text and with the instructor's framework, and are free to find it wanting.</p>
+        </div>
+      </div>
+      <div class="notice" role="note">
+        <p><strong>Where the instructor's framework stands today.</strong> It is shown here as a distinct, attributed contribution beside Hume's verified text and HumeBot's independently generated explanation. It has not been incorporated into the model's prompts, training or generation; the pipeline that writes HumeBot's answers is instructor-agnostic. Presenting instructor materials inside the Reading Desk is a development direction, not a feature of the recording above.</p>
+      </div>
+    </section>
+
     <section id="steps" aria-labelledby="steps-h">
       <h2 id="steps-h">What the demonstration shows</h2>
       <ol class="stages">

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HumeBot — An AI tutor answerable to the text</title>
-  <meta name="description" content="HumeBot is a faculty-led project building an AI tutor that answers philosophical questions about Hume's Enquiry while making its textual evidence, explanations and limitations open to examination.">
+  <title>HumeBot — Explore David Hume's philosophy through AI explanations you can check against his own words</title>
+  <meta name="description" content="HumeBot helps students investigate questions about David Hume's Enquiry concerning Human Understanding, with answers presented alongside verified passages from Hume's text.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HumeBot">
-  <meta property="og:title" content="HumeBot — An AI tutor answerable to the text">
-  <meta property="og:description" content="An AI tutor that answers philosophical questions while making its textual evidence, explanations, and limitations open to examination.">
+  <meta property="og:title" content="HumeBot — Explore David Hume's philosophy through AI explanations you can check against his own words">
+  <meta property="og:description" content="HumeBot helps students investigate questions about David Hume's Enquiry concerning Human Understanding, with answers presented alongside verified passages from Hume's text.">
   <meta property="og:url" content="https://mdcollier.github.io/humebot-site/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -33,71 +33,53 @@
 
   <main id="main">
 
-    <p class="kicker">A faculty-led project · University of Minnesota Morris</p>
     <h1>HumeBot</h1>
-    <p class="lede">An AI tutor that answers philosophical questions while making its textual evidence, explanations, and limitations open to examination.</p>
-
-    <blockquote class="principle">
-      <p>“Educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant.”</p>
-    </blockquote>
-    <p class="small">The project's governing educational principle, adopted November 2026.</p>
-
-    <div class="notice" role="note">
-      <p><strong>Status.</strong> HumeBot's Reading Desk is a working local development application, tested with synthetic identities and recorded answers. It has not been approved or deployed for live student use, and its proposed live configuration is not institutionally qualified. HumeBot is not an official University of Minnesota service.</p>
-    </div>
+    <p class="lede"><strong>Explore David Hume's philosophy through AI explanations you can check against his own words.</strong></p>
+    <p class="small"><em>A faculty-led project at the University of Minnesota Morris</em></p>
 
     <section id="what" aria-labelledby="what-h">
-      <h2 id="what-h">What HumeBot is</h2>
-      <p>HumeBot answers students' questions about David Hume's <cite>Enquiry concerning Human Understanding</cite>, directly and substantively, and shows its work. Each answer appears beside the verified passages of Hume's text it draws on. Every sentence of the answer points to the exact words it cites; the reader can follow a citation into the complete paragraph, read the surrounding argument in the whole section, and come back. The answer is labelled as HumeBot's interpretation, and the limits of what it could establish are stated with it.</p>
-      <p>The activity HumeBot supports is historical-philosophical inquiry: reconstructing and assessing a philosopher's arguments from the text itself. That activity has its own norms. A claim about what Hume says must be grounded in Hume's words; the evidence must be open to inspection; the text, the interpretation and the open questions must be kept apart; and the interpretation must be offered with the qualification it deserves, under the direction of the instructor who teaches the course. HumeBot is built around those norms.</p>
+      <h2 id="what-h">What HumeBot does</h2>
+      <p>HumeBot helps students investigate questions about David Hume's <cite>Enquiry concerning Human Understanding</cite>.</p>
+      <p>Its Reading Desk presents answers to student questions alongside verified passages from Hume's text. Students can select a citation to see the exact words supporting an interpretation, highlighted within their original paragraph. They can then explore the surrounding passages, read the argument in the context of the entire section, and return to the explanation. Throughout, Hume's words remain distinct from HumeBot's interpretations, which students are encouraged to examine critically.</p>
     </section>
 
     <section id="why" aria-labelledby="why-h">
-      <h2 id="why-h">Why it exists</h2>
-      <p>A general-purpose AI assistant is designed to be helpful in conversation, and a capable one, given the text of the <cite>Enquiry</cite> and a careful prompt, can produce an excellent philosophical explanation. But whether it quotes the text exactly, cites a passage that says what it is said to say, keeps a contested reading open, or distinguishes Hume's own position from one he reports and rejects, depends on how it was prompted and on how the model behaves on that occasion. Nothing in the arrangement guarantees it, and nothing lets a reader or an instructor check afterwards what text the answer was built from.</p>
-      <p>The difference HumeBot makes is architectural and normative. It enforces, through software and governance rather than through prompting alone, the norms that reading Hume requires:</p>
-      <div class="pair">
-        <div>
-          <h3>Relying on model behaviour</h3>
-          <ul>
-            <li>provenance and exactness depend on the prompt and the model, answer by answer;</li>
-            <li>a quotation's source can be checked only by hand, if at all;</li>
-            <li>text, interpretation and commentary are as distinct as the prose happens to make them;</li>
-            <li>a faulty answer looks like a good one;</li>
-            <li>the instructor sees what the student chooses to show.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>HumeBot's enforced norms</h3>
-          <ul>
-            <li>a controlled, verified corpus, with the passages used displayed in full;</li>
-            <li>every quotation and location built and checked by the software;</li>
-            <li>Hume's words, HumeBot's reading and the open questions in distinct, labelled types;</li>
-            <li>an answer that fails any check is withheld, never shown in part;</li>
-            <li>an inspector for the instructor over every answer's evidence and checks.</li>
-          </ul>
-        </div>
-      </div>
-      <p>These safeguards establish forms of textual accountability: that the words are Hume's, that they are where the answer says they are, and that every claim can be traced to passages a reader can inspect. They do not establish that HumeBot's interpretation is correct, or better than one a well-prompted model would give; the project treats that as an open question. Verification settles what Hume wrote and where. The philosophical judgment stays with the reader and the instructor.</p>
+      <h2 id="why-h">Why it's different</h2>
+      <p>A general-purpose AI assistant can explain philosophy well. But a plausible explanation is not necessarily an accountable interpretation.</p>
+      <p>HumeBot is designed around the epistemic norms and pedagogical principles of the history of philosophy:</p>
+      <ul>
+        <li><strong>Textual evidence.</strong> HumeBot uses a controlled transcription of the 1777 edition of the <cite>Enquiry</cite>, checked against digitized images of the original printed pages. Quotations and citations are verified against this text, with traceable locations. Answers that fail verification are withheld.</li>
+        <li><strong>Interpretive accountability.</strong> Hume's own words remain distinct from the model's interpretations. Students can examine the textual evidence supporting a reading or reconstruction, recognizing that accurate citations do not guarantee a correct interpretation.</li>
+        <li><strong>Instructor-guided pedagogy.</strong> Instructors establish the educational objectives and interpretive frameworks through which students engage philosophical arguments. Their own reconstructions remain distinct from both Hume's text and HumeBot's explanations, and open to critical examination.</li>
+      </ul>
+      <p><strong>The governing principle of HumeBot:</strong></p>
+      <blockquote class="principle">
+        <p>Educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant.</p>
+      </blockquote>
     </section>
 
     <section id="explore" aria-labelledby="explore-h">
       <h2 id="explore-h">Explore</h2>
-      <ul class="explore">
-        <li><a href="demo.html">Demo</a><p>A short walk through the Reading Desk: a student's question, the answer beside Hume's text, a citation followed to the exact words, the whole section, and the instructor's Evidence Inspector.</p></li>
-        <li><a href="how-it-works.html">How It Works</a><p>The three-stage architecture, verified provenance, typed responses, fail-closed delivery, and how an approved inference API would connect to a University-hosted application.</p></li>
-        <li><a href="reports.html">Reports</a><p>The educational design, the deployment overview for University IT, what has been evaluated, and the institutional decisions that remain.</p></li>
+      <ul class="materials">
+        <li><strong><a href="demo.html">Demo:</a></strong> See the Reading Desk and an instructor's reconstruction of Hume's problem of induction.</li>
+        <li><strong><a href="how-it-works.html">How It Works:</a></strong> Explore the normative principles and architecture.</li>
+        <li><strong><a href="reports.html">Reports:</a></strong> Read about the educational design, evaluation findings, and proposed University deployment.</li>
       </ul>
     </section>
 
     <section id="contact" aria-labelledby="contact-h">
       <h2 id="contact-h">Contact</h2>
       <address>
-        <strong>Mark Collier</strong>, faculty lead<br>
-        Professor of Philosophy, University of Minnesota Morris<br>
+        Mark Collier, Professor of Philosophy<br>
+        University of Minnesota Morris<br>
         <a href="mailto:mcollier@morris.umn.edu">mcollier@morris.umn.edu</a>
       </address>
-      <p class="small">HumeBot is a faculty research project. Nothing on this site should be read as University sponsorship or endorsement.</p>
+    </section>
+
+    <section id="status" aria-labelledby="status-h">
+      <h2 id="status-h">Current status</h2>
+      <p>HumeBot is a working local prototype, tested with fictional accounts and recorded answers. It has not been approved or deployed for student use and is not an official University service.</p>
+      <p class="small"><em>Reviewed November 2026. This website uses no cookies or analytics.</em></p>
     </section>
 
   </main>
@@ -105,7 +87,6 @@
   <footer class="site">
     <div class="bar">
       <p><strong>HumeBot</strong> · A faculty-led project · 2026</p>
-      <p>Reviewed November 2026. This site sets no cookies and uses no analytics.</p>
     </div>
   </footer>
 </body>

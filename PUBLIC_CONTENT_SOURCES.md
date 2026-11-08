@@ -58,6 +58,7 @@ When a source document changes, update the affected sections by hand and record 
 
 | Demo: "Three contributions, kept distinct" (added 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08 describing his PE–PI–UP–FE reconstruction and the sunrise example (the framework is his, abridged into ordinary sentences and labelled as instructor-authored interpretation); Hume quotations copied exactly from the corpus (EHU 4.19, 4.21, 5.5); HumeBot sentences copied exactly from two recorded answers (a frontier-pilot answer on the circle, and sentence 6 of the recording's answer), with their recorded citations |
 | Home: "Why it exists" (revised 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08: the comparison with generic assistants is architectural and normative, not categorical |
+| Home (replaced 2026-11-08, revision 3) | the faculty lead's approved homepage text, reproduced verbatim: title, lede, affiliation line, What HumeBot does, Why it's different (three commitments and the governing principle), Explore, Contact, Current status and the closing line; only HTML structure, the three Explore links and the metadata were supplied |
 | Reports (reordered 2026-11-08, revision 2) | the faculty lead's instructions of 2026-11-08: the IT overview first; records governance; processing location under an external API |
 
 **Updates:**

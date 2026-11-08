@@ -106,71 +106,65 @@ def frame(x, y, w, h):
                       f'<rect x="{x+7}" y="{y+7}" width="{w-14}" height="{h-14}" rx="16" class="frame-in acc-s"/>'])
 
 
+DESC = "A student question enters HumeBot's normative harness. Inside, the AI model analyzes the question, selects evidence and explains; Hume's verified text supplies the evidence to the selection stage only; the software rules of the harness govern the evidence, the citations, the structure of the response and its verification. The answer leaves the harness only through a verification seal, to the Reading Desk, which shows Hume's text beside HumeBot's explanation. The instructor's dashed arrow ends at the harness boundary: course guidance and evidence inspection, not an input to the model. Instructor lectures and notes are not supplied to the generation model."
+
+
 def landscape():
-    W, H = 1060, 640
-    fx, fy, fw, fh = 280, 150, 520, 420
-    cy = 330
+    W, H = 1060, 540
+    fx, fy, fw, fh = 280, 110, 520, 400
+    cy = fy + 160
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="hb-title hb-desc">',
              '<title id="hb-title">HumeBot: an AI model inside a normative harness</title>',
-             '<desc id="hb-desc">A student question enters HumeBot\'s normative harness. Inside, the AI model analyzes the question, selects evidence and explains; Hume\'s verified text supplies the evidence to the selection stage only; the software rules of the harness govern the evidence, the citations, the structure of the response and its verification. The answer leaves the harness only through a verification seal, to the Reading Desk, which shows Hume\'s text beside HumeBot\'s explanation. The instructor guides the course and inspects the evidence: a dashed arrow to the harness boundary, not an input to the model.</desc>',
+             f'<desc id="hb-desc">{DESC}</desc>',
              defs('-l'),
              pill(30, cy - 36, 200, 72, 'Student question'),
              f'<path d="M232 {cy} L{fx-4} {cy}" class="flow acc-s"/>',
              frame(fx, fy, fw, fh),
-             text(fx + 24, fy + 38, "HumeBot's normative harness", 'serif t-title ink', 'start'),
-             text(fx + 24, fy + 60, 'AI model inside · software rules around it', 't-small muted', 'start'),
+             text(fx + 24, fy + 40, "HumeBot's normative harness", 'serif t-title ink', 'start'),
              text(fx + fw / 2, fy + fh - 20, 'software rules: evidence · citations · structure · verification', 't-rule muted'),
-             # stages, labels above the circles so the evidence arrow below is unobstructed
              stage(fx + 100, cy, 40, 'Analyze', 1, label_dy=-58), f'<path d="M{fx+144} {cy} L{fx+216} {cy}" class="flow-thin acc-s"/>',
              stage(fx + 260, cy, 40, 'Select evidence', 2, label_dy=-58), f'<path d="M{fx+304} {cy} L{fx+376} {cy}" class="flow-thin acc-s"/>',
              stage(fx + 420, cy, 40, 'Explain', 3, label_dy=-58),
-             book(fx + 160, fy + fh - 128, 200, 72, "Hume's verified text", 'Enquiry, 1777 edition'),
-             f'<path d="M{fx+260} {fy+fh-130} L{fx+260} {cy+46}" class="flow-thin gold-s" marker-end="url(#head-gold-l)"/>',
+             book(fx + 160, fy + fh - 126, 200, 72, "Hume's verified text", 'Enquiry, 1777 edition'),
+             f'<path d="M{fx+260} {fy+fh-128} L{fx+260} {cy+46}" class="flow-thin gold-s" marker-end="url(#head-gold-l)"/>',
              f'<path d="M{fx+462} {cy} L{fx+fw-28} {cy}" class="flow-thin acc-s"/>',
              seal(fx + fw, cy),
              f'<path d="M{fx+fw+26} {cy} L{fx+fw+74} {cy}" class="flow acc-s"/>',
              desk(fx + fw + 78, cy - 100, 180, 200, stacked=True),
-             # the instructor: governance, not a model input
-             pill(fx + 110, 16, 190, 56, 'Instructor'),
-             f'<path d="M{fx+205} 74 L{fx+205} {fy-4}" class="govern gold-s"/>',
-             text(fx + 222, 100, 'Guides the course · Inspects the evidence', 't-small muted', 'start'),
-             text(fx + 222, 118, 'not an input to the model', 't-small muted', 'start'),
+             # the instructor, close above the harness: governance to the boundary, not a data flow into a stage
+             pill(fx + 110, 12, 190, 56, 'Instructor'),
+             f'<path d="M{fx+205} 70 L{fx+205} {fy-4}" class="govern gold-s"/>',
+             text(fx + 222, 94, 'Course guidance · Evidence inspection', 't-small muted', 'start'),
              '</svg>']
     return '\n'.join(parts)
 
 
 def portrait():
-    W, H = 640, 1140
-    fx, fy, fw, fh = 40, 200, 560, 640
-    sx = fx + 110          # stage column
+    W, H = 640, 1010
+    fx, fy, fw, fh = 40, 170, 560, 560
+    sx = fx + 110
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="hbp-title hbp-desc">',
              '<title id="hbp-title">HumeBot: an AI model inside a normative harness</title>',
-             '<desc id="hbp-desc">A student question enters HumeBot\'s normative harness. Inside, the AI model analyzes the question, selects evidence and explains; Hume\'s verified text supplies the evidence to the selection stage only; the software rules of the harness govern the evidence, the citations, the structure of the response and its verification. The answer leaves the harness only through a verification seal, to the Reading Desk, which shows Hume\'s text beside HumeBot\'s explanation. The instructor guides the course and inspects the evidence: a dashed arrow to the harness boundary, not an input to the model.</desc>',
+             f'<desc id="hbp-desc">{DESC}</desc>',
              defs('-p'),
              pill(40, 30, 240, 72, 'Student question'),
              f'<path d="M160 104 L160 {fy-4}" class="flow acc-s"/>',
-             # instructor from the side, to the boundary
              pill(380, 38, 190, 56, 'Instructor'),
              f'<path d="M475 96 L475 {fy-4}" class="govern gold-s"/>',
-             text(462, 128, 'Guides the course ·', 't-small muted', 'end'),
-             text(462, 146, 'Inspects the evidence', 't-small muted', 'end'),
-             text(462, 164, 'not an input to the model', 't-small muted', 'end'),
+             text(462, 124, 'Course guidance ·', 't-small muted', 'end'),
+             text(462, 142, 'Evidence inspection', 't-small muted', 'end'),
              frame(fx, fy, fw, fh),
-             text(fx + 24, fy + 38, "HumeBot's normative harness", 'serif t-title ink', 'start'),
-             text(fx + 24, fy + 60, 'AI model inside · software rules around it', 't-small muted', 'start'),
-             text(fx + fw / 2, fy + fh - 60, 'software rules · evidence · citations', 't-rule muted'),
+             text(fx + 24, fy + 40, "HumeBot's normative harness", 'serif t-title ink', 'start'),
+             text(fx + fw / 2, fy + fh - 60, 'software rules: evidence · citations', 't-rule muted'),
              text(fx + fw / 2, fy + fh - 40, 'structure · verification', 't-rule muted'),
-             text(sx, fy + 100, 'AI model', 't-rule muted'),
-             stage(sx, fy + 180, 42, '', 1, label_dy=0), text(sx + 64, fy + 186, 'Analyze', 't-stage ink', 'start'),
-             f'<path d="M{sx} {fy+226} L{sx} {fy+294}" class="flow-thin acc-s"/>',
-             stage(sx, fy + 340, 42, '', 2, label_dy=0), text(sx + 64, fy + 346, 'Select evidence', 't-stage ink', 'start'),
-             f'<path d="M{sx} {fy+386} L{sx} {fy+454}" class="flow-thin acc-s"/>',
-             stage(sx, fy + 500, 42, '', 3, label_dy=0), text(sx + 64, fy + 506, 'Explain', 't-stage ink', 'start'),
-             # verified text beside selection, feeding it
-             book(fx + 330, fy + 410, 200, 80, "Hume's verified text", 'Enquiry, 1777 edition'),
-             f'<path d="M{fx+330} {fy+440} L{sx+40} {fy+378}" class="flow-thin gold-s" marker-end="url(#head-gold-p)"/>',
-             # exit through the seal at the bottom edge
-             f'<path d="M{sx} {fy+546} L{sx} {fy+fh-30}" class="flow-thin acc-s"/>',
+             stage(sx, fy + 130, 42, '', 1, label_dy=0), text(sx + 64, fy + 136, 'Analyze', 't-stage ink', 'start'),
+             f'<path d="M{sx} {fy+176} L{sx} {fy+234}" class="flow-thin acc-s"/>',
+             stage(sx, fy + 280, 42, '', 2, label_dy=0), text(sx + 64, fy + 286, 'Select evidence', 't-stage ink', 'start'),
+             f'<path d="M{sx} {fy+326} L{sx} {fy+384}" class="flow-thin acc-s"/>',
+             stage(sx, fy + 430, 42, '', 3, label_dy=0), text(sx + 64, fy + 436, 'Explain', 't-stage ink', 'start'),
+             book(fx + 330, fy + 350, 200, 80, "Hume's verified text", 'Enquiry, 1777 edition'),
+             f'<path d="M{fx+330} {fy+380} L{sx+40} {fy+318}" class="flow-thin gold-s" marker-end="url(#head-gold-p)"/>',
+             f'<path d="M{sx} {fy+476} L{sx} {fy+fh-30}" class="flow-thin acc-s"/>',
              seal(sx, fy + fh),
              f'<path d="M{sx} {fy+fh+28} L{sx} {fy+fh+72}" class="flow acc-s"/>',
              desk(40, fy + fh + 78, 560, 170, stacked=False),

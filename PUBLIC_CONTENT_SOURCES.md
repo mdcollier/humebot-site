@@ -5,57 +5,59 @@
 - **Initial site prepared:** 2026-09-24, from the HumeBot executive brief for University IT and the full University IT
   support case.
 - **V1 prepared:** 2026-11-03, for review by the faculty lead, and revised the same day after the faculty lead's
-  final review. It is published only on the faculty lead's authorization.
+  final review.
+- **V2 prepared:** 2026-11-08, at the faculty lead's direction, as a four-page site for an introduction to University IT
+  and cloud-infrastructure colleagues. Published only on the faculty lead's authorization, after review of the preview.
 
-**Source documents for V1:**
-- the HumeBot research statement, a draft of 2026-11-03 that is still under the faculty lead's review;
-- the project's current status records;
-- the project's corpus records;
-- the reading application's documentation;
-- the September 2026 version of this site;
-- for statements about that project, the public Glass-Box AI Tutor site.
+Substantive site claims are curated manually from the project's documents and checked against them. They are not
+generated automatically from internal project materials.
 
-Substantive site claims are curated manually from these documents and checked against them. They are not generated
-automatically from internal project materials.
+**Source documents for V2:**
+- the project's constitutional document, including the governing educational principle adopted on 2026-11-08 and the
+  normative invariants as adopted on 2026-10-29 and revised on 2026-11-01;
+- the project's strategic record of 2026-10-30 and its student-inquiry rulings of 2026-10-30;
+- the reading application's documentation: its README, deployment-readiness register, University deployment pathway,
+  cloud-team handoff and model-service contract;
+- the faculty lead's analyses of 2026-11-08 on the live path, cost and evidence-context options (for the "about a
+  minute" figure and the description of the proposed inference arrangement);
+- the project's status records for the evaluation account (the native evaluation, the held-out study, the frontier
+  comparisons, the October 2026 qualification attempt, the November 2026 review-harness pilot);
+- the V1 site, for the corpus statements, the acknowledgement of Hume Texts Online, the citation figures and the
+  open-weight page;
+- for structure only, the public Glass-Box AI Tutor site (its four-page organization). No content was taken from it.
 
-| section of `index.html` | derived from |
+| page or section | derived from |
 |---|---|
-| Opening and Overview | research statement §1–§2; the Glass-Box AI Tutor site (its statement of the instructor-sets-the-policy principle) |
-| Research approach | research statement §1–§2; the project's corpus records (pilot scope and unit count; status of the canonical release and of provenance consolidation); the faculty lead's closure decision of 2026-11-05 (instructor direction) |
-| The existing prototype | status records; reading application documentation |
-| Research questions | research statement §3–§4 |
-| Research update | the faculty lead's research-update text and closure decision of 2026-11-05 for the project's instructor-guidance studies; the project's closure record for those studies |
-| Demonstration | status records (no public deployment exists); three screenshots of the development build, with synthetic data, checked for accuracy and privacy on 2026-11-03 and published only with the faculty lead's approval |
-| Research materials | September 2026 site (corpus acknowledgement); the Glass-Box AI Tutor site (its reports page) |
-| Development status and future directions | research statement §5–§8; figures as published on the September 2026 site, with the wording of the held-out result corrected; status records (the October 2026 qualification attempt); the faculty lead's closure decision of 2026-11-05 (the next step) |
-| Contact and affiliation | September 2026 site (faculty lead); faculty lead's own contact details |
+| Home: what HumeBot is, why it exists | constitutional document §1 and §3 (the principle and its six distinctions); the student-inquiry rulings (direct, substantive answers; textual grounding) |
+| Home: status notice | the faculty lead's status statement of 2026-11-08; the deployment-readiness register |
+| How It Works: text, stages, types, verification, justification, instructor | constitutional document §3; the typed response contract as described there; the application's README and handoff (verification before display, fail-closed delivery, what the inspector shows and withholds) |
+| How It Works: diagram and hosting | the University deployment pathway and the model-service contract (trusted header, worker-only egress, question text only, append-only history); every dashed element marked as proposed |
+| Demo | a recording made on 2026-11-08 against the local development build with synthetic identities and the recorded answer HG-18; captions and transcript generated from the recording's own timeline and edited by hand; three key-moment screenshots from the same run |
+| Reports §1 | constitutional document §3 (the eight invariants, abridged by hand) and the principle's six distinctions |
+| Reports §2 | the handoff's "what remains unverified" table, the deployment-readiness register (B-1..B-9), the pathway's target shape, the model-service contract; the faculty lead's statements of 2026-11-08 on the proposed classroom use (ordinary teaching, no IRB study, what the database would hold) |
+| Reports §3 | figures as published on the V1 site (native evaluation 0 of 89 against 12 of 51; held-out 238 of 238), the frontier comparison (442 of 442; no fidelity improvement; the blinded reviewer's preference), the October 2026 qualification attempt, the review-harness pilot's provisional conclusion |
+| Reports §4 | the deployment-readiness register and the faculty lead's shortest-path recommendation of 2026-11-08 |
+| `open-weight-research.html` | unchanged from V1 except its navigation |
 
-| page | derived from |
-|---|---|
-| `open-weight-research.html` | status records; the records of the project's open-weight studies (native evaluation, open-weight model comparison, repeatability, held-out generalization, the MSI development studies, the synthesizer-capacity diagnostic, the post-training pilot's closure, the qualification record); the public Gemma 4 31B model card; MSI's public site |
-
-**Retired or withdrawn in V1:**
-- the one-page executive brief for University IT (PDF, 2026-09-24), withdrawn;
-- the separate How it works, Evidence, Current status, University IT and About pages, which now carry superseded-page
-  notices linking to the home page.
+**Retired or withdrawn:**
+- the one-page executive brief for University IT (PDF, 2026-09-24), withdrawn in V1;
+- the V1 home page's Research approach, Research questions, Research update and Development status sections, replaced
+  in V2 by the four pages; their substance is carried where it still applies (Reports §1 and §3; How It Works);
+- the separate About, Evidence, Current status and University IT pages (September 2026), which carry superseded-page
+  notices linking to the current page.
 
 **Not published, by design:**
-- the research statement itself;
+- the research statement;
 - lecture notes and other course materials;
-- study and evaluation records;
-- screenshots that have not been reviewed for release;
+- study and evaluation records, decision logs, traces and prompts;
+- internal file paths, identifiers and configuration;
+- screenshots or recordings that have not been reviewed for release;
 - any other internal project material.
 
 When a source document changes, update the affected sections by hand and record the date of the update here.
 
 **Updates:**
-- 2026-11-03: corrections from the faculty lead's final review: corpus provenance, citation support, Commons retention,
-  the October 2026 qualification attempt, superseded pages and the screenshot gallery.
-- 2026-11-03: Open-Weight Model Research page added.
-- 2026-11-03: corrections from the faculty lead's review of revision 2: linked full-size screenshots, post-training
-  wording, citation results scoped to their experiments, instructor reconstructions described as the proposed next step.
-- 2026-11-03: editorial revision: the home page's opening and Overview; citation figures stated with what they count;
-  the open-weight page's qualifications of reproducibility, hosting, judged quality and the scope of comparisons.
-- 2026-11-05: research update on the instructor-guidance studies added, from the faculty lead's text, lightly adapted.
-  The instructor-direction commitment and the status section's next step were revised to match: presenting instructor
-  materials is a development direction, not yet built, and using them to guide explanations is an open research question.
+- 2026-11-03: V1 corrections and additions (see the repository history).
+- 2026-11-05: research update on the instructor-guidance studies added to V1.
+- 2026-11-08: V2 prepared for the faculty lead's review: four pages, the governing educational principle, the recorded
+  demonstration, the overview for University IT and the evaluation account. Awaiting approval before publication.

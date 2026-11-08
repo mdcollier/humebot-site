@@ -3,25 +3,174 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Superseded: How it works — HumeBot</title>
-  <meta name="robots" content="noindex">
+  <title>How It Works — HumeBot</title>
+  <meta name="description" content="How HumeBot answers a question in three stages, verifies every quotation against a controlled corpus, keeps Hume's words apart from its own reading, fails closed, and gives instructors an inspector over every answer.">
+  <link rel="canonical" href="https://mdcollier.github.io/humebot-site/how-it-works.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site">
     <div class="bar">
-      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable reading of Hume</span></a>
+      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable philosophical inquiry</span></a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html" aria-current="page">How It Works</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main id="main">
-    <p class="kicker">Superseded page</p>
-    <h1>How it works (September 2026)</h1>
-    <div class="notice" role="note">
-      <p><strong>This page has been retired.</strong> It was part of the September 2026 version of this site. In November 2026 the site was reorganized as a single home page, and this page no longer describes the project as it now stands.</p>
-    </div>
-    <p>For current information, see <a href="index.html#approach">Research approach</a> and <a href="index.html#prototype">The existing prototype</a> on the HumeBot home page.</p>
+
+    <p class="kicker">How It Works</p>
+    <h1>An answer you can check against the text</h1>
+    <p class="lede">HumeBot answers a question in three stages, builds every quotation it shows from a controlled corpus, and refuses to show anything it cannot verify. What it verifies is the text; the interpretation it offers remains open to judgment.</p>
+
+    <section id="text" aria-labelledby="text-h">
+      <h2 id="text-h">The text comes first</h2>
+      <p>HumeBot works from a controlled corpus: Hume's <cite>Enquiry concerning Human Understanding</cite>, Sections I–IX, in 216 textual units transcribed from the public-domain 1777 edition. Every unit carries its location in that edition, down to the printed page, and the corpus is pinned by a cryptographic hash, so the application can tell whether the text it is showing is the text it was built with. HumeBot never quotes from memory. When a reader sees Hume's words, the software has taken them from this corpus at a location the reader can check.</p>
+      <p>The project gratefully acknowledges <a href="https://davidhume.org/">Hume Texts Online</a>, edited by Amyas Merivale and Peter Millican, whose scholarship informed the project; HumeBot's paragraph identifiers follow its numbering.</p>
+    </section>
+
+    <section id="stages" aria-labelledby="stages-h">
+      <h2 id="stages-h">Three stages, one answer</h2>
+      <p>A question is answered in three separate steps, each a distinct request to a language model, with the software in control between them. Nothing passes from one stage to the next except what the software has checked.</p>
+      <ol class="stages">
+        <li>
+          <h3>Analysis: what would an adequate answer have to do?</h3>
+          <p>The model reads the question alone, with no text, and proposes the requirements an answer should meet: the distinctions to draw, the steps of argument to reconstruct, the qualifications to preserve. The software canonicalizes the proposal and records it; the instructor can later see what the question was taken to require.</p>
+        </li>
+        <li>
+          <h3>Evidence selection: which passages bear on it?</h3>
+          <p>The model receives the whole corpus and the requirements, never the raw question, and selects passages, each identified by exact location. The software resolves every selection against the corpus. A passage that cannot be located exactly is dropped, and the record says so.</p>
+        </li>
+        <li>
+          <h3>Synthesis: the explanation, from the selected evidence only</h3>
+          <p>The model writes the answer from the selected passages alone, proposing where each sentence's support lies. The software constructs the displayed text from the corpus, checks that every cited span lies inside text actually displayed, and verifies every quotation character by character.</p>
+        </li>
+      </ol>
+      <p>The three stages are a design for <em>evidence-dependent reasoning</em>: the model is made to engage the supplied text rather than attach citations to an answer drawn from training. The design cannot prove what the model relied on internally. HumeBot therefore treats evidence dependence as a behavioural objective to be examined, and never claims it as a verified property.</p>
+    </section>
+
+    <section id="types" aria-labelledby="types-h">
+      <h2 id="types-h">Four kinds of statement, kept apart</h2>
+      <p>An answer is assembled from typed parts, and the type is visible to the reader. Verification is structural: it checks what each part is and where it comes from, not whether the prose is persuasive.</p>
+      <dl class="terms">
+        <dt>TEXT</dt><dd>Hume's words, built by the software from the corpus and verified against it. Only this type may present itself as what Hume wrote.</dd>
+        <dt>READING</dt><dd>HumeBot's interpretation, sentence by sentence, each anchored to exact spans of displayed TEXT. Anchoring locates the evidence to check; it does not make the sentence true.</dd>
+        <dt>SCHOLARSHIP</dt><dd>Attributed scholarly positions, with bibliographic identity. None is in use yet: the curated layer that would supply them is empty by design until adjudicated.</dd>
+        <dt>OPEN</dt><dd>What remains open: contested interpretations, limits of the corpus, questions the answer could not settle. This type carries no model prose.</dd>
+      </dl>
+    </section>
+
+    <section id="verification" aria-labelledby="verification-h">
+      <h2 id="verification-h">What is verified, and what is not</h2>
+      <div class="pair">
+        <div>
+          <h3>Verified by the software</h3>
+          <ul>
+            <li>that every displayed passage equals the corpus, character for character;</li>
+            <li>that every quotation sits at the location cited;</li>
+            <li>that every sentence's cited words lie inside displayed text;</li>
+            <li>that the answer's record is intact, each time it is displayed.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Not verified, by design</h3>
+          <ul>
+            <li>that the cited words support the sentence that cites them;</li>
+            <li>that the interpretation is correct, complete or proportionate;</li>
+            <li>that a passage the reading left out did not matter;</li>
+            <li>what the model relied on while writing.</li>
+          </ul>
+        </div>
+      </div>
+      <p>The Reading Desk states both verdicts next to each sentence: <em>source and location, verified</em>; <em>interpretation, not verified</em>. Source verification is a fact about the text. Philosophical accuracy is a judgment, and HumeBot leaves it to the reader and the instructor, with the evidence in view.</p>
+      <p><strong>Fail-closed delivery.</strong> An answer that fails any check is withheld entirely and recorded as withheld; the student sees a plain notice, never a partial or unverified reading. Nothing is shown before it has been verified and durably stored, and it is verified again each time it is displayed.</p>
+    </section>
+
+    <section id="justification" aria-labelledby="justification-h">
+      <h2 id="justification-h">Public justification, not private traces</h2>
+      <p>HumeBot does not ask readers to trust a model's hidden chain of thought, and it does not store one. What it requires is a justification anyone can examine: the passages displayed, the words each sentence cites, the reasoning stated in the explanation itself, and the limits acknowledged. An explanation is answerable as an argument, in public, in the way a student's or a scholar's would be. This is also why the project can say plainly what it cannot establish: that the model relied only on the supplied text rather than on what it learned in training.</p>
+    </section>
+
+    <section id="instructor" aria-labelledby="instructor-h">
+      <h2 id="instructor-h">The instructor's authority and view</h2>
+      <p>The instructor decides what a course is for and how its students should engage the text. HumeBot's core is neutral on pedagogy; any teaching policy belongs to the instructor, and no policy may override the provenance and privacy commitments. For every answer, the instructor's Evidence Inspector shows what evidence was supplied, selected, displayed and cited, the verification results at delivery and at each display, the requirements the question was taken to impose, the paragraphs between displayed ones that the reading did not show (reported, never judged), and the generation metadata: model, prompt versions and settings. Raw model output and prompt text are not shown. Auditability never overrides a student's privacy, and no real student's data reaches the application until the University's written determination allows it.</p>
+    </section>
+
+    <section id="principle" aria-labelledby="principle-h">
+      <h2 id="principle-h">The principle behind the design</h2>
+      <blockquote class="principle">
+        <p>“Educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant.”</p>
+      </blockquote>
+      <p>The commitments described on this page are the project's normative invariants: visible primary text, deterministic provenance, epistemic typing, evidence accountability, evidence-dependent reasoning, instructor authority, educator auditability, and student privacy with the separation of educational from research data. They hold because the activity requires them, not because they have been shown to improve explanations. A measured cost to interpretive quality would be reported and reduced within an invariant, never by relaxing it. The principle explains why these constraints belong together; it adds none of its own.</p>
+      <p>Different educational activities call for different constraints. A Socratic tutor might withhold answers to protect a student's own reasoning. HumeBot gives substantive answers and governs how they are justified. Both can be faithful to the activity they serve; neither follows from a generic conception of helpfulness.</p>
+    </section>
+
+    <section id="architecture" aria-labelledby="architecture-h">
+      <h2 id="architecture-h">Where it would run</h2>
+      <p>The Reading Desk is a containerized web application with a PostgreSQL database. Today it runs only as a local development build. The diagram shows the arrangement proposed for University hosting; the dashed parts are proposals, not anything that has been provisioned or approved.</p>
+      <figure class="diagram" aria-labelledby="diagram-title" aria-describedby="diagram-text">
+        <p class="figure-title" id="diagram-title">Proposed arrangement on University infrastructure</p>
+        <svg viewBox="0 0 1000 420" role="img" aria-labelledby="diagram-title diagram-text">
+          <defs>
+            <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="fill: var(--accent)"></path>
+            </marker>
+          </defs>
+          <rect class="zone" x="250" y="22" width="480" height="378" rx="6"></rect>
+          <text class="zone-label" x="262" y="44">University-hosted application (proposed)</text>
+          <rect class="box" x="20" y="150" width="170" height="78" rx="6"></rect>
+          <text class="label" x="105" y="183" text-anchor="middle">Student or instructor</text>
+          <text class="small" x="105" y="205" text-anchor="middle">browser, University sign-in</text>
+          <rect class="box proposed" x="270" y="150" width="170" height="78" rx="6"></rect>
+          <text class="label" x="355" y="183" text-anchor="middle">Authenticating proxy</text>
+          <text class="small" x="355" y="205" text-anchor="middle">one identity header</text>
+          <rect class="box" x="520" y="80" width="190" height="78" rx="6"></rect>
+          <text class="label" x="615" y="113" text-anchor="middle">Reading Desk: web</text>
+          <text class="small" x="615" y="135" text-anchor="middle">verifies before every display</text>
+          <rect class="box" x="520" y="222" width="190" height="78" rx="6"></rect>
+          <text class="label" x="615" y="255" text-anchor="middle">Reading Desk: worker</text>
+          <text class="small" x="615" y="277" text-anchor="middle">runs the three stages</text>
+          <rect class="box proposed" x="520" y="330" width="190" height="58" rx="6"></rect>
+          <text class="label" x="615" y="355" text-anchor="middle">PostgreSQL</text>
+          <text class="small" x="615" y="375" text-anchor="middle">answers, audit; append-only</text>
+          <rect class="box" x="270" y="300" width="170" height="58" rx="6"></rect>
+          <text class="label" x="355" y="325" text-anchor="middle">Pinned corpus</text>
+          <text class="small" x="355" y="345" text-anchor="middle">read-only, in the image</text>
+          <rect class="box proposed" x="820" y="222" width="170" height="78" rx="6"></rect>
+          <text class="label" x="905" y="249" text-anchor="middle">Approved inference</text>
+          <text class="label" x="905" y="268" text-anchor="middle">API</text>
+          <text class="small" x="905" y="288" text-anchor="middle">external; proposed</text>
+          <path class="arrow" d="M 190 189 L 268 189"></path>
+          <path class="arrow proposed" d="M 440 189 L 518 125"></path>
+          <path class="arrow" d="M 615 158 L 615 220"></path>
+          <path class="arrow proposed" d="M 615 300 L 615 328"></path>
+          <path class="arrow" d="M 440 329 L 518 150"></path>
+          <path class="arrow proposed" d="M 710 261 L 818 261"></path>
+          <text class="small" x="764" y="246" text-anchor="middle">question text</text>
+          <text class="small" x="764" y="282" text-anchor="middle">no identity</text>
+          <text class="small" x="447" y="160" text-anchor="start">identity</text>
+        </svg>
+        <figcaption id="diagram-text">A student's browser reaches the Reading Desk through the University's sign-in, which passes one trusted identity header. The web process shows answers only after re-verifying them against the pinned corpus, which ships read-only inside the application. A separate worker process runs the three stages; only it would call an approved external inference API, sending the question text and never the student's identity. Answers and their audit records are stored in PostgreSQL with append-only history. Dashed elements, the proxy, the database service and the inference API, are proposed arrangements awaiting University provision and approval.</figcaption>
+      </figure>
+      <p>The three-stage pipeline, the verification and the typed contract do not depend on which model or provider sits behind the API. Any configuration that would serve students must first be shown to satisfy the same requirements; see <a href="reports.html#deployment">the deployment overview</a>.</p>
+    </section>
+
   </main>
+
+  <footer class="site">
+    <div class="bar">
+      <p><strong>HumeBot</strong> · A faculty-led project · 2026</p>
+      <p>Reviewed November 2026. This site sets no cookies and uses no analytics.</p>
+    </div>
+  </footer>
 </body>
 </html>

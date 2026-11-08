@@ -1,0 +1,89 @@
+WEBVTT
+
+1
+00:00:00.044 --> 00:00:07.467
+The HumeBot Reading Desk, running as a local development build. The identities are synthetic and the answers are recorded; no live model is called.
+
+2
+00:00:07.667 --> 00:00:16.539
+A student signs in and chooses a question about Hume's Enquiry. Here: a question on Section IV, the problem of induction.
+
+3
+00:00:16.739 --> 00:00:24.205
+Hume admits it would be arrogant to conclude that an argument does not exist just because he has not found it. How does he think he escapes that charge?
+
+4
+00:00:24.405 --> 00:00:31.207
+Before anything is shown, the application re-verifies the answer against the pinned corpus and records it. Then the Reading Desk opens.
+
+5
+00:00:31.407 --> 00:00:40.272
+Left: HumeBot's reading, labelled as interpretation. Right: Hume's text, labelled as verified against the corpus. Each sentence carries markers for the paragraphs it cites.
+
+6
+00:00:40.472 --> 00:00:49.723
+At the top of Hume's text, the passages this reading cites, in the order of the 1777 text, with how many sentences cite each.
+
+7
+00:00:49.923 --> 00:00:59.607
+Selecting a citation marker highlights exactly the words that sentence cites, in the whole paragraph, with the paragraphs around it one click away.
+
+8
+00:00:59.807 --> 00:01:05.842
+"Back to sentence 1" returns to the reading.
+
+9
+00:01:06.042 --> 00:01:17.906
+The magnifier inspects one sentence. Two separate verdicts: source and location are verified, these are Hume's exact words at the place cited; the interpretation is not verified. Whether the words support the sentence is for the reader to judge.
+
+10
+00:01:18.106 --> 00:01:25.491
+Below the verdicts, the exact words the sentence cites, each with a way into the text.
+
+11
+00:01:25.691 --> 00:01:36.093
+"Read it in Section IV" opens the whole section in the order of the 1777 text. The page says which sentence the reader came from and highlights the words it cites.
+
+12
+00:01:36.293 --> 00:01:48.241
+Here the reader can judge the sentence against the surrounding argument: the paragraphs displayed with the answer are marked, and the cited words are highlighted inside the complete paragraph.
+
+13
+00:01:48.441 --> 00:01:54.488
+"Back to sentence 5 of the reading" returns to the explanation at the same sentence.
+
+14
+00:01:54.688 --> 00:02:01.538
+The reading can also be shown sentence by sentence. The wording never changes; only the layout does.
+
+15
+00:02:01.738 --> 00:02:10.169
+Every answer ends with its limits and its provenance: a recorded response, replayed, re-verified against the corpus at this display, with the time of each check.
+
+16
+00:02:10.369 --> 00:02:17.318
+The instructor's view. Signing in as the synthetic instructor opens the Evidence Inspector.
+
+17
+00:02:17.518 --> 00:02:22.909
+Every reading in the course is listed. The instructor opens the student's answer.
+
+18
+00:02:23.109 --> 00:02:34.486
+The summary row keeps two things apart: source verification, re-checked now with its time, and the interpretive sentences, which are model interpretation and are not verified as correct.
+
+19
+00:02:34.686 --> 00:02:47.900
+Band 3 lists every sentence with the exact words it cites. "Cited" records which passages a sentence cites; it is not a record of what the model relied on, and not verification that the passage supports the claim.
+
+20
+00:02:48.100 --> 00:02:57.410
+"Show in the student view" highlights the same words in the stored student view, rendered read-only from the exact record the student saw.
+
+21
+00:02:57.610 --> 00:03:07.915
+The inspector also reports the paragraphs between displayed ones that the reading did not show. It flags no error: whether an omitted passage matters is the instructor's judgment.
+
+22
+00:03:08.115 --> 00:03:17.917
+The verification log, the audit of who viewed what, and append-only instructor notes. HumeBot shows its evidence and its checks; the philosophical judgment stays with the reader and the instructor.

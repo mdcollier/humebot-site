@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo — HumeBot</title>
+  <meta name="description" content="A short recorded demonstration of HumeBot's Reading Desk: a student's question about Hume, the answer beside the verified text, a citation followed to the exact words, the whole section, and the instructor's Evidence Inspector.">
+  <link rel="canonical" href="https://mdcollier.github.io/humebot-site/demo.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="index.html">HumeBot<span>Evidence-accountable philosophical inquiry</span></a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="demo.html" aria-current="page">Demo</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <p class="kicker">Demo</p>
+    <h1>The Reading Desk in three minutes</h1>
+    <p class="lede">A recorded walk through the development build (3 min 18 s, captioned, no sound): a student opens a question about Hume's problem of induction, reads HumeBot's answer beside the text, follows a citation to the exact words, reads the whole section, and returns. Then the instructor's view of the same answer.</p>
+
+    <div class="notice" role="note">
+      <p><strong>What you are watching.</strong> A local development build with a synthetic course, synthetic student and instructor identities, and a recorded answer replayed and re-verified against the corpus. No live model was called, and no real student has used the application. HumeBot's reading in the video is its own interpretation and may be mistaken. The banner across the top of every screen says the same.</p>
+    </div>
+
+    <section id="video" aria-labelledby="video-h">
+      <h2 id="video-h">The recording</h2>
+      <figure class="video">
+        <video controls preload="metadata" width="1280" height="800" poster="assets/demo/poster.png">
+          <source src="assets/demo/reading-desk-demo.webm" type="video/webm">
+          <track kind="captions" src="assets/demo/reading-desk-demo.vtt" srclang="en" label="English captions" default>
+          <p>Your browser cannot play this video. The <a href="#transcript">transcript</a> below describes every step.</p>
+        </video>
+        <figcaption>Recorded in a browser against the development build, November 2026. Captions are included; the full transcript follows. The recording has no sound.</figcaption>
+      </figure>
+      <details class="transcript" id="transcript">
+        <summary>Transcript</summary>
+        <ol>
+          <li><time>00:00</time>The HumeBot Reading Desk, running as a local development build. The identities are synthetic and the answers are recorded; no live model is called.</li>
+          <li><time>00:07</time>A student signs in and chooses a question about Hume's Enquiry. Here: a question on Section IV, the problem of induction.</li>
+          <li><time>00:16</time>Hume admits it would be arrogant to conclude that an argument does not exist just because he has not found it. How does he think he escapes that charge?</li>
+          <li><time>00:24</time>Before anything is shown, the application re-verifies the answer against the pinned corpus and records it. Then the Reading Desk opens.</li>
+          <li><time>00:31</time>Left: HumeBot's reading, labelled as interpretation. Right: Hume's text, labelled as verified against the corpus. Each sentence carries markers for the paragraphs it cites.</li>
+          <li><time>00:40</time>At the top of Hume's text, the passages this reading cites, in the order of the 1777 text, with how many sentences cite each.</li>
+          <li><time>00:49</time>Selecting a citation marker highlights exactly the words that sentence cites, in the whole paragraph, with the paragraphs around it one click away.</li>
+          <li><time>00:59</time>"Back to sentence 1" returns to the reading.</li>
+          <li><time>01:06</time>The magnifier inspects one sentence. Two separate verdicts: source and location are verified, these are Hume's exact words at the place cited; the interpretation is not verified. Whether the words support the sentence is for the reader to judge.</li>
+          <li><time>01:18</time>Below the verdicts, the exact words the sentence cites, each with a way into the text.</li>
+          <li><time>01:25</time>"Read it in Section IV" opens the whole section in the order of the 1777 text. The page says which sentence the reader came from and highlights the words it cites.</li>
+          <li><time>01:36</time>Here the reader can judge the sentence against the surrounding argument: the paragraphs displayed with the answer are marked, and the cited words are highlighted inside the complete paragraph.</li>
+          <li><time>01:48</time>"Back to sentence 5 of the reading" returns to the explanation at the same sentence.</li>
+          <li><time>01:54</time>The reading can also be shown sentence by sentence. The wording never changes; only the layout does.</li>
+          <li><time>02:01</time>Every answer ends with its limits and its provenance: a recorded response, replayed, re-verified against the corpus at this display, with the time of each check.</li>
+          <li><time>02:10</time>The instructor's view. Signing in as the synthetic instructor opens the Evidence Inspector.</li>
+          <li><time>02:17</time>Every reading in the course is listed. The instructor opens the student's answer.</li>
+          <li><time>02:23</time>The summary row keeps two things apart: source verification, re-checked now with its time, and the interpretive sentences, which are model interpretation and are not verified as correct.</li>
+          <li><time>02:34</time>Band 3 lists every sentence with the exact words it cites. "Cited" records which passages a sentence cites; it is not a record of what the model relied on, and not verification that the passage supports the claim.</li>
+          <li><time>02:48</time>"Show in the student view" highlights the same words in the stored student view, rendered read-only from the exact record the student saw.</li>
+          <li><time>02:57</time>The inspector also reports the paragraphs between displayed ones that the reading did not show. It flags no error: whether an omitted passage matters is the instructor's judgment.</li>
+          <li><time>03:08</time>The verification log, the audit of who viewed what, and append-only instructor notes. HumeBot shows its evidence and its checks; the philosophical judgment stays with the reader and the instructor.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="steps" aria-labelledby="steps-h">
+      <h2 id="steps-h">What the demonstration shows</h2>
+      <ol class="stages">
+        <li>
+          <h3>A question about Section IV</h3>
+          <p>A synthetic student signs in and chooses a recorded question: Hume admits it would be arrogant to conclude that an argument does not exist just because he has not found it; how does he think he escapes that charge? Before the answer appears, the application re-verifies it against the pinned corpus and records the check.</p>
+        </li>
+        <li>
+          <h3>The answer beside Hume's text</h3>
+          <p>HumeBot's reading, labelled as interpretation, on the left; Hume's text, labelled as verified against the corpus, on the right. A list at the top of the text names the passages the reading cites, in the order of the 1777 edition, with how many sentences cite each.</p>
+        </li>
+        <li>
+          <h3>A citation, followed to the exact words</h3>
+          <p>Selecting a marker after a sentence highlights precisely the words it cites, inside the complete paragraph, with the neighbouring paragraphs one click away. A single control returns to the sentence.</p>
+        </li>
+        <li>
+          <h3>Inspecting one sentence</h3>
+          <p>The magnifier shows the sentence with two separate verdicts: <em>source and location, verified</em>, these are Hume's exact words at the place cited; <em>interpretation, not verified</em>, whether the words support the sentence is for the reader to judge.</p>
+        </li>
+        <li>
+          <h3>The surrounding argument</h3>
+          <p>From the inspected sentence, the whole of Section IV opens in the order of the text, naming the sentence the reader came from and highlighting its words, so the sentence can be judged against the argument around it. One link returns to the same sentence of the reading.</p>
+        </li>
+        <li>
+          <h3>The instructor's Evidence Inspector</h3>
+          <p>The synthetic instructor opens the same answer. The summary row keeps source verification, re-checked with its time, apart from the interpretive sentences, which are model interpretation and not verified as correct. Every sentence is listed with the words it cites and a way into the student's view and the section; the paragraphs the reading did not show are reported, never judged; the verification log and the audit record of who viewed what are kept, with the instructor's append-only notes.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="shots" aria-labelledby="shots-h">
+      <h2 id="shots-h">Three moments</h2>
+      <p class="small">Select an image to open it at full size.</p>
+      <div class="gallery">
+        <figure class="shot">
+          <a href="assets/demo/shot_citation.png"><img src="assets/demo/shot_citation.png" width="1280" height="800" loading="lazy" alt="The Reading Desk with sentence 1 of HumeBot's reading selected. On the right, the paragraph of Hume's text that it cites, with the cited words highlighted inside the complete paragraph, and a button reading Back to sentence 1."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>The exact words a sentence cites.</strong> The highlight is computed from recorded character offsets into the corpus, not from matching text.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/demo/shot_inspect.png"><img src="assets/demo/shot_inspect.png" width="1280" height="800" loading="lazy" alt="The evidence panel for sentence 5 of the reading, showing the sentence, the verdict Source and location: verified, the verdict Interpretation: not verified, and the words it cites in Hume with links to show them in the text and to read them in Section IV."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>Two verdicts, kept apart.</strong> What is verified is the source and its location. Whether the words support the sentence is left to the reader.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/demo/shot_inspector.png"><img src="assets/demo/shot_inspector.png" width="1280" height="800" loading="lazy" alt="The instructor's Evidence Inspector for the same answer: a summary row with Source verification: Verified, Interpretive sentences: 8, Cited evidence, Argumentative-context gaps and Delivery, above the stored student view."><span class="visually-hidden"> Opens the full-size image.</span></a>
+          <figcaption><strong>The instructor's view.</strong> Verification, re-checked at display, is reported separately from the interpretive sentences, which are not verified as correct.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="not-shown" aria-labelledby="not-shown-h">
+      <h2 id="not-shown-h">What the demonstration does not show</h2>
+      <ul>
+        <li>A live answer to a new question. The development build can run HumeBot's pipeline against a local stand-in that serves recorded answers; no model is called. A classroom configuration that answers new questions is proposed, not approved or qualified.</li>
+        <li>Real students, a real course, or University sign-in. The identities are synthetic and the application runs on one developer's machine.</li>
+        <li>That the answer is philosophically right. Verification establishes what Hume wrote and where. The reading is HumeBot's interpretation, labelled as such.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="bar">
+      <p><strong>HumeBot</strong> · A faculty-led project · 2026</p>
+      <p>Reviewed November 2026. This site sets no cookies and uses no analytics.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="arch-title arch-desc">
+<title id="arch-title">HumeBot Reading Desk: proposed University deployment</title>
+<desc id="arch-desc">A browser reaches the University sign-in gateway, which authenticates every request and passes one identity header to the Reading Desk web process. The web process, a worker process and a one-off migration job run from one container image that also carries the pinned corpus, the replay bundle and the HumeBot verification core. The web and worker processes use a managed PostgreSQL database with append-only history. Only the worker calls the external inference API, sending the question text and corpus evidence and never a student identity. Platform services (secrets, registry, ingress, logs, monitoring) surround the application. Solid outlines mark components implemented and tested in development; dashed outlines mark University or external services that are not provisioned or approved.</desc>
+<style>
+.t { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #1f1f1f; }
+.title { font-size: 17px; font-weight: 600; }
+.label { font-size: 13.5px; font-weight: 600; }
+.tiny { font-size: 12px; fill: #5f6368; }
+.burg { fill: #7a1e2e; }
+.solid { fill: #fff; stroke: #7a1e2e; stroke-width: 1.6; }
+.image { fill: #f7f4ef; stroke: #7a1e2e; stroke-width: 1.6; }
+.proc { fill: #fff; stroke: #7a1e2e; stroke-width: 1.3; }
+.dashed { fill: #fff; stroke: #5f6368; stroke-width: 1.4; stroke-dasharray: 6 4; }
+.flow { fill: none; stroke: #1f1f1f; stroke-width: 1.6; }
+.gold { fill: none; stroke: #d9a62b; stroke-width: 2.4; }
+.legend-solid { fill: none; stroke: #7a1e2e; stroke-width: 1.6; }
+.legend-dashed { fill: none; stroke: #5f6368; stroke-width: 1.4; stroke-dasharray: 6 4; }
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f1f1f"/></marker><marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#d9a62b"/></marker></defs>
+<rect width="820" height="560" fill="#fff"/>
+<rect x="10" y="112" width="142" height="66" rx="6" class="solid"/>
+<text x="81" y="140" class="t label" text-anchor="middle">Student / instructor</text>
+<text x="81" y="160" class="t tiny" text-anchor="middle">web browser · HTTPS</text>
+<path d="M154 145 L162 145" class="flow" marker-end="url(#arrow)"/>
+<rect x="164" y="92" width="150" height="104" rx="6" class="dashed"/>
+<text x="239" y="120" class="t label" text-anchor="middle">University sign-in</text>
+<text x="239" y="137" class="t label" text-anchor="middle">gateway (proposed)</text>
+<text x="239" y="158" class="t tiny" text-anchor="middle">authenticating proxy</text>
+<text x="239" y="171" class="t tiny" text-anchor="middle">one identity header;</text>
+<text x="239" y="184" class="t tiny" text-anchor="middle">client copies stripped</text>
+<path d="M316 145 L328 145" class="flow" marker-end="url(#arrow)"/>
+<rect x="330" y="40" width="290" height="470" rx="10" class="image"/>
+<text x="475.0" y="66" class="t title burg" text-anchor="middle">Reading Desk application</text>
+<text x="475.0" y="84" class="t tiny" text-anchor="middle">one container image · non-root · read-only filesystem</text>
+<rect x="350" y="96" width="250" height="84" rx="6" class="proc"/>
+<text x="362" y="118" class="t label" text-anchor="start">web</text>
+<text x="362" y="136" class="t tiny" text-anchor="start">Django · gunicorn · port 8000</text>
+<text x="362" y="150" class="t tiny" text-anchor="start">pages, questions, Evidence Inspector</text>
+<text x="362" y="164" class="t tiny" text-anchor="start">/healthz · /readyz</text>
+<rect x="350" y="192" width="250" height="98" rx="6" class="proc"/>
+<text x="362" y="214" class="t label" text-anchor="start">worker</text>
+<text x="362" y="232" class="t tiny" text-anchor="start">answers queued questions with the frozen</text>
+<text x="362" y="246" class="t tiny" text-anchor="start">pipeline: analyze · select evidence · explain</text>
+<text x="362" y="260" class="t tiny" text-anchor="start">the only process with outbound model calls</text>
+<text x="362" y="274" class="t tiny" text-anchor="start">re-verifies, then commits in one transaction</text>
+<rect x="350" y="302" width="250" height="52" rx="6" class="proc"/>
+<text x="362" y="324" class="t label" text-anchor="start">migrate</text>
+<text x="362" y="342" class="t tiny" text-anchor="start">one-off job per release (schema owner)</text>
+<rect x="350" y="366" width="250" height="112" rx="6" class="proc"/>
+<text x="362" y="388" class="t label" text-anchor="start">pinned in the image</text>
+<text x="362" y="406" class="t tiny" text-anchor="start">HumeBot core: verification, contract, gates</text>
+<text x="362" y="420" class="t tiny" text-anchor="start">corpus package: Enquiry I–IX, 1777 text</text>
+<text x="362" y="434" class="t tiny" text-anchor="start">replay bundle: 20 recorded answers</text>
+<text x="362" y="448" class="t tiny" text-anchor="start">both hash-pinned at release</text>
+<text x="362" y="462" class="t tiny" text-anchor="start">no model weights · no student data</text>
+<rect x="636" y="60" width="172" height="152" rx="6" class="dashed"/>
+<text x="722" y="86" class="t label" text-anchor="middle">Approved inference</text>
+<text x="722" y="103" class="t label" text-anchor="middle">API (proposed)</text>
+<text x="722" y="124" class="t tiny" text-anchor="middle">external provider · TLS</text>
+<text x="722" y="138" class="t tiny" text-anchor="middle">receives the question text</text>
+<text x="722" y="152" class="t tiny" text-anchor="middle">and the corpus evidence;</text>
+<text x="722" y="166" class="t tiny" text-anchor="middle">never a student identity</text>
+<text x="722" y="180" class="t tiny" text-anchor="middle">frozen settings; served</text>
+<text x="722" y="194" class="t tiny" text-anchor="middle">model checked against pin</text>
+<path d="M602 232 C 622 232, 622 140, 634 140" class="gold" marker-end="url(#arrow-gold)"/>
+<rect x="636" y="330" width="172" height="150" rx="6" class="dashed"/>
+<text x="722" y="352" class="t label" text-anchor="middle">Managed PostgreSQL</text>
+<text x="722" y="369" class="t label" text-anchor="middle">(proposed)</text>
+<text x="722" y="390" class="t tiny" text-anchor="middle">TLS required</text>
+<text x="722" y="404" class="t tiny" text-anchor="middle">schemas: ops · instr · research</text>
+<text x="722" y="418" class="t tiny" text-anchor="middle">(research stays empty)</text>
+<text x="722" y="432" class="t tiny" text-anchor="middle">roles: owner · app · admin</text>
+<text x="722" y="446" class="t tiny" text-anchor="middle">append-only history</text>
+<text x="722" y="460" class="t tiny" text-anchor="middle">backups; tested restore</text>
+<path d="M602 150 C 622 150, 622 395, 634 395" class="flow" marker-end="url(#arrow)"/>
+<path d="M602 262 C 622 262, 622 410, 634 410" class="flow" marker-end="url(#arrow)"/>
+<rect x="330" y="522" width="478" height="30" rx="6" class="dashed"/>
+<text x="569" y="541" class="t tiny" text-anchor="middle">Platform services (proposed): secrets · registry · ingress and TLS · logs · monitoring</text>
+<text x="16" y="236" class="t tiny" text-anchor="start">Local development only (never deployed):</text>
+<text x="16" y="250" class="t tiny" text-anchor="start">synthetic sign-in page; mock model service</text>
+<text x="16" y="264" class="t tiny" text-anchor="start">serving recorded answers; Compose stack.</text>
+<rect x="16" y="436" width="24" height="13" rx="3" class="legend-solid"/>
+<text x="48" y="447" class="t tiny" text-anchor="start">implemented and tested in development</text>
+<rect x="16" y="458" width="24" height="13" rx="3" class="legend-dashed"/>
+<text x="48" y="469" class="t tiny" text-anchor="start">proposed University or external service:</text>
+<text x="48" y="483" class="t tiny" text-anchor="start">not provisioned, tested or approved</text>
+<path d="M16 503 L40 503" class="gold"/>
+<text x="48" y="507" class="t tiny" text-anchor="start">outbound model call, worker only</text>
+</svg>

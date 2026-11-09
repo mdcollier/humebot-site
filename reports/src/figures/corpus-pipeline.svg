@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" role="img" aria-labelledby="cp-title cp-desc">
+<title id="cp-title">From page image to verified displayed text</title>
+<desc id="cp-desc">Row one: a page image of the 1777 printing is read by two independent OCR engines; every leaf is then read in full against the image and every decision is recorded; an assembler emits characters only from the OCR files and the recorded edits, producing the diplomatic text, which an independent reconstruction must reproduce byte for byte. Row two: a deterministic normalization produces the reading text; every unit receives a stable identifier and a citation URI; a hash-pinned corpus package carries the text into the Reading Desk, which constructs displayed quotations from it and verifies them.</desc>
+<style>
+.t { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #1f1f1f; }
+.label { font-size: 14px; font-weight: 600; }
+.tiny { font-size: 12px; fill: #5f6368; }
+.row { font-size: 11px; fill: #7a1e2e; font-weight: 600; letter-spacing: 0.08em; }
+.box { fill: #fff; stroke: #7a1e2e; stroke-width: 1.5; }
+.evid { fill: #f7f4ef; stroke: #7a1e2e; stroke-width: 1.8; }
+.flow { fill: none; stroke: #1f1f1f; stroke-width: 1.5; }
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f1f1f"/></marker></defs>
+<rect width="820" height="330" fill="#fff"/>
+<text x="16" y="18" class="t row" text-anchor="start">FROM PAGE IMAGE TO DIPLOMATIC TEXT</text>
+<rect x="16" y="32" width="184" height="82" rx="6" class="box"/>
+<text x="108.0" y="54" class="t label" text-anchor="middle">Page image</text>
+<text x="108.0" y="74" class="t tiny" text-anchor="middle">a leaf of the 1777 printing,</text>
+<text x="108.0" y="88" class="t tiny" text-anchor="middle">identified by checksum</text>
+<path d="M202 73.0 L213 73.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="216" y="32" width="184" height="82" rx="6" class="box"/>
+<text x="308.0" y="54" class="t label" text-anchor="middle">Two OCR readings</text>
+<text x="308.0" y="74" class="t tiny" text-anchor="middle">independent engines; where</text>
+<text x="308.0" y="88" class="t tiny" text-anchor="middle">they disagree, a site to decide</text>
+<path d="M402 73.0 L413 73.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="416" y="32" width="184" height="82" rx="6" class="box"/>
+<text x="508.0" y="54" class="t label" text-anchor="middle">Full reading of every leaf</text>
+<text x="508.0" y="74" class="t tiny" text-anchor="middle">read against the image;</text>
+<text x="508.0" y="88" class="t tiny" text-anchor="middle">every decision recorded</text>
+<path d="M602 73.0 L613 73.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="616" y="32" width="184" height="82" rx="6" class="evid"/>
+<text x="708.0" y="54" class="t label" text-anchor="middle">Diplomatic text</text>
+<text x="708.0" y="74" class="t tiny" text-anchor="middle">only OCR characters and</text>
+<text x="708.0" y="88" class="t tiny" text-anchor="middle">recorded edits; page-faithful</text>
+<text x="800" y="131" class="t tiny" text-anchor="end">an independent reconstruction must match it byte for byte</text>
+<path d="M708.0 140 L708.0 154 L108.0 154 L108.0 187" class="flow" marker-end="url(#arrow)"/>
+<text x="16" y="178" class="t row" text-anchor="start">FROM DIPLOMATIC TEXT TO THE READER</text>
+<rect x="16" y="190" width="184" height="82" rx="6" class="box"/>
+<text x="108.0" y="212" class="t label" text-anchor="middle">Normalized text</text>
+<text x="108.0" y="232" class="t tiny" text-anchor="middle">a deterministic derivative for</text>
+<text x="108.0" y="246" class="t tiny" text-anchor="middle">reading; versioned rules</text>
+<path d="M202 231.0 L213 231.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="216" y="190" width="184" height="82" rx="6" class="box"/>
+<text x="308.0" y="212" class="t label" text-anchor="middle">Identifiers and index</text>
+<text x="308.0" y="232" class="t tiny" text-anchor="middle">216 units; E.4.19 and</text>
+<text x="308.0" y="246" class="t tiny" text-anchor="middle">urn:hume:ehu:4.19</text>
+<path d="M402 231.0 L413 231.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="416" y="190" width="184" height="82" rx="6" class="evid"/>
+<text x="508.0" y="212" class="t label" text-anchor="middle">Corpus package</text>
+<text x="508.0" y="232" class="t tiny" text-anchor="middle">built from the sealed baseline;</text>
+<text x="508.0" y="246" class="t tiny" text-anchor="middle">SHA-256 pinned at release</text>
+<path d="M602 231.0 L613 231.0" class="flow" marker-end="url(#arrow)"/>
+<rect x="616" y="190" width="184" height="82" rx="6" class="box"/>
+<text x="708.0" y="212" class="t label" text-anchor="middle">Reading Desk</text>
+<text x="708.0" y="232" class="t tiny" text-anchor="middle">quotations constructed from the</text>
+<text x="708.0" y="246" class="t tiny" text-anchor="middle">package and verified at display</text>
+<text x="508.0" y="289" class="t tiny" text-anchor="middle">engineering baseline: rebuild from the frozen sources is byte-identical</text>
+<rect x="16" y="306" width="22" height="12" rx="3" class="evid"/>
+<text x="44" y="316" class="t tiny" text-anchor="start">the evidential text and its hash-pinned package</text>
+</svg>

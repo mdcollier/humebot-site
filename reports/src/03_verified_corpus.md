@@ -4,10 +4,10 @@ title: HumeBot: The Verified Hume Corpus and Scholarly Infrastructure
 subtitle: How Hume's primary text is established, verified and used as the foundation for accountable interpretation
 short: The Verified Hume Corpus and Scholarly Infrastructure
 audience: Philosophers, textual scholars, digital-humanities researchers and developers of scholarly AI systems
-version: 0.2 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Pilot corpus (Enquiry I–IX) built and sealed as an engineering baseline; canonical release not yet authorized.
-pdf: HumeBot_Report_3_Verified_Hume_Corpus_and_Scholarly_Infrastructure_v0_2_review_draft.pdf
+pdf: HumeBot_Report_3_Verified_Hume_Corpus_and_Scholarly_Infrastructure_v1_0.pdf
 draft: false
 ---
 
@@ -54,10 +54,10 @@ The intellectual debt and the source of the transcription are distinct, and the 
 
 The aim of the production method is a text whose every character has a recorded origin that anyone can check: either a machine reading of an identified page image, or a recorded decision about such a reading. Figure 1 shows the steps; each is described below with its purpose before its mechanics.
 
-<figure>
-<figcaption><strong>Figure 1.</strong> From page image to verified displayed text. The shaded boxes are the evidential text and the hash-pinned package built from it.</figcaption>
+<div class="figure">
+<p class="figcaption"><strong>Figure 1.</strong> From page image to verified displayed text. The shaded boxes are the evidential text and the hash-pinned package built from it.</p>
 <img src="figures/corpus-pipeline.svg" alt="Two-row flow diagram. Row one: page image; two OCR readings; full reading of every leaf with recorded decisions; diplomatic text, assembled only from OCR characters and recorded edits, which an independent reconstruction must match byte for byte. Row two: normalized text; identifiers and index; hash-pinned corpus package; Reading Desk, which constructs quotations from the package and verifies them.">
-</figure>
+</div>
 
 **Page images.** Each leaf of the source digitization is identified by its SHA-256 checksum and mapped to its printed page; the batch records state the mapping as a rule for their range (in the first production batch, the leaf number is the printed page plus seven throughout the body). Image files are never committed to the repository; they are identified by checksum and locator, so that a reading can always be traced to the exact image it was made from.
 
@@ -170,4 +170,4 @@ HumeBot has a reliable computational textual foundation: a transcription of *Enq
 <li>Strategic directions §12 (the pilot-corpus phase boundary, 2 September 2026) and §16 (the student digital-edition direction); the constitutional document §3.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.2, review draft of 8 November 2026, prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. The corpus described is an engineering baseline in development use; it is not a canonical scholarly release.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. The corpus described is an engineering baseline in development use; it is not a canonical scholarly release.</p>

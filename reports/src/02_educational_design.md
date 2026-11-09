@@ -4,10 +4,10 @@ title: HumeBot: Educational Design and Philosophical Principles
 subtitle: Why an educational AI for the history of philosophy should be designed around the epistemic norms of the discipline, and what follows for HumeBot
 short: Educational Design and Philosophical Principles
 audience: Philosophers, faculty, educational researchers and interested University colleagues
-version: 0.1 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Design principle and invariants adopted; implemented in a development prototype; educational outcomes not yet evaluated.
-pdf: HumeBot_Report_2_Educational_Design_and_Philosophical_Principles_v0_1_review_draft.pdf
+pdf: HumeBot_Report_2_Educational_Design_and_Philosophical_Principles_v1_0.pdf
 draft: false
 ---
 
@@ -33,10 +33,10 @@ The thesis of this report is the principle applied. For historical-philosophical
 
 The question this report is organized around is the one any reader of that principle should ask: **why build HumeBot at all, rather than simply call a capable frontier model with a carefully designed prompt and the complete text of the *Enquiry*?** Such a model can be asked to reconstruct arguments, quote exactly, cite correctly, preserve Hume's qualifications and explain where interpreters disagree, and it will often do all of this well; it can also be given the instructor's own notes. HumeBot denies none of that, and it can itself use a frontier model to generate its explanations. The contrast is not between a weak model and a strong one but between relying on a model's generated response alone and using a model inside a discipline-specific software harness. A norm that is requested in a prompt is not enforced: when the model fails it, nothing in the response tells the reader. Enforcement has to come from outside the generating process, and other applications could build it; HumeBot is one implemented, discipline-specific instance, in software the project calls the **normative harness**. The model generates the philosophical explanation; the harness governs the evidence, its provenance, the structure of the response and its verification. Every quotation a student sees is constructed by the software from the controlled text, at a location the student can check; every interpretive sentence is tied to specific words in the displayed evidence; what fails the checks is withheld; what the software has and has not verified is stated to the reader; and an instructor can inspect the evidence behind every answer. The project treats epistemic accountability as an architectural requirement because the activity's standards concern what a reader can check, and checkability has to be built, not promised.
 
-<figure>
-<figcaption><strong>Figure 1.</strong> The normative harness. The model generates the explanation; the harness governs the evidence and the verification. The instructor's guidance shapes the course and inspects the evidence; it is not an input to the model.</figcaption>
+<div class="figure">
+<p class="figcaption"><strong>Figure 1.</strong> The normative harness. The model generates the explanation; the harness governs the evidence and the verification. The instructor's guidance shapes the course and inspects the evidence; it is not an input to the model.</p>
 <img src="figures/harness-landscape.svg" alt="Diagram: a student question enters HumeBot's normative harness, inside which the model analyzes the question, selects evidence and explains, with Hume's verified text supplying the evidence; the answer leaves through a verification seal to the Reading Desk, which shows Hume's text beside HumeBot's explanation; the instructor's dashed arrow ends at the harness boundary.">
-</figure>
+</div>
 
 The report also keeps three things apart, because they are often run together: the **educational principle**, which is a normative claim about how such a tool should be designed; its **architectural implementation**, which is a matter of record and is described in Report 1; and the **educational outcomes**, which are empirical and remain to be established. The architecture can be shown to enforce what it enforces. Whether it helps students read Hume better is a question no study has yet answered.
 
@@ -241,4 +241,4 @@ That answer runs in three steps that should not be collapsed. The **normative ju
 <li>Research-planning drafts on instructor-directed inquiry (November 2026), cited for the project's working view on instructor reconstructions, which is not adopted policy.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.1, review draft of 8 November 2026, prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified; no educational outcome has been evaluated.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified; no educational outcome has been evaluated.</p>

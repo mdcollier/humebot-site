@@ -4,10 +4,10 @@ title: HumeBot: Open-Weight Models and Post-Training
 subtitle: Why the project studied open-weight language models, what it attempted, what it learned, and how the findings shape its direction
 short: Open-Weight Models and Post-Training
 audience: Philosophers, educators, AI researchers and technically interested readers
-version: 0.2 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Research track; no open-weight model is qualified for teaching, and no post-training has been performed.
-pdf: HumeBot_Report_4_Open_Weight_Models_and_Post_Training_v0_2_review_draft.pdf
+pdf: HumeBot_Report_4_Open_Weight_Models_and_Post_Training_v1_0.pdf
 draft: false
 ---
 
@@ -155,4 +155,4 @@ HumeBot's open-weight research was pursued for sound reasons, reproducibility, c
 <li>Frontier pilot 0.1 and frontier comparison 0.2 (29 October 2026); research roadmap 0.1 (proposal); see Report 5.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.2, review draft of 8 November 2026, prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. No model is qualified or accepted for teaching; no post-training has been performed.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. No model is qualified or accepted for teaching; no post-training has been performed.</p>

@@ -4,10 +4,10 @@ title: HumeBot: Experimental Evaluation, Frontier Models and Efficiency
 subtitle: What the project's experiments have established about the reliability, interpretive quality and practical costs of its evidence-based approach
 short: Experimental Evaluation, Frontier Models and Efficiency
 audience: Philosophers, educators and AI researchers
-version: 0.2 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Research findings on development and held-out material; no configuration is qualified for student use; no learning outcome has been studied.
-pdf: HumeBot_Report_5_Experimental_Evaluation_Frontier_Models_and_Efficiency_v0_2_review_draft.pdf
+pdf: HumeBot_Report_5_Experimental_Evaluation_Frontier_Models_and_Efficiency_v1_0.pdf
 draft: false
 ---
 
@@ -183,4 +183,4 @@ HumeBot's evaluations have established one thing firmly and failed to establish 
 <li>Constitutional document §2 and §4 (epistemic constraint is not evidence of interpretive benefit); Report 1 for the system evaluated.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.2, review draft of 8 November 2026, prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. No configuration is qualified for student use; no learning outcome has been studied.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. No configuration is qualified for student use; no learning outcome has been studied.</p>

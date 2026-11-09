@@ -4,10 +4,10 @@ title: HumeBot: Classroom Readiness and Institutional Decisions
 subtitle: What has been accomplished toward a university instructional resource, what remains before students could use it, and which decisions belong to whom
 short: Classroom Readiness and Institutional Decisions
 audience: Faculty, university administrators, educational technologists and researchers in the responsible educational use of AI
-version: 0.1 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Working development application; not deployed, not approved for student use, no qualified model.
-pdf: HumeBot_Report_6_Classroom_Readiness_and_Institutional_Decisions_v0_1_review_draft.pdf
+pdf: HumeBot_Report_6_Classroom_Readiness_and_Institutional_Decisions_v1_0.pdf
 draft: false
 ---
 
@@ -129,4 +129,4 @@ The project's planning names a first course in 2027 as a target, explicitly subj
 <li>The deployment gate on student data (Workbench specification §9); the constitutional document §3; the closure of the instructor-guidance research arc (5 November 2026); strategic directions §14.6, §15.2 and §16; the Instructional Qualification 0.1 decision record (closure); Report 5.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.1, review draft of 8 November 2026, prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified; no formal request for University evaluation or approval has been made.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified; no formal request for University evaluation or approval has been made.</p>

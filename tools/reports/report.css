@@ -30,6 +30,12 @@ code { font-family: Menlo, Consolas, monospace; font-size: 0.86em; background: v
 /* ---------- cover ---------- */
 body.cover-page { width: 8.5in; height: 11in; overflow: hidden; }
 .cover { box-sizing: border-box; height: 11in; padding: 3.2in 1.1in 0.9in 1.1in; position: relative; font-family: var(--sans); }
+/* Single-document mode: the cover is the first page of the same flow, inside the ordinary page
+   margins (0.95in top, 0.9in bottom, 1in sides), so its box is the page's content area. */
+body.single-page .cover { height: 9.15in; padding: 2.3in 0.1in 0.5in 0.1in; break-after: page; page-break-after: always; }
+body.single-page .cover .draft { left: 0.1in; bottom: 0.9in; }
+body.single-page .cover .standing { left: 0.1in; right: 0.1in; bottom: 0.1in; }
+body.single-page .report { counter-reset: h2; }
 .cover .kicker { font-size: 9pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.1em; }
 .cover h1 { font-size: 27pt; line-height: 1.18; font-weight: 600; color: var(--burgundy); margin: 0 0 0.45em; letter-spacing: -0.005em; }
 .cover .subtitle { font-family: var(--serif); font-size: 13pt; line-height: 1.4; color: var(--ink); margin: 0 0 1.4em; max-width: 5.6in; }
@@ -42,7 +48,7 @@ body.cover-page { width: 8.5in; height: 11in; overflow: hidden; }
 .cover .meta dd { margin: 0; }
 .cover .draft { position: absolute; left: 1.1in; bottom: 1.55in; font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); }
 .cover .standing { position: absolute; left: 1.1in; right: 1.1in; bottom: 0.95in; font-size: 8.5pt; line-height: 1.5; color: var(--muted); margin: 0; }
-.cover .url { font-family: var(--sans); }
+.cover .url { font-family: var(--sans); color: inherit; text-decoration: none; }
 
 /* ---------- body typography ---------- */
 .report { counter-reset: h2; }
@@ -98,10 +104,10 @@ table.compact td, table.compact th { padding-top: 0.3em; padding-bottom: 0.3em; 
 table .tag { font-size: 7.6pt; letter-spacing: 0.06em; text-transform: uppercase; color: var(--burgundy); white-space: nowrap; }
 
 /* ---------- figures ---------- */
-figure { margin: 1.3em 0 1.3em; break-inside: avoid; page-break-inside: avoid; }
-figure img, figure svg { display: block; width: 100%; height: auto; }
-figcaption { font-family: var(--sans); font-size: 8.8pt; color: var(--muted); margin: 0 0 0.5em; }
-figcaption strong { color: var(--ink); font-weight: 600; }
+figure, .figure { margin: 1.3em 0 1.3em; break-inside: avoid; page-break-inside: avoid; }
+figure img, figure svg, .figure img, .figure svg { display: block; width: 100%; height: auto; }
+figcaption, .figure .figcaption { font-family: var(--sans); font-size: 8.8pt; color: var(--muted); margin: 0 0 0.5em; line-height: 1.45; text-indent: 0; }
+figcaption strong, .figure .figcaption strong { color: var(--ink); font-weight: 600; }
 figure .fignote { font-family: var(--sans); font-size: 8.6pt; color: var(--muted); margin: 0.5em 0 0; line-height: 1.45; }
 
 /* ---------- key-value "at a glance" list ---------- */

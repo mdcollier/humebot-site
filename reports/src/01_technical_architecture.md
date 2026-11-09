@@ -4,10 +4,10 @@ title: HumeBot: Technical Architecture and University Deployment
 subtitle: What has been built, and how the University could operate it
 short: Technical Architecture and University Deployment
 audience: University IT and cloud services
-version: 0.1 — Review draft
+version: 1.0
 date: 8 November 2026
 status: Development prototype. Not deployed; not approved for student use.
-pdf: HumeBot_Report_1_Technical_Architecture_and_University_Deployment_v0_1_review_draft.pdf
+pdf: HumeBot_Report_1_Technical_Architecture_and_University_Deployment_v1_0.pdf
 draft: false
 ---
 
@@ -75,10 +75,10 @@ The architecture supports evidence accountability without guaranteeing interpret
 
 Three further requirements cannot be met by prompting even when the model is accurate. **Auditability:** an instructor must be able to inspect what evidence was supplied, selected, displayed and cited for any answer, which requires that the system, not the model, record those things. **Scope authority:** whether a question falls outside the corpus is a fact about the corpus, and the software decides it from approved metadata rather than trusting the model to know its own limits. **Separation:** the student's identity, the instructor's materials and the model's prompt must be kept apart by construction. The architecture described in the rest of this report (Figure 1) is the project's answer to these requirements, and it is designed to hold across models, providers and hosting arrangements, each of which must demonstrably satisfy the same requirements (section 6).
 
-<figure>
-<figcaption><strong>Figure 1.</strong> The Reading Desk as proposed for University deployment. Solid outlines: implemented and tested in development. Dashed outlines, marked <em>proposed</em>: University or external services that do not exist for this application today and have not been provisioned, tested or approved.</figcaption>
+<div class="figure">
+<p class="figcaption"><strong>Figure 1.</strong> The Reading Desk as proposed for University deployment. Solid outlines: implemented and tested in development. Dashed outlines, marked <em>proposed</em>: University or external services that do not exist for this application today and have not been provisioned, tested or approved.</p>
 <img src="figures/architecture.svg" alt="Architecture diagram: a browser reaches a proposed University sign-in gateway, which passes one identity header to the Reading Desk web process; the web process, a worker and a migration job run from one container image that also carries the verification core, the pinned corpus and the replay bundle; web and worker use a proposed managed PostgreSQL service; only the worker calls a proposed approved inference API; proposed platform services surround the application.">
-</figure>
+</div>
 
 ## The normative harness
 
@@ -271,4 +271,4 @@ The Reading Desk is a complete development application built on a specific archi
 <li>Native harness comparison (September 2026) and frontier comparison 0.2 (October 2026); see Reports 4 and 5.</li>
 </ul>
 
-<p class="small"><strong>Document status.</strong> Version 0.1, review draft of 8 November 2026 (second revision), prepared for the faculty lead's review. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified.</p>
+<p class="small"><strong>Document status.</strong> Version 1.0, 8 November 2026. A faculty-led project report of the University of Minnesota Morris; not an official University publication and not University policy. HumeBot is a development prototype: not deployed, not approved for student use, and not qualified.</p>

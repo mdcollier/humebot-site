@@ -80,6 +80,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 1.4em 0; }
 .box dt { font-family: var(--sans); font-size: 8.5pt; color: var(--muted); margin: 0; padding-top: 0.1em; }
 .box dd { margin: 0; }
 
+.keep { break-inside: avoid; page-break-inside: avoid; }
 .note { font-size: 9.5pt; color: var(--muted); }
 .small { font-size: 9pt; color: var(--muted); }
 

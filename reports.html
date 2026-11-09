@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reports — HumeBot</title>
-  <meta name="description" content="HumeBot's educational and philosophical design, a technical and institutional overview for University IT, what has been evaluated so far, and the institutional decisions that remain before any classroom use.">
+  <meta name="description" content="Six reports on the HumeBot project: its technical architecture, educational design, verified Hume corpus, open-weight model research, experimental evaluation, and classroom readiness.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/reports.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -29,106 +29,47 @@
   <main id="main">
 
     <p class="kicker">Reports</p>
-    <h1>Design, deployment and evidence</h1>
-    <p class="lede">Four short overviews, beginning with the one for University IT: the technical and institutional picture; the educational and philosophical design; what has been evaluated so far, and what has not; and the decisions that remain before any classroom use.</p>
-    <ul class="explore" aria-label="On this page">
-      <li><a href="#deployment">Deployment overview for University IT</a></li>
-      <li><a href="#design">Educational and philosophical design</a></li>
-      <li><a href="#evaluation">What has been evaluated</a></li>
-      <li><a href="#decisions">Decisions that remain</a></li>
-    </ul>
+    <h1>The HumeBot reports</h1>
+    <p class="lede">Six reports describe the HumeBot project for different readers: what has been built and how a university could operate it, why it is designed around the norms of philosophical inquiry, how Hume's text was established and verified, what the research on open-weight language models found, what the experiments show and do not show, and what would have to happen before students could use it.</p>
+    <p>Each report stands on its own and names the others where they go further. Together they describe a working research application that has not been approved or deployed for student use. The reports are documents of a faculty-led project at the University of Minnesota Morris, not University publications.</p>
 
-    <section id="deployment" aria-labelledby="deployment-h">
-      <h2 id="deployment-h">1. Technical and institutional overview for University IT</h2>
-      <p><strong>Prepared for</strong> the colleagues who would host and operate the application. It separates what is implemented and tested in development from what is proposed and would need University provision or approval. What has been verified experimentally, and what has not, is in <a href="#evaluation">section 3</a>.</p>
+    <ol class="reports" aria-label="The six reports">
+      <li id="deployment">
+        <h2>1. Technical Architecture and University Deployment</h2>
+        <p>What has been built, and how the University could operate it: the Reading Desk application, the software harness that constructs and verifies every quotation around the language model, how data and identity are handled, and what a deployment on University infrastructure would require. Written for IT and cloud-services colleagues.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_1_Technical_Architecture_and_University_Deployment_v1_0.pdf">Read Report 1 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+      <li id="design">
+        <h2>2. Educational Design and Philosophical Principles</h2>
+        <p>Why build HumeBot rather than simply call a capable language model with Hume's text? The governing educational principle, the eight commitments that follow from the practices of historical philosophy, the difference between an accurate citation and a correct interpretation, the instructor's authority, and a case study on Hume's problem of induction. Written for philosophers, faculty and educational researchers.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_2_Educational_Design_and_Philosophical_Principles_v1_0.pdf">Read Report 2 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+      <li>
+        <h2>3. The Verified Hume Corpus and Scholarly Infrastructure</h2>
+        <p>How Hume's text is established, verified and cited: the choice of the 1777 edition, the transcription method and what it does and does not establish, the current corpus of Sections I–IX of the <cite>Enquiry</cite> and its status, the citation infrastructure that lets software check exactness and location but not interpretation, and the scholarly layers that are specified but not yet built. Written for textual scholars and digital-humanities researchers.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_3_Verified_Hume_Corpus_and_Scholarly_Infrastructure_v1_0.pdf">Read Report 3 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+      <li>
+        <h2>4. Open-Weight Models and Post-Training</h2>
+        <p>Why the project studied open-weight language models on the University's research computing, what the development work located about where such a model succeeds and fails at reading Hume, why an investigation into post-training stopped before any training, and how comparisons with frontier models bear on the choice of model. Written for AI researchers and research-computing colleagues.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_4_Open_Weight_Models_and_Post_Training_v1_0.pdf">Read Report 4 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+      <li id="evaluation">
+        <h2>5. Experimental Evaluation, Frontier Models and Efficiency</h2>
+        <p>The principal quantitative report: what the experiments established about the reliability of the text students would see, what they investigated without demonstrating about the quality of the interpretations, and what the system costs, with the sample sizes, the limits of AI-assisted review and the status of the formal qualification attempt stated throughout. Written for researchers and evaluators.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_5_Experimental_Evaluation_Frontier_Models_and_Efficiency_v1_0.pdf">Read Report 5 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+      <li id="decisions">
+        <h2>6. Classroom Readiness and Institutional Decisions</h2>
+        <p>What has been accomplished toward a university instructional resource, what remains before students could use it, and which decisions belong to the faculty lead and which to the University. Written for faculty, administrators and educational technologists.</p>
+        <p class="pdf"><a href="reports/HumeBot_Report_6_Classroom_Readiness_and_Institutional_Decisions_v1_0.pdf">Read Report 6 (PDF)</a> · Version 1.0 · November 2026</p>
+      </li>
+    </ol>
 
-      <h3>What exists today</h3>
-      <p>The Reading Desk is a containerized web application: a Python web process, a worker process and a migration job built from one image, with a PostgreSQL 16 database. It runs as a non-root user on a read-only filesystem, exposes liveness and readiness probes, and takes every setting from the environment. It is tested with synthetic identities and recorded answers on a developer's machine; it has not been deployed anywhere.</p>
-      <ul>
-        <li><strong>Identity.</strong> In production the application trusts exactly one identity header from an authenticating proxy, the pattern University single sign-on gateways provide. Unknown identities are refused, never created; roles are granted per course and default to deny. The synthetic sign-in used for development cannot exist in a production configuration.</li>
-        <li><strong>PostgreSQL.</strong> Standard features only: schemas, JSON columns, triggers and ordinary roles, with no extensions or superuser rights at runtime. Three roles: schema owner (migrations), application (no DDL rights) and administrative. Separate schemas for operations, instruction and research; the research schema is empty by design. Triggers make history append-only and refuse an incomplete or inconsistent answer at commit. Production refuses a database connection without TLS.</li>
-        <li><strong>Answers.</strong> Every answer is verified against the pinned corpus and committed, with its audit records, before anything is shown, and verified again at each display. Raw model output and prompt text are never stored. Logs carry no question text, model output or credential.</li>
-        <li><strong>Operations.</strong> Stdout logging, a readiness report, an audit of delivery, viewing, inspection and annotation, operational commands for readiness checks and a rolled-back self-test, and a release build whose image records its exact inputs.</li>
-      </ul>
-
-      <h3>Proposed: answering new questions through an approved inference API</h3>
-      <p>Today the application serves recorded answers, and can exercise its live path only against a local stand-in. The proposal is to let students ask their own questions, with HumeBot's three stages run through an external inference API that the University has approved for this use. Only the worker process would call it, over TLS, sending the text of the question and the corpus and never the student's identity. The settings are fixed by the pipeline; a response from an unexpected model, or one that fails verification, is refused. Each new answer takes about a minute on the configuration tested in development. An external API means that the question text, and the corpus, leave University infrastructure for the provider's systems under whatever agreement governs that use; institutional approval of the endpoint does not make the processing local. Which provider, under which agreement and data-handling terms, is a University decision, and the configuration that would serve students must also pass the project's own acceptance decision; neither has been made.</p>
-
-      <h3>Data, privacy and retention</h3>
-      <p>The proposed initial classroom use is an ordinary instructional application, not a research study, and no institutional review board study is being conducted for it. The database would hold ordinary teaching records: which course members asked which questions, the answers they received, the verification and audit records, and potentially optional student feedback, retained for legitimate teaching purposes subject to University data-governance approval. Access follows course roles and defaults to deny; students see only their own readings and instructors the readings of their own course; every view is audited, and the history is append-only. Any later research use of such records would need its own governance, access and retention rules and the appropriate institutional determinations. The questions to settle in writing are the data classification of student questions and readings; the treatment of stored answers and instructor views under student-records law; the retention schedule and a governed deletion path compatible with append-only history, which is not yet built; what notice students receive; and whether the approved model service may receive student questions.</p>
-
-      <h3>What the University would provide</h3>
-      <div class="table-scroll">
-      <table class="status">
-        <thead><tr><th scope="col">Area</th><th scope="col">Needed</th><th scope="col">Application side</th></tr></thead>
-        <tbody>
-          <tr><td>Platform</td><td>A container platform for the web, worker and migration processes; secrets; probes; ingress and TLS</td><td>Ready; configuration refuses unsafe combinations</td></tr>
-          <tr><td>Database</td><td>Managed PostgreSQL 16 with TLS, three roles, backups and a tested restore</td><td>Ready; migrations run as a separate job</td></tr>
-          <tr><td>Identity</td><td>The sign-in gateway, its identity header, written confirmation that client-supplied headers are stripped, and the source of course roles</td><td>Ready; an audited provisioning command stands in for a roster feed</td></tr>
-          <tr><td>Inference</td><td>An approved endpoint and model, authentication method, quotas, data-handling terms and egress from the worker</td><td>Connector implemented and tested against a local stand-in; the University endpoint has not been tested</td></tr>
-          <tr><td>Operations</td><td>Monitoring on the readiness probe, log retention and access, incident ownership, a change freeze in term</td><td>Readiness report and audit records exist</td></tr>
-          <tr><td>Governance</td><td>The written determination on student data and provider suitability; the retention schedule; the acceptance decision for the live configuration</td><td>Gated: no student use before the determination</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p><strong>Accessibility.</strong> Automated checks against WCAG 2.1 AA and scripted keyboard tests pass and run as a regression gate in development. That is not a conformance claim: screen-reader testing, real browser zoom, other browsers and the University's accessibility review remain to be done.</p>
-    </section>
-
-    <section id="design" aria-labelledby="design-h">
-      <h2 id="design-h">2. Educational and philosophical design</h2>
-      <p><strong>The activity.</strong> HumeBot supports historical-philosophical inquiry: reconstructing and assessing a philosopher's arguments from the text, with the book in front of the student. It answers questions directly and substantively, with its best-supported reading rather than an authoritative verdict, and directs the student back to the primary text at every step.</p>
-      <p><strong>The principle.</strong> The project's governing educational principle, adopted in November 2026, is that educational AI should be designed around the epistemic norms of the activity it is meant to support, rather than around a generic conception of a helpful conversational assistant. The principle explains the project's commitments and adds none of its own.</p>
-      <p><strong>The commitments.</strong> Eight normative invariants, held because scholarship requires them and never traded for a better-sounding explanation:</p>
-      <dl class="terms">
-        <dt>Visible primary text</dt><dd>A substantive answer displays the relevant passages, built and verified by the software; citations attached to prose are not a substitute.</dd>
-        <dt>Deterministic provenance</dt><dd>Every quotation and location is derived from, or verified against, the controlled corpus before it is shown; anything that fails is withheld.</dd>
-        <dt>Epistemic typing</dt><dd>Hume's text, HumeBot's reading, attributed scholarship and open questions stay distinct and labelled. An anchored interpretation is not thereby correct.</dd>
-        <dt>Evidence accountability</dt><dd>Every interpretive claim is traceable to passages actually supplied and open to inspection. A correct quotation does not establish that the passage supports the claim.</dd>
-        <dt>Evidence-dependent reasoning</dt><dd>Generation is designed to engage the supplied text rather than decorate pretrained knowledge with citations. This is a behavioural objective, examined empirically, never claimed as proven.</dd>
-        <dt>Instructor authority</dt><dd>The instructor sets the course's objectives and norms. Pedagogy belongs to a policy the instructor can set or decline, never to the core, and no policy overrides provenance or privacy.</dd>
-        <dt>Educator auditability</dt><dd>For any answer, the instructor can inspect the evidence supplied, selected, displayed and cited, the checks, the stated limits and the generation metadata.</dd>
-        <dt>Student privacy and data separation</dt><dd>No real student data reaches a remote provider or an instructor view before the University's written determination. Instructional, operational and research data stay separate; storing an interaction gives no permission to analyse or train on it.</dd>
-      </dl>
-      <p><strong>Public justification.</strong> HumeBot requires explanations and reasons that anyone can examine, not access to a model's private reasoning. The project cannot establish that a model relied only on the supplied text rather than on its training; it says so, and treats evidence dependence as an objective to be studied.</p>
-      <p><strong>A conceptual contrast.</strong> Different teaching applications may need different epistemic constraints. A Socratic tutor may restrict answer-giving to protect a student's own reasoning; HumeBot gives substantive answers and governs how they are justified. The comparison is conceptual: it says what kind of design HumeBot is, not that one approach is better.</p>
-    </section>
-
-    <section id="evaluation" aria-labelledby="evaluation-h">
-      <h2 id="evaluation-h">3. What has been evaluated, and what has not</h2>
-      <p>The studies below were small, exploratory, and run on development material, with AI reviewers where judgments were needed. They support claims about provenance; they do not support claims about educational or interpretive superiority.</p>
-      <div class="pair">
-        <div>
-          <h3>Demonstrated: provenance reliability</h3>
-          <ul>
-            <li>In a 24-question comparison using the same open-weight model for both systems, HumeBot's pipeline made no faulty citations in 89. The same model, strongly prompted and given the whole text, made 12 faulty citations in 51.</li>
-            <li>In a 60-question held-out study, all 238 of the pipeline's citations were exact and came from the evidence supplied for the answer.</li>
-            <li>With a frontier model on the same unchanged pipeline, all 442 citations in a 20-question comparison were exact.</li>
-          </ul>
-          <p>These results concern whether quotations are exact, correctly located and anchored in displayed text. They follow from the design, which builds every quotation from the corpus and withholds what it cannot verify.</p>
-        </div>
-        <div>
-          <h3>Not established</h3>
-          <ul>
-            <li>That HumeBot interprets Hume better than a well-prompted model given the same text. In the frontier comparison, the pipeline did not improve fidelity over direct prompting, and a blinded AI reviewer preferred the direct form of explanation more often on pedagogical grounds.</li>
-            <li>That it improves student learning. No classroom study has been conducted.</li>
-            <li>That any configuration is qualified for student use. The October 2026 qualification attempt returned not eligible at its evidence gate, before scholarly review; it established neither a pass nor a fail.</li>
-            <li>That exchange between AI readers improves judgment. A November 2026 pilot found text-grounded challenges useful, but the revisions they prompted did not reliably improve philosophical judgments.</li>
-          </ul>
-        </div>
-      </div>
-      <p>Further detail on the open-weight studies is on the <a href="open-weight-research.html">Open-Weight Model Research</a> page. The project's internal research records are not published; selected public summaries will be listed here as they are completed and reviewed for release.</p>
-    </section>
-
-    <section id="decisions" aria-labelledby="decisions-h">
-      <h2 id="decisions-h">4. Decisions that remain before classroom use</h2>
-      <ol>
-        <li><strong>The written determination on student data and provider suitability:</strong> which providers may receive student questions and on what terms; where records are kept, who may see them and for how long; how instructors may inspect sessions; what students are told.</li>
-        <li><strong>An approved inference channel</strong> for a configuration that answers new questions, with its data-handling terms.</li>
-        <li><strong>The project's acceptance decision</strong> for that configuration: a bounded review of live answers to course questions under the invariants, before any student sees one.</li>
-        <li><strong>Hosting, identity, database and operations</strong> on University infrastructure, as tabled above.</li>
-        <li><strong>Accessibility review</strong> beyond automated checks.</li>
-      </ol>
-      <p class="small">Nothing on this page claims that institutional approvals, model qualification or learning-outcome validation are complete. They are not.</p>
+    <section id="about-the-reports" aria-labelledby="about-h">
+      <h2 id="about-h">About these reports</h2>
+      <p>The reports were written in November 2026 from the project's own records and reflect the project as it stood on 8 November 2026. The PDFs are tagged for accessibility and carry bookmarks for their sections. An earlier page on the project's <a href="open-weight-research.html">open-weight model research</a> remains available; Report 4 gives the fuller account.</p>
+      <p class="small"><em>HumeBot is a working development prototype, tested with fictional accounts and recorded answers. It has not been approved or deployed for student use, no language model has been qualified for teaching, and it is not an official University service.</em></p>
     </section>
 
   </main>

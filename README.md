@@ -2,7 +2,7 @@
 
 This repository contains **only the public HumeBot project website**. It is a small static site:
 - HTML and CSS only, with one inline SVG diagram in two layouts;
-- no build step, framework or scripts on the site; `tools/harness_diagram.py` (standard-library Python, run by hand) regenerates the diagram's SVG files in `assets/diagram/`;
+- no build step, framework or scripts on the site; `tools/harness_diagram.py` (standard-library Python, run by hand) regenerates the diagram's SVG files in `assets/diagram/`; the six PDF reports in `reports/` are built by hand from their Markdown sources with `tools/reports/build_reports.py` (Python with `markdown`, `pypdf` and Playwright's Chrome);
 - no analytics, cookies or forms.
 
 Open `index.html` locally to preview it, or serve the directory with any static file server.
@@ -32,7 +32,9 @@ repository is copied here wholesale.
 | `index.html` | Home: what HumeBot is, why it exists, the governing educational principle |
 | `how-it-works.html` | How It Works: the three stages, verification, typed responses, the instructor's view, the proposed hosting arrangement |
 | `demo.html` | Demo: a recorded walk through the Reading Desk, with captions and a transcript |
-| `reports.html` | Reports: educational design, the overview for University IT, what has been evaluated, the decisions that remain |
+| `reports.html` | Reports: the index of the six-report collection |
+| `reports/` | The six project reports as tagged PDFs (Version 1.0), their Markdown sources (`reports/src/`) and figures |
+| `tools/reports/` | The report builder (`build_reports.py`: Markdown → HTML → tagged PDF with headless Chrome), the shared print stylesheet and the figure generators |
 | `open-weight-research.html` | Open-Weight Model Research, linked from Reports |
 | `about.html`, `evidence.html`, `status.html`, `university-it.html` | Superseded-page notices for pages retired in November 2026, each linking to the current page |
 | `assets/` | Stylesheet and favicon |

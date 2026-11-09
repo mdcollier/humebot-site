@@ -299,6 +299,8 @@ table.status th { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0
 .reports > li { max-width: 44rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 .reports > li:last-child { border-bottom: none; }
 .reports h3 { margin: 0 0 0.3rem; }
+.reports h2 { font-size: 1.2rem; margin: 0 0 0.3rem; }
+.reports .pdf { font-family: var(--sans); font-size: 0.9rem; }
 .reports p { margin: 0.35rem 0 0; }
 
 /* ---------- V2.1: the three contributions panel on the Demo page ---------- */

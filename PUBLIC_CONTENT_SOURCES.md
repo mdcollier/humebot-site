@@ -33,10 +33,17 @@ generated automatically from internal project materials.
 | How It Works: text, stages, types, verification, justification, instructor | constitutional document §3; the typed response contract as described there; the application's README and handoff (verification before display, fail-closed delivery, what the inspector shows and withholds) |
 | How It Works: diagram and hosting | the University deployment pathway and the model-service contract (trusted header, worker-only egress, question text only, append-only history); every dashed element marked as proposed |
 | Demo | a recording made on 2026-11-08 against the local development build with synthetic identities and the recorded answer HG-18; captions and transcript generated from the recording's own timeline and edited by hand; three key-moment screenshots from the same run |
-| Reports §1 | constitutional document §3 (the eight invariants, abridged by hand) and the principle's six distinctions |
-| Reports §2 | the handoff's "what remains unverified" table, the deployment-readiness register (B-1..B-9), the pathway's target shape, the model-service contract; the faculty lead's statements of 2026-11-08 on the proposed classroom use (ordinary teaching, no IRB study, what the database would hold) |
-| Reports §3 | figures as published on the V1 site (native evaluation 0 of 89 against 12 of 51; held-out 238 of 238), the frontier comparison (442 of 442; no fidelity improvement; the blinded reviewer's preference), the October 2026 qualification attempt, the review-harness pilot's provisional conclusion |
-| Reports §4 | the deployment-readiness register and the faculty lead's shortest-path recommendation of 2026-11-08 |
+| Reports §1 (superseded 2026-11-08, V2.3, by the index and the six reports) | constitutional document §3 (the eight invariants, abridged by hand) and the principle's six distinctions |
+| Reports §2 (superseded 2026-11-08, V2.3, by the index and the six reports) | the handoff's "what remains unverified" table, the deployment-readiness register (B-1..B-9), the pathway's target shape, the model-service contract; the faculty lead's statements of 2026-11-08 on the proposed classroom use (ordinary teaching, no IRB study, what the database would hold) |
+| Reports §3 (superseded 2026-11-08, V2.3, by the index and the six reports) | figures as published on the V1 site (native evaluation 0 of 89 against 12 of 51; held-out 238 of 238), the frontier comparison (442 of 442; no fidelity improvement; the blinded reviewer's preference), the October 2026 qualification attempt, the review-harness pilot's provisional conclusion |
+| Reports §4 (superseded 2026-11-08, V2.3, by the index and the six reports) | the deployment-readiness register and the faculty lead's shortest-path recommendation of 2026-11-08 |
+| Reports index (replaced 2026-11-08, V2.3) | a concise index of the six-report collection: purpose, audience, one entry per report with a one- or two-sentence description drawn from the approved report itself, PDF link, version and date; the status statement; the Open-Weight page link retained |
+| Report 1, Technical Architecture and University Deployment (PDF, Version 1.0) | editorially approved report; sources listed in the report: Reading Desk handoff and model-service contract, deployment-readiness register, pathway assessment, README and acceptance record, typed response contract, frozen candidate manifest, constitutional document, strategic directions |
+| Report 2, Educational Design and Philosophical Principles (PDF, Version 1.0) | editorially approved report; sources: constitutional document §§1, 3, 4 (principle and invariants verbatim), strategic directions §§13, 15.6, 16, 17, pedagogical memo, typed response contract, Reading Desk documentation, the instructor-guidance studies, the public Demo page's induction framework |
+| Report 3, The Verified Hume Corpus and Scholarly Infrastructure (PDF, Version 1.0) | editorially approved report; sources: corpus standards and copy-text decision, provenance manifest, production batch records, engineering baseline, citation index and package manifest, argument catalog and audit ledger, sidecar specification, retrieval and graph governance documents |
+| Report 4, Open-Weight Models and Post-Training (PDF, Version 1.0) | editorially approved report; sources: strategic directions §§14, 15.4, oracle studies, harness comparisons, model comparison, MSI deployment record and development reports, qualification decision record, post-training design and closure, reviewer pilots, frontier comparisons, research roadmap (proposal) |
+| Report 5, Experimental Evaluation, Frontier Models and Efficiency (PDF, Version 1.0) | editorially approved report; every figure from the study's closure or results record (September–November 2026), including the held-out study's per-citation measures and reviewer-calibration analysis; cost and efficiency baseline; evidence-context comparison |
+| Report 6, Classroom Readiness and Institutional Decisions (PDF, Version 1.0) | editorially approved report; sources: deployment-readiness register, pathway assessment, handoff, README and acceptance record, the deployment gate on student data, constitutional document §3, instructor-guidance closure, strategic directions §§14.6, 15.2, 16, qualification decision record |
 | `open-weight-research.html` | unchanged from V1 except its navigation |
 
 **Retired or withdrawn:**
@@ -45,6 +52,8 @@ generated automatically from internal project materials.
   in V2 by the four pages; their substance is carried where it still applies (Reports §1 and §3; How It Works);
 - the separate About, Evidence, Current status and University IT pages (September 2026), which carry superseded-page
   notices linking to the current page.
+- the V2 Reports page's four sections (2026-11-08), replaced in V2.3 by the index of the six-report collection; their
+  substance is carried in Reports 1, 2, 5 and 6.
 
 **Not published, by design:**
 - the research statement;
@@ -72,3 +81,5 @@ When a source document changes, update the affected sections by hand and record 
 - 2026-11-05: research update on the instructor-guidance studies added to V1.
 - 2026-11-08: V2 prepared for the faculty lead's review: four pages, the governing educational principle, the recorded
   demonstration, the overview for University IT and the evaluation account. Awaiting approval before publication.
+- 2026-11-08: V2.3 prepared for the faculty lead's authorization: the Reports page replaced by the index of the six-report
+  collection, and the six reports added as tagged PDFs (Version 1.0) built from their Markdown sources. Not yet published.

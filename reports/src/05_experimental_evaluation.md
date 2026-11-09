@@ -52,18 +52,18 @@ The project's experiments share a small set of methods, and a reader needs four 
 
 **Development research versus formal qualification.** Every study below except one is development research: exploratory, small, and never intended to qualify anything. The exception is the Instructional Qualification attempt of October 2026, designed in advance with frozen thresholds and a scholarly review, which stopped at its evidence gate (section 7). Throughout, proportions from samples of 24 or 60 questions are reported as what they are, counts in a sample, not population error rates, and most figures come from a single run.
 
-<p class="caption"><strong>Table 1.</strong> The principal studies. "AI" marks an AI reviewer; "PI" the faculty lead. Development questions unless marked held-out.</p>
+<p class="caption"><strong>Table 1.</strong> The principal studies. AI = AI reviewer; PI = faculty lead. Development questions unless marked held-out.</p>
 
 | Study (date) | Design and size | Judged by | What it established |
 |---|---|---|---|
-| Epistemic-harness pilot (Sept 2026) | 8 held-out questions × 4 arms, open-weight model | AI; PI partial | Conventional prompting misquoted 29 of 86 quoted strings; constructed-citation arms misquoted none; answer length confounded interpretive ratings |
+| Epistemic-harness pilot (Sept 2026) | 8 held-out questions × 4 arms, open-weight model | AI; PI partial | Direct prompting misquoted 29 of 86 quoted strings; constructed-citation arms none; length confounded ratings |
 | Native harness comparison (Sept 2026) | 24 questions, harness vs direct prompting, Gemma 4 31B | 2 AI, blinded; PI on escalations | Direct: 12 faulty citations of 51, undetected; harness: 0 of 89, 22 of 24 delivered; no interpretive winner |
 | Locator ablation and repeatability (Sept 2026) | 24 questions × 2 prompts; 3 repetitions × 24 × 3 arms | software | Revised prompt removed invented locators; direct exactness 86–92%; harness 250 citations, 0 faults, 21–22 of 24 delivered |
-| Held-out generalization (Sept 2026) | 60 new questions (48 answerable, 12 boundary), harness vs revised direct prompt | 2 AI, blinded; PI audit of 9 pairs | Harness 238 citations, all exact and from supplied evidence, 50 of 60 delivered; direct 12 faulty citations of 107; false abstention 2 of 48 |
-| Model comparison (Sept 2026) | Same 24 questions, Gemma vs gpt-oss-120b, both arms | 2 AI, blinded | Larger model richer interpretively when direct, 83% of its citations faulty; inside the harness delivered 12 of 24 |
-| MSI development diagnostics (Oct 2026) | 36-question development set; selector, prompt and writer variants | development grader; PI adjudication of disputes | Serious errors concern scope and qualification; selector information and a larger writer reduced omissions, not those errors |
+| Held-out generalization (Sept 2026) | 60 new questions (48 answerable, 12 boundary), harness vs revised direct prompt | 2 AI, blinded; PI audit of 9 pairs | Harness 238 citations, 0 faults, 50 of 60 delivered; direct 12 faulty of 107; false abstention 2 of 48 |
+| Model comparison (Sept 2026) | Same 24 questions, Gemma vs gpt-oss-120b, both arms | 2 AI, blinded | Richer when direct but 83% of citations faulty; in the harness delivered 12 of 24 |
+| MSI development diagnostics (Oct 2026) | 36 development questions; selector, prompt and writer variants | development grader; PI adjudicated disputes | Serious errors concern scope and qualification; selector information and a larger writer reduced omissions, not those errors |
 | Instructional Qualification 0.1 (Oct 2026) | 170 held-out questions, frozen thresholds, 230 conditions | gate; review never reached | Not eligible at the evidence gate; neither pass nor fail; set spent |
-| Frontier pilot and comparison (Oct 2026) | 5 hard questions; then 20 questions, 40 pairs, Claude Opus 5.5 in and out of the harness | 1–2 AI (ChatGPT), blinded | Citations exact in and out of the harness; no fidelity gain from the harness; direct explanations preferred on pedagogy; length confounded |
+| Frontier pilot and comparison (Oct 2026) | 5 hard questions; then 20 questions, 40 pairs; Opus 5.5 in and out of the harness | 1–2 AI (ChatGPT), blinded | Citations exact in and out; no fidelity gain; direct form preferred on pedagogy; length confounded |
 | Three-arm evidence routes (Nov 2026) | 7 questions × 2, three evidence routes, Opus | 1 AI, advisory; PI decision | No route better overall; baseline retained |
 | Synthesis and instructor-guidance experiments (Oct–Nov 2026) | 1–12 questions each, Opus; format, context, inference, length, course guidance | 1 AI, advisory; PI rulings | No advance from any tested change; one recurring omission persisted; guided answers more often withheld |
 

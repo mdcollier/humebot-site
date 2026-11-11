@@ -31,7 +31,9 @@ repository is copied here wholesale.
 |---|---|
 | `index.html` | Home: what HumeBot is, why it exists, the governing educational principle |
 | `how-it-works.html` | How It Works: the three stages, verification, typed responses, the instructor's view, the proposed hosting arrangement |
-| `demo.html` | Demo: a recorded walk through the Reading Desk, with captions and a transcript |
+| `demo.html` | Demo: the narrated conceptual demonstration (Version 1), with links to the MP4, the transcript and the background page |
+| `demo-details.html` | About the Demo: background, verification limits, development status and provenance, and the earlier recording of the development build |
+| `demo-transcript.html` | The Demo's descriptive transcript |
 | `reports.html` | Reports: the index of the six-report collection |
 | `reports/` | The six project reports as tagged PDFs (Version 1.0), their Markdown sources (`reports/src/`) and figures |
 | `tools/reports/` | The report builder (`build_reports.py`: Markdown → HTML → tagged PDF with headless Chrome), the shared print stylesheet and the figure generators |
@@ -39,7 +41,8 @@ repository is copied here wholesale.
 | `about.html`, `evidence.html`, `status.html`, `university-it.html` | Superseded-page notices for pages retired in November 2026, each linking to the current page |
 | `assets/` | Stylesheet and favicon |
 | `assets/screenshots/` | Screenshots of the development build from V1, synthetic data only |
-| `assets/demo/` | The demonstration recording (WebM), its poster, captions (WebVTT) and key-moment screenshots, synthetic data only |
+| `assets/demo-v1/` | The narrated conceptual demonstration (MP4), its poster, captions (WebVTT and SRT) and descriptive transcript (Markdown) |
+| `assets/demo/` | The earlier recording of the development build (WebM, no sound), its poster, captions (WebVTT) and key-moment screenshots, synthetic data only; shown on `demo-details.html` |
 | `assets/diagram/`, `tools/harness_diagram.py` | The How It Works diagram (landscape and portrait SVG) and the script that generates it |
 
 ## History
@@ -49,5 +52,8 @@ repository is copied here wholesale.
   the executive brief was withdrawn; a screenshot gallery and an Open-Weight Model Research page were added.
 - **2026-11 (V2).** Reorganized into four pages, Home, How It Works, Demo and Reports, for an introduction to University IT
   and cloud-infrastructure colleagues; the governing educational principle added; a recorded demonstration added.
+
+- **2026-11-11 (V2.5).** The Demo page reduced to the narrated conceptual demonstration; its background and the earlier
+  recording moved to a new background page; a descriptive transcript page added.
 
 Earlier versions, including the withdrawn brief, remain in this repository's history.

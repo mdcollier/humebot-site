@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo — HumeBot</title>
-  <meta name="description" content="HumeBot in four minutes: a narrated conceptual demonstration of the Reading Desk, with captions and a descriptive transcript.">
+  <meta name="description" content="The HumeBot Demo: a narrated development preview of HumeBot’s scholarly architecture and the Reading Desk, with captions and a descriptive transcript.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/demo.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -29,20 +29,33 @@
   <main id="main">
 
     <p class="kicker">Demo</p>
-    <h1>HumeBot in four minutes</h1>
+    <h1>HumeBot Demo</h1>
 
     <figure class="video">
-      <video controls playsinline preload="metadata" width="1920" height="1080" poster="assets/demo-v1/HumeBot_Demo_V1_poster.jpg" aria-label="HumeBot in four minutes: a narrated conceptual demonstration">
-        <source src="assets/demo-v1/HumeBot_Demo_V1.mp4" type="video/mp4">
-        <track kind="captions" src="assets/demo-v1/HumeBot_Demo_V1_captions.vtt" srclang="en" label="English captions" default>
-        <p>Your browser cannot play this video. <a href="assets/demo-v1/HumeBot_Demo_V1.mp4">Open the narrated MP4</a> or read the <a href="demo-transcript.html">descriptive transcript</a>.</p>
+      <video controls playsinline preload="metadata" width="1920" height="1080" poster="assets/demo-v1/HumeBot_Demo_V1_2026-11-13_poster.jpg" aria-label="HumeBot Demo: a narrated development preview">
+        <source src="assets/demo-v1/HumeBot_Demo_V1_2026-11-13.mp4" type="video/mp4">
+        <track kind="captions" src="assets/demo-v1/HumeBot_Demo_V1_2026-11-13_captions.vtt" srclang="en" label="English captions" default>
+        <p>Your browser cannot play this video. <a href="assets/demo-v1/HumeBot_Demo_V1_2026-11-13.mp4">Open the narrated MP4</a> or read the <a href="demo-transcript.html">descriptive transcript</a>.</p>
       </video>
     </figure>
-    <p class="small demo-links"><a href="assets/demo-v1/HumeBot_Demo_V1.mp4">Narrated MP4 (3:49)</a> · <a href="demo-transcript.html">Descriptive transcript</a> · <a href="demo-details.html">Background details</a></p>
+    <p class="small demo-links"><a href="assets/demo-v1/HumeBot_Demo_V1_2026-11-13.mp4">Narrated MP4 (6:29)</a> · <a href="demo-transcript.html">Descriptive transcript</a> · <a href="demo-details.html">About the demo</a></p>
 
-    <section aria-labelledby="shows-h">
-      <h2 id="shows-h">What it shows</h2>
-      <p>HumeBot places an AI-generated explanation alongside checked quotations from Hume, the surrounding text, an instructor’s reconstruction of an argument, and student questions. The video illustrates a synthetic development course, not an approved classroom service.</p>
+    <section aria-labelledby="vision-h">
+      <h2 id="vision-h">The educational vision</h2>
+      <p>HumeBot places an AI model inside a scholarly reading environment. Its explanations are tied by citations to Hume’s own words, and software checks those quotations against a controlled transcription of the 1777 <em>Enquiry</em> before anything is shown. Instructors can inspect how each answer was built and evaluate it. Students can question the answer, follow its citations into Hume’s text, and add contributions that remain part of the course.</p>
+      <p>Its purpose is not simply to provide answers about Hume, but to support independent philosophical inquiry.</p>
+    </section>
+
+    <section aria-labelledby="status-h">
+      <h2 id="status-h">Development status</h2>
+      <p>The film is a development preview. It combines working research and application components with designs of the Reading Desk intended for classroom use.</p>
+      <ul>
+        <li><strong>Working now, on a development system:</strong> the controlled transcription of Hume’s <em>Enquiry</em> and the checking of quotations and citations; HumeBot’s staged answering process; the Evidence Inspector’s records; the reader for Hume’s text; students’ questions attached to a sentence of an answer; the instructor’s reconstruction; course records in PostgreSQL.</li>
+        <li><strong>Under development for the Reading Desk:</strong> the question-first layout with Textual Support and Instructor Materials beside the answer; the redesigned Evidence Inspector; a structured instructor review (its rubric is a draft); annotations on a whole answer or a cited passage; finding other readings that cite the same passage.</li>
+        <li><strong>Longer-term:</strong> shared discussion of a passage across different questions and course offerings.</li>
+        <li><strong>Before classroom use:</strong> University hosting and sign-in, a determination on student data (including retention), accessibility testing, and a qualified AI model configuration. No real students have used HumeBot.</li>
+      </ul>
+      <p class="small"><a href="demo-details.html">More about the demo: recorded responses, synthetic participants, provenance and feature status</a></p>
     </section>
 
   </main>

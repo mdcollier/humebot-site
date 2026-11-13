@@ -31,8 +31,8 @@ repository is copied here wholesale.
 |---|---|
 | `index.html` | Home: what HumeBot is, why it exists, the governing educational principle |
 | `how-it-works.html` | How It Works: the three stages, verification, typed responses, the instructor's view, the proposed hosting arrangement |
-| `demo.html` | Demo: the narrated conceptual demonstration (Version 1), with links to the MP4, the transcript and the background page |
-| `demo-details.html` | About the Demo: background, verification limits, development status and provenance, and the earlier recording of the development build |
+| `demo.html` | Demo: the narrated development preview, Demo V1 (13 November 2026), with links to the MP4, the transcript and the background page, the educational vision and a development-status summary |
+| `demo-details.html` | About the Demo: what the film shows, recorded AI responses and synthetic participants, verification limits, provenance, feature status, and the earlier recording of the development build |
 | `demo-transcript.html` | The Demo's descriptive transcript |
 | `reports.html` | Reports: the index of the six-report collection |
 | `reports/` | The six project reports as tagged PDFs (Version 1.0), their Markdown sources (`reports/src/`) and figures |
@@ -41,7 +41,7 @@ repository is copied here wholesale.
 | `about.html`, `evidence.html`, `status.html`, `university-it.html` | Superseded-page notices for pages retired in November 2026, each linking to the current page |
 | `assets/` | Stylesheet and favicon |
 | `assets/screenshots/` | Screenshots of the development build from V1, synthetic data only |
-| `assets/demo-v1/` | The narrated conceptual demonstration (MP4), its poster, captions (WebVTT and SRT) and descriptive transcript (Markdown) |
+| `assets/demo-v1/` | Demo V1 (MP4, 13 November 2026), its poster, captions (WebVTT and SRT) and descriptive transcript (Markdown) |
 | `assets/demo/` | The earlier recording of the development build (WebM, no sound), its poster, captions (WebVTT) and key-moment screenshots, synthetic data only; shown on `demo-details.html` |
 | `assets/diagram/`, `tools/harness_diagram.py` | The How It Works diagram (landscape and portrait SVG) and the script that generates it |
 
@@ -55,5 +55,7 @@ repository is copied here wholesale.
 
 - **2026-11-11 (V2.5).** The Demo page reduced to the narrated conceptual demonstration; its background and the earlier
   recording moved to a new background page; a descriptive transcript page added.
+- **2026-11-13 (V2.6).** The conceptual demonstration replaced by Demo V1, a narrated development preview of HumeBot's
+  architecture and the Reading Desk; the Demo, transcript and background pages rewritten for it.
 
 Earlier versions, including the withdrawn brief, remain in this repository's history.

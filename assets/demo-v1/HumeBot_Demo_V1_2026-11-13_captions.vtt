@@ -1,0 +1,313 @@
+WEBVTT
+
+00:00:02.920 --> 00:00:05.959
+Ask a general-purpose AI assistant about
+Hume,
+
+00:00:05.959 --> 00:00:09.130
+and you'll usually get a fluent, helpful
+answer.
+
+00:00:09.835 --> 00:00:11.755
+HumeBot takes a different approach.
+
+00:00:12.402 --> 00:00:17.303
+Instead of simply relying on the model to
+behave well, it places the model
+
+00:00:17.303 --> 00:00:22.402
+inside a scholarly reading environment,
+with safeguards enforced by software.
+
+00:00:23.057 --> 00:00:24.327
+Four commitments shape it.
+
+00:00:25.211 --> 00:00:27.621
+Explanations answer to Hume's own words.
+
+00:00:28.322 --> 00:00:32.012
+The process can be inspected, and
+instructors keep authority.
+
+00:00:32.632 --> 00:00:36.552
+Students examine the evidence, and
+challenge interpretations.
+
+00:00:37.241 --> 00:00:41.581
+And their questions and contributions
+become lasting parts of the course.
+
+00:00:42.792 --> 00:00:44.929
+Let's follow one student's question:
+
+00:00:44.929 --> 00:00:48.252
+do we have reason to believe the sun will
+rise tomorrow?
+
+00:00:49.528 --> 00:00:52.878
+First, HumeBot works out what a good
+answer must address.
+
+00:00:53.487 --> 00:00:56.267
+Here, the model identified three
+requirements.
+
+00:00:57.336 --> 00:00:58.756
+The grounds for the prediction.
+
+00:00:59.461 --> 00:01:01.381
+The origin of the expectation.
+
+00:01:02.062 --> 00:01:04.002
+And the status of our confidence in it.
+
+00:01:06.151 --> 00:01:11.481
+Next, it reads the whole controlled text:
+two hundred and sixteen textual units.
+
+00:01:12.072 --> 00:01:15.322
+For the three requirements, it selects
+twenty-four
+
+00:01:15.322 --> 00:01:18.572
+short passages, drawn from fifteen of
+those units.
+
+00:01:21.368 --> 00:01:23.708
+The model then writes its explanation.
+
+00:01:24.451 --> 00:01:29.781
+Here are three of its steps, each tied by
+citations to specific passages from Hume.
+
+00:01:32.899 --> 00:01:35.719
+AI systems can hallucinate quotations.
+
+00:01:36.372 --> 00:01:40.342
+Before showing them to students, HumeBot
+independently checks
+
+00:01:40.342 --> 00:01:44.442
+the quotations and their citations against
+its controlled text.
+
+00:01:45.728 --> 00:01:49.208
+Here, the cited words are found exactly
+where the answer says.
+
+00:01:52.857 --> 00:01:55.905
+A quotation that cannot be found is
+withheld,
+
+00:01:55.905 --> 00:02:00.037
+so invented evidence does not reach
+students as Hume's words.
+
+00:02:02.237 --> 00:02:05.808
+And these words can be traced to their
+source:
+
+00:02:05.808 --> 00:02:10.077
+a scholarly transcription of the 1777
+edition, page 28,
+
+00:02:11.552 --> 00:02:17.032
+documented by research records made from
+inspected scans of the original pages.
+
+00:02:19.393 --> 00:02:21.979
+Instructors can review every answer in the
+
+00:02:21.979 --> 00:02:24.873
+Evidence Inspector, which students cannot
+open.
+
+00:02:26.176 --> 00:02:29.206
+What did HumeBot decide the answer needed
+to address?
+
+00:02:30.607 --> 00:02:32.987
+The same three requirements we saw at the
+start.
+
+00:02:35.102 --> 00:02:37.102
+What evidence did it select for each one?
+
+00:02:38.827 --> 00:02:41.879
+For the origin of the expectation, for
+example,
+
+00:02:41.879 --> 00:02:44.737
+it selected this passage, from Section
+five.
+
+00:02:48.045 --> 00:02:52.465
+Instructors can also see what was verified
+before the answer was shown.
+
+00:02:53.924 --> 00:02:57.464
+The cited words matched Hume's text, and
+nothing was withheld.
+
+00:03:00.381 --> 00:03:03.191
+Instructors can then evaluate the answer
+itself.
+
+00:03:04.556 --> 00:03:07.721
+The review panel is designed to let
+instructors
+
+00:03:07.721 --> 00:03:10.953
+judge different aspects of an answer
+separately,
+
+00:03:10.953 --> 00:03:14.522
+such as philosophical accuracy, the
+textual evidence,
+
+00:03:14.522 --> 00:03:16.946
+completeness, reasoning and clarity.
+
+00:03:19.453 --> 00:03:24.079
+An instructor can also mark whether a
+passage was relevant to its requirement,
+
+00:03:24.079 --> 00:03:27.103
+and whether it supports the sentence that
+cites it.
+
+00:03:29.148 --> 00:03:33.262
+When completed, instructor reviews can be
+saved with the answer,
+
+00:03:33.262 --> 00:03:36.348
+creating a lasting record of scholarly
+judgment.
+
+00:03:39.442 --> 00:03:41.682
+Students, too, can question the answer.
+
+00:03:42.747 --> 00:03:46.377
+The Reading Desk begins with the question
+and the complete answer.
+
+00:03:47.917 --> 00:03:50.387
+A student picks out a claim: sentence
+four.
+
+00:03:52.412 --> 00:03:56.992
+Then the student asks: does Hume mean that
+our expectation is unreasonable?
+
+00:03:58.242 --> 00:04:02.362
+The question is saved with the course,
+attached to that exact sentence.
+
+00:04:03.737 --> 00:04:08.727
+Classmates' questions and interpretations
+about the same claim appear beside it.
+
+00:04:10.871 --> 00:04:13.828
+Selecting a citation opens Textual
+Support:
+
+00:04:13.828 --> 00:04:16.991
+the passage, with the cited words
+highlighted.
+
+00:04:19.297 --> 00:04:23.107
+Here, a student can ask whether this
+passage really supports the claim.
+
+00:04:25.344 --> 00:04:29.094
+From there, the student can open Hume's
+own text at that passage.
+
+00:04:30.837 --> 00:04:33.932
+The student can then read the surrounding
+argument,
+
+00:04:33.932 --> 00:04:36.117
+beyond the excerpts the AI selected.
+
+00:04:40.268 --> 00:04:42.458
+Many answers cite the same passages.
+
+00:04:43.709 --> 00:04:46.838
+Three other recorded answers also cite
+this one,
+
+00:04:46.838 --> 00:04:50.879
+from questions about custom, inference and
+circular reasoning.
+
+00:04:52.920 --> 00:04:55.980
+In this environment, a student reading
+this passage
+
+00:04:55.980 --> 00:04:59.280
+can see how the same text was read for
+other questions.
+
+00:05:03.245 --> 00:05:06.047
+The course also includes materials written
+
+00:05:06.047 --> 00:05:08.915
+by the instructor, independently of the
+AI.
+
+00:05:09.993 --> 00:05:13.843
+They open in the same second pane, while
+the answer stays in view.
+
+00:05:15.326 --> 00:05:18.908
+Here, the instructor's reconstruction of
+Hume's argument,
+
+00:05:18.908 --> 00:05:21.736
+from the uniformity assumption to the
+circle.
+
+00:05:26.808 --> 00:05:32.788
+Unlike a disposable chat, course activity
+persists, in a PostgreSQL database.
+
+00:05:33.943 --> 00:05:37.511
+Questions, interpretations and scholarly
+evaluations
+
+00:05:37.511 --> 00:05:41.423
+remain available for later inquiry and
+instructor review.
+
+00:05:45.362 --> 00:05:48.952
+In sum, HumeBot combines AI-generated
+explanations
+
+00:05:48.952 --> 00:05:52.112
+with independently checked textual
+evidence,
+
+00:05:52.112 --> 00:05:55.199
+instructor oversight, and opportunities
+for
+
+00:05:55.199 --> 00:05:58.502
+students to develop their own
+interpretations.
+
+00:06:00.261 --> 00:06:04.005
+Its purpose is not simply to provide
+answers about Hume,
+
+00:06:04.005 --> 00:06:07.281
+but to support independent philosophical
+inquiry.
+
+00:06:10.540 --> 00:06:17.063
+HumeBot is a project by Mark Collier at
+the University of Minnesota Morris,
+
+00:06:17.063 --> 00:06:22.890
+developed for PHIL 3171, History of Modern
+Philosophy, Spring 2027.

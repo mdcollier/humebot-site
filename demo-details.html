@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About the Demo — HumeBot</title>
-  <meta name="description" content="Background to the HumeBot Demo: what is drawn and what is built, what checking establishes, development status and provenance, and an earlier recording of the development build.">
+  <meta name="description" content="About the HumeBot Demo: what the film shows, the recorded AI responses and synthetic participants, provenance, and the development status of each feature.">
   <link rel="canonical" href="https://mdcollier.github.io/humebot-site/demo-details.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -30,21 +30,16 @@
 
     <p class="kicker">Demo · background</p>
     <h1>About the HumeBot Demo</h1>
-    <p class="lede">The <a href="demo.html">four-minute demonstration</a> illustrates how the Reading Desk brings Hume’s text, model explanations, instructor material and student questions into a course.</p>
-    <p>The video follows one example: Hume’s argument that we cannot use past experience to prove the future will be like the past without arguing in a circle.</p>
+    <p class="lede">The <a href="demo.html">HumeBot Demo</a> follows one student’s question, “Do we have reason to believe the sun will rise tomorrow?”, through HumeBot’s scholarly architecture and the Reading Desk.</p>
 
     <div class="notice" role="note">
-      <p><strong>What you are watching.</strong> The diagrams were made for this video; they are not recordings of the application. The quoted passages, recorded question and explanation, instructor reconstruction, and example student contribution come from the development record. The course and student are synthetic; no real students have used HumeBot.</p>
+      <p><strong>What you are watching.</strong> A development preview. It combines screens of the development Reading Desk (the question box and the reader for Hume’s text), designs of the Reading Desk intended for classroom use (the Evidence Inspector, the instructor review and the student Reading Desk with its panes), values taken from HumeBot’s records, and illustrations. The <a href="demo-transcript.html">descriptive transcript</a> says which each shot is.</p>
     </div>
 
-    <section aria-labelledby="adds-h">
-      <h2 id="adds-h">What the Reading Desk adds</h2>
-      <ul class="cards">
-        <li><h3>Checked quotations</h3><p>Software constructs displayed quotations from a controlled transcription of Hume’s 1777 <em>Enquiry</em> and verifies where they appear. Failed checks cause quotations to be withheld.</p></li>
-        <li><h3>Hume in context</h3><p>Students can move from a cited phrase to its paragraph and neighboring text, or read the available sections of the <em>Enquiry</em> independently.</p></li>
-        <li><h3>An instructor’s reconstruction</h3><p>Course-authored argument steps are available for examination and challenge alongside the model’s interpretation.</p></li>
-        <li><h3>Student questions</h3><p>With instructor-controlled sharing, students can attach attributable questions and objections to particular steps of an argument. Contributions remain with the course.</p></li>
-      </ul>
+    <section aria-labelledby="recorded-h">
+      <h2 id="recorded-h">Recorded AI responses and synthetic participants</h2>
+      <p>No AI model was run for the film. The main answer, to the sunrise question, was recorded on 12 November 2026. The three other answers shown in the scene on one passage and many questions were recorded on 29 October 2026. All four were produced by Claude Opus 5.5 working inside HumeBot’s fixed answering process, in development runs. None has been reviewed by a scholar, and none comes from an approved classroom configuration.</p>
+      <p>The course and its participants are synthetic. The students’ questions were written for the demonstration. The instructor’s argument reconstruction is course material approved for the demonstration; it was written independently of HumeBot, which never sees it. No instructor evaluation was entered: the review form in the film is shown empty.</p>
     </section>
 
     <section aria-labelledby="checking-h">
@@ -53,20 +48,43 @@
       <p>Whether a quotation supports the model’s interpretation, or whether the interpretation is a good reading of Hume, remains a question for readers and scholars. The Reading Desk is designed to make that judgment possible, not to replace it.</p>
     </section>
 
-    <section aria-labelledby="drawn-h">
-      <h2 id="drawn-h">What is drawn, and what is built</h2>
-      <p>The two-pathway diagrams, book illustration, passage cards and section overview were drawn to explain the design. They are not screenshots or continuous footage of the application.</p>
-      <p>The development Reading Desk does include the verified explanation and Hume reader. <strong>On 10 November 2026</strong>, the instructor’s argument reconstruction and line-attached synthetic student contributions were added to the development course. This happened after the six project reports were prepared, so descriptions in those reports of these features as not yet built reflect the earlier state of the project.</p>
-      <p>The demo illustrates what students could do in this environment; it does not show a deployed or approved classroom service.</p>
+    <section aria-labelledby="text-h">
+      <h2 id="text-h">Hume’s text and its provenance</h2>
+      <p>The demonstration uses the project’s controlled transcription of <em>An Enquiry concerning Human Understanding</em>, Sections I–IX, based on the 1777 edition. Every transcribed page is documented by research records made from inspected scans of the original printed pages. The page images themselves are not published here as a viewer. The transcription is not a finished scholarly edition of the whole work.</p>
     </section>
 
-    <section aria-labelledby="status-h">
-      <h2 id="status-h">Development status and provenance</h2>
-      <p>The opening sunrise question is illustrative. The recorded explanation shown later answered a different question about Hume’s circularity objection in a development trial on 29 October 2026. It was generated using Claude Opus 5.5. The instructor’s reconstruction was added to the synthetic course on 10 November 2026, after the recorded answer. The two interpretations were produced independently.</p>
-      <p>The demonstration uses the project’s controlled transcription of <em>An Enquiry concerning Human Understanding</em>, Sections I–IX, based on the 1777 text. It does not represent a finished scholarly edition of the entire work. The example explanation has not completed formal scholarly review.</p>
-      <p>The Reading Desk has been implemented and exercised in a development environment with synthetic participants and recorded answers. No language model has been qualified for teaching, and the model a course would use has not been selected. The Reading Desk is not deployed as an approved classroom service, no real students have used it, and no learning outcomes have been demonstrated. The narration uses a synthetic voice.</p>
-      <p>This video does not show live inference on a new student question or decide which AI model would be used in teaching. See the project’s <a href="reports.html">Reports</a> 1 and 6 for the system design and classroom-readiness questions.</p>
-      <p class="small">The diagrammatic comparison and staged passage-selection visuals are editorial illustrations. They should not be understood as screenshots or a recording of live model inference.</p>
+    <section aria-labelledby="features-h">
+      <h2 id="features-h">Feature status</h2>
+      <h3>Working now, on a development system</h3>
+      <ul>
+        <li>The controlled transcription, and software checks that every displayed quotation is Hume’s exact words at the place cited; quotations that fail are withheld.</li>
+        <li>HumeBot’s staged answering process: what an answer must address, evidence selected from the whole text, and an explanation tied to it by citations.</li>
+        <li>The Evidence Inspector’s records for each answer: requirements, evidence by requirement, verification results and processing records, in its current layout.</li>
+        <li>The reader for Hume’s text, opening at a cited passage, with a way back to the sentence.</li>
+        <li>Students’ questions, objections and alternative interpretations attached to a sentence of an answer or a paragraph of Hume’s text, in a reading shared with the course; several classmates can contribute to the same sentence.</li>
+        <li>The instructor’s argument reconstruction, on its own page.</li>
+        <li>Course records in PostgreSQL, including instructors’ free-text notes on an answer.</li>
+      </ul>
+      <h3>Under development for the Reading Desk</h3>
+      <ul>
+        <li>The question-first layout: the question and complete answer first, with a second pane for Textual Support, Instructor Materials or Annotations.</li>
+        <li>The redesigned Evidence Inspector shown in the film.</li>
+        <li>A structured instructor review, saved with the answer. Its dimensions and rating scale are a draft and have not been approved.</li>
+        <li>Annotations on a whole answer or on a cited passage, and a “further inquiry” contribution.</li>
+        <li>Finding other readings in a course that cite the same passage.</li>
+        <li>Instructor materials opened beside any answer they are associated with.</li>
+      </ul>
+      <h3>Longer-term</h3>
+      <ul>
+        <li>Shared discussion of a passage across different questions, and across course offerings, which raises questions of permissions, retention and consent.</li>
+      </ul>
+      <h3>Before classroom use</h3>
+      <ul>
+        <li>University-managed hosting, database and sign-in.</li>
+        <li>A determination on student data, including retention and deletion.</li>
+        <li>Accessibility testing, including screen readers.</li>
+        <li>A qualified AI model configuration. None has yet been qualified for teaching, and no real students have used HumeBot.</li>
+      </ul>
     </section>
 
     <section id="walkthrough" aria-labelledby="walkthrough-h">
